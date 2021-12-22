@@ -8,12 +8,12 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Author] # Used in authorbox
   name = "Vijay Panchal"
-  bio = "Hello, it's me. Vijay panchal. Happy to meet you."
-  avatar = "/pf.png"
+  bio = "Hello, I'm Physics student and lover. I'm very enthuasist about computers and intrested in CS. I think there will be middle ground somewhere..."
+  avatar = "/refs/logo.svg"
 
 [Params]
-  description = "John Doe's Personal blog about everything" # Site description. Used in meta description
-  copyright = "John Doe" # Footer copyright holder, otherwise will use site title
+  description = "Physics and computer blog" # Site description. Used in meta description
+  copyright = "Vijay Panchal" # Footer copyright holder, otherwise will use site title
   opengraph = true # Enable OpenGraph if true
   schema = true # Enable Schema
   twitter_cards = true # Enable Twitter Cards if true
@@ -40,13 +40,13 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
-  fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
+  fontFamilyPrimary = "Open Sans, 'Helvetica', Arial, sans-serif"
   fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
 [Params.logo]
-  image = "/pf.png" # Logo image. Path relative to "static"
+  image = "/refs/logo.svg" # Logo image. Path relative to "static"
   title = "Continuity" # Logo title, otherwise will use site title
-  subtitle = "Just another site" # Logo subtitle
+  subtitle = "A Physics and computer science nerds site" # Logo subtitle
 
 [Params.thumbnail]
   visibility = ["list", "post"] # Control thumbnail visibility
@@ -67,10 +67,10 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Params.widgets.social]
   github = "vijaypanchalr3"
-  email = "example@example.com"
+  email = "vijayrameshpanchal@gmail.com"
 
 
-#[[Params.widgets.social.custom]]
-#  title = "My Home Page"
-#  url = "https://example.com"
+[[Params.widgets.social.custom]]
+  title = "My Home Page"
+  url = "https://vijaypanchalr3.github.com"
 

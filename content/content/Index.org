@@ -1,0 +1,10 @@
+﻿#+title: All Posts
+#+author: vijay panchal
+#+pager: true
+#+toc: true
+#+menu: main
+#+widgets[]: search recent taglist
+
+
+** [[./posts/new.md][this is my first post]]
+how to create new sites and help, via org all content. this will help.
