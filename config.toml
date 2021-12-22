@@ -1,14 +1,13 @@
 baseurl = "https://vijaypanchalr3.github.io/"
 title = "continuity"
-languageCode = "en-us"
 paginate = "10" # Number of posts per page
-theme = "ananke"
+theme = "mainroad"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
 [Author] # Used in authorbox
-  name = "Vijay panchal"
-  bio = "HElooo"
+  name = "vijay panchal"
+  bio = ""
   avatar = "refs/logo.svg"
 
 [Params]
@@ -28,34 +27,68 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
-  customCSS = ["custom.css","special.css"] # Include custom CSS files
+  customCSS = ["css/custom.css"] # Include custom CSS files
   customJS = ["js/custom.js"] # Include custom JS files
-  commentoEnable = true
-  site_logo = "img/logo.svg"
-  body_classes = "avenir bg-near-white"
+
   # DEPRECATED PARAMS
   subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
   highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
 
+[Params.style.vars]
+  highlightColor = "#e22d30" # Override highlight color
 
   # Override font-family sets. Secondary font-family set responsible for pre, code, kbd, and samp tags font
   # Take care of different quotes OR escaping symbols in these params if necessary
   fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
   fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
 
+[Params.logo]
+  image = "refs/logo.svg" # Logo image. Path relative to "static"
+  title = "Continuity" # Logo title, otherwise will use site title
+  subtitle = "this is my website" # Logo subtitle
 
+[Params.thumbnail]
+  visibility = ["list", "post"] # Control thumbnail visibility
 
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "left"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  # alternatively "ddg-search" can be used, to search via DuckDuckGo
+  # widgets = ["ddg-search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  categories_counter = false # Enable counter for each category in "Categories" widget
+  tags_counter = false # Enable counter for each tag in "Tags" widget
 
 [Params.widgets.social]
-  github = "vijaypanchalr3"
+  # Enable parts of social widget
+#  facebook = "username"
+#  twitter = "username"
+#  instagram = "username"
+#  linkedin = "username"
+#  telegram = "username"
+  github = "username"
+#  gitlab = "username"
+#  bitbucket = "username"
   email = "example@example.com"
 
+# Custom social links
+#[[Params.widgets.social.custom]]
+#  title = "Youtube"
+#  url = "https://youtube.com/user/username"
+#  icon = "youtube.svg" # Optional. Path relative to "layouts/partials"
 
 #[[Params.widgets.social.custom]]
 #  title = "My Home Page"
-#  url = "https://example.com"
+#  url = "https://example.com"languageCode = "en-us"
+
+
 [[menu.main]]
     identifier = "posts"
     name = "posts"
-    title = "All Posts"
-    url = "/posts"
+    title = "All posts"
+    url = "/content/posts"
