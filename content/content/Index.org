@@ -1,10 +1,11 @@
-﻿#+title: All Posts
-#+author: vijay panchal
-#+pager: true
-#+toc: true
+﻿#+pager: true
 #+menu: main
 #+widgets[]: search recent taglist
 
 
-** [[./posts/new.md][this is my first post]]
-how to create new sites and help, via org all content. this will help.
+* [[./g1145.png]] [[./posts/new.md][This is my first blog]]
+how to create new sites and help, via org all content. this will help. lsdafksdlk flhkj h;alsdf ;sdflasldhf lshfjhsjsdfhj hfjh  dsdhffjhsdjdf hkjhj. /sjdjhfjsd/ *this idsfi*. jaslkdfj kldsfklsadjfl lksdafjfslkdjfkl asdlffjaskld fflkjaslkdfdjf lk;asdjfklfj lkdsffjklasdj flkaj.
+
+-----
+
+ 
