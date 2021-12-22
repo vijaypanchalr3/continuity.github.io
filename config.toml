@@ -2,7 +2,7 @@ baseurl = "https://vijaypanchalr3.github.io/"
 title = "continuity"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
-theme = "mainroad"
+theme = "ananke"
 disqusShortname = "" # Enable Disqus comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
@@ -10,6 +10,11 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   name = "Vijay Panchal"
   bio = "Hello, I'm Physics student and lover. I'm very enthuasist about computers and intrested in CS. I think there will be middle ground somewhere..."
   avatar = "/refs/logo.svg"
+
+
+[params]
+  commentoEnable = true
+
 
 [Params]
   description = "Physics and computer blog" # Site description. Used in meta description
