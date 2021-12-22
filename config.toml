@@ -15,7 +15,8 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 [params]
   commentoEnable = true
 
-
+[params]
+  custom_css = ["custom.css","special.css"]
 [Params]
   description = "Physics and computer blog" # Site description. Used in meta description
   copyright = "Vijay Panchal" # Footer copyright holder, otherwise will use site title
@@ -33,8 +34,6 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
   mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
-  customCSS = ["css/custom.css"] # Include custom CSS files
-  customJS = ["js/custom.js"] # Include custom JS files
 
   # DEPRECATED PARAMS
   subtitle = "" # Deprecated in favor of .Site.Params.logo.subtitle
