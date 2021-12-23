@@ -12,6 +12,7 @@
   }
 *{
     font-family: "jetbrains mono";
+    background-color: antiquewhite;
 }
 body{
     margin: 0;
@@ -89,6 +90,7 @@ h3{
 .hcontainer .section .li-items ul li a{
     color: black;
     font-size: larger;
+    margin-top: 1rem;
     display: inline-block;
     transition: ease-in-out 0.1s;
 
