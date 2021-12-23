@@ -1,0 +1,21 @@
+{{ define "main" }}
+<article class="single-post">
+    <h1 class="entry-title">
+        {{ .Title }}
+    </h1>
+    <div class="post-meta">
+        <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+        <span class="post-tags">
+            {{ range (.GetTerms "tags" ) }}
+                <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
+            {{ end }}
+        </span>
+        <span class="post-author justify-content-end">
+            {{ .Params.Author }}
+        </span>
+    </div>
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

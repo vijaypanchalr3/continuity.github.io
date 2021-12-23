@@ -1,0 +1,38 @@
+{{ define "main"}}
+<section class="post-list">
+    {{ range .Paginator.Pages }}
+    <article class="single-post">
+        <h2 class="entry-title mt-5 mb-5">
+            <a href="{{ .Permalink}}">{{ .Title }}</a>
+            
+        </h2>
+        <div class="post-meta mb-2">
+            <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+            <span class="post-tags ">
+                {{ range (.GetTerms "tags" ) }}
+                    <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
+                {{ end }}
+            </span>
+            <span class="post-author">
+                {{ .Params.Author }}
+            </span>
+        </div>
+        <div class="content">
+            {{ .Summary }}
+        </div>
+        <div class="post-end">
+            <a href="{{ .Permalink }}">Read more</a>
+
+            <hr>
+        </div>
+        
+    </article>.post-meta{
+
+    }
+    {{end}}
+    <div class="mt-5 justify-content-center">
+        {{ template "_internal/pagination.html" . }}
+    </div>
+    
+</section>
+{{ end }}
