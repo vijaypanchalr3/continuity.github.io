@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'jetbrains mono';
+    font-style: normal;
+    font-weight: 400;
+    src: local('jetbrains mono'), url('/fonts/JetBrainsMono-VariableFont_wght.ttf');
+  }
+@font-face {
+    font-family: 'playfair';
+    font-style: normal;
+    font-weight: 400;
+    src: local('playfair'), url('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+  }
+*{
+    font-family: "jetbrains mono";
+}
 body{
     margin: 0;
     padding: 0;
@@ -41,19 +56,20 @@ a {
 }
 h1 {
     text-align: center;
-    margin-bottom: 0px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 60px;
+    color: rgb(114, 53, 42);
 }
-/* .hnav{
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+h2{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 40px;    margin-bottom: 5px;
 }
-.hnav li{
-    list-style: none;
+h3{
+    text-align: center;
 }
-.hnav 
-*/
+
 .hcontainer .section .li-items{
     display: flex;
     justify-content: center;
@@ -81,4 +97,23 @@ h1 {
 }
 .hcontainer .section .li-items ul li a:hover{
     transform: scale(1.2);
+}
+
+
+
+.post-meta{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgb(109, 109, 109);
+    
+    margin-bottom: 50px;
+    font-size: 13px;
+}
+
+.post-meta .post-author{
+    margin-top: 10px;
+    color: rgb(33, 58, 83);
+    font-size: 15px;
 }

@@ -6,29 +6,29 @@
             <a href="{{ .Permalink}}">{{ .Title }}</a>
             
         </h2>
-        <div class="post-meta mb-2">
-            <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-            <span class="post-tags ">
-                {{ range (.GetTerms "tags" ) }}
-                    <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
-                {{ end }}
-            </span>
-            <span class="post-author">
-                {{ .Params.Author }}
-            </span>
+        <div class="post-meta">
+                <div class="hello">
+                    <span class="time">
+                       <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                    </span>
+                    <span class="post-tags">
+                        {{ range (.GetTerms "tags" ) }}
+                            <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
+                        {{ end }}
+                    </span>
+                </div>
+        
+                <div class="post-author">
+                    {{ .Params.Author }}
+                </div>
         </div>
         <div class="content">
-            {{ .Summary }}
+            {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
         </div>
-        <div class="post-end">
-            <a href="{{ .Permalink }}">Read more</a>
+        <hr>
 
-            <hr>
-        </div>
         
-    </article>.post-meta{
-
-    }
+    </article>
     {{end}}
     <div class="mt-5 justify-content-center">
         {{ template "_internal/pagination.html" . }}

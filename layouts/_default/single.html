@@ -4,15 +4,22 @@
         {{ .Title }}
     </h1>
     <div class="post-meta">
-        <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-        <span class="post-tags">
-            {{ range (.GetTerms "tags" ) }}
-                <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
-            {{ end }}
-        </span>
-        <span class="post-author justify-content-end">
+        <div class="hello">
+            <span class="time">
+               <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+            </span>
+            <span class="post-tags">
+                {{ range (.GetTerms "tags" ) }}
+                    <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
+                {{ end }}
+            </span>
+        </div>
+
+        <div class="post-author">
             {{ .Params.Author }}
-        </span>
+        </div>
+        <hr>
+
     </div>
     <div class="content">
         {{ .Content }}
