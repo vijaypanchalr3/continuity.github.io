@@ -1,0 +1,84 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+}
+#site-footer{
+    height: 50px;
+    background-color: rgb(201, 201, 201);
+    font-size: larger;
+    padding: 10px;
+}
+
+.hcontainer{
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.hcontainer .section{
+    position: relative;
+    height: 90%;
+    background-blend-mode: multiply;
+    margin: 0;
+}
+.hcontainer .section:nth-child(1){
+    background: antiquewhite url(/refs/keep-it-simple-wallpaper-2560x1080_14.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+.hcontainer .section:nth-child(2){
+    background-color: antiquewhite;
+}
+
+a {
+    text-decoration: none;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+/* .hnav{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.hnav li{
+    list-style: none;
+}
+.hnav 
+*/
+.hcontainer .section .li-items{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    height: 100%;
+}
+.hcontainer .section .li-items img{
+    height: 100px;
+}
+.hcontainer .section .li-items h1{
+    font-size: 60px;
+}
+.hcontainer .section .li-items ul li{
+    list-style: none;
+}
+.hcontainer .section .li-items ul li a{
+    color: black;
+    font-size: larger;
+    display: inline-block;
+    padding: 1rem;
+    transition: ease-in-out 0.1s;
+
+}
+.hcontainer .section .li-items ul li a:hover{
+    transform: scale(1.2);
+}
