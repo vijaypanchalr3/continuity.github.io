@@ -5,7 +5,9 @@
             <div class="content">
                 <img src="/refs/logo.svg" alt="">
                 <h1>Continuity</h1>
-                <h1>&#8675;</h1>
+                <h1><span class="material-icons md-48">
+                    expand_more
+                    </span></h1>
             </div>
             
         </div>
@@ -13,12 +15,35 @@
     </div>
     <div class="section">
         <div class="li-items">
-            <h1>MENU</h1>
+            <span class="material-icons md-48">reorder</span>
             <ul class="hnav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/posts/">Content</a></li>
-                <li><a href="/About.md">About</a></li>
+                <li><a href="/"><span class="material-icons md-32">home</span><span>Home</span></a></li>
+                <li><a href="/posts/"><span class="material-icons md-32">explore</span><span>Explore</span></a></li>
+                <li><a href="/About.md"><span class="material-icons md-32">account_box</span><span>About</span></a></li>
+                <li><span class="material-icons md-32">expand_more</span><span>Recent</span></li>
             </ul>
+        </div>
+        <div class="section">
+            <div class="li-items">
+                <h1>this is recent files</h1>
+                <div class="">
+                    <h2>ByLastMod</h2>
+                        {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
+                        {{ $recent := ($byLastMod | last 5).Reverse }}
+                    
+                    
+                        <ol>
+                        {{ range $byLastMod }}
+                          <li>
+                            <p class="" style="margin:0 0;">
+                               File <b>{{ .Title  }}</b> Lastmod date is <b>{{ .Lastmod }}</b>
+                            </p>
+                          </li>
+                        {{ end }}
+                        </ol>
+                    </div>
+                    
+            </div>
         </div>
     </div>
 </div>
