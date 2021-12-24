@@ -26,23 +26,6 @@
         <div class="section">
             <div class="li-items">
                 <h1>this is recent files</h1>
-                <div class="">
-                    <h2>ByLastMod</h2>
-                        {{ $byLastMod :=  .Site.RegularPages.ByLastmod  }}
-                        {{ $recent := ($byLastMod | last 5).Reverse }}
-                    
-                    
-                        <ol>
-                        {{ range $byLastMod }}
-                          <li>
-                            <p class="" style="margin:0 0;">
-                               File <b>{{ .Title  }}</b> Lastmod date is <b>{{ .Lastmod }}</b>
-                            </p>
-                          </li>
-                        {{ end }}
-                        </ol>
-                    </div>
-                    
             </div>
         </div>
     </div>
