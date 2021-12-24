@@ -12,11 +12,11 @@
   }
 *{
     font-family: "jetbrains mono";
-    background-color: antiquewhite;
 }
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(255, 240, 213);
 }
 #site-footer{
     height: 50px;
@@ -46,7 +46,14 @@ body{
 
 }
 .hcontainer .section:nth-child(2){
-    background-color: antiquewhite;
+    background: antiquewhite;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.hcontainer .section:nth-child(3){
+    background: rgb(90, 90, 90) url(/refs/keep-it-simple-wallpaper-2560x1080_14.jpg);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 a {
@@ -70,7 +77,8 @@ h3{
 
 .hcontainer .section .li-items{
     display: flex;
-    justify-content: center;    content: 'arrow_right';
+    justify-content: center;    
+    content: 'arrow_right';
     font-family: 'Material Icons';
     margin: 0;
     padding: 0;
@@ -86,20 +94,22 @@ h3{
 }
 .hcontainer .section .li-items ul li{
     list-style: none;
-}
-.hcontainer .section .li-items ul li a{
     color: black;
     font-size: larger;
-    margin-top: 1rem;
-    display: inline-block;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    padding-top: 1rem;
     transition: ease-in-out 0.1s;
+}
+.hcontainer .section .li-items ul li a{
+    display: flex;
+    color: black;
 
 }
 .hcontainer .section .li-items ul li a:hover{
     transform: scale(1.2);
 }
-
-
 
 .post-meta{
     width: 100%;
@@ -118,7 +128,9 @@ h3{
     font-size: 15px;
 }
 .content li{
-    color: rgb(78, 115, 136);
+    color: rgb(102, 102, 102);
+    text-decoration: underline darkgray;
+    list-style: none;
 }
 
 .content img{
@@ -159,3 +171,7 @@ h3{
     /* Support for IE. */
     font-feature-settings: 'liga';
   }
+  .material-icons.md-18 { font-size: 18px; }
+  .material-icons.md-24 { font-size: 24px; }
+  .material-icons.md-36 { font-size: 36px; }
+  .material-icons.md-48 { font-size: 48px; }
