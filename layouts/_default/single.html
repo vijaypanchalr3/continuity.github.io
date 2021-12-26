@@ -1,24 +1,32 @@
 {{ define "main" }}
 <article class="single-post">
-    <h1 class="entry-title">
+    <p class="entry">blog</p>
+    <a href="/posts/" class="entry-title">
         {{ .Title }}
-    </h1>
+    </a>
     <div class="post-meta">
-        <div class="hello">
-            <span class="time">
-               <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-            </span>
-            <span class="post-tags">
-                {{ range (.GetTerms "tags" ) }}
-                    <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
-                {{ end }}
-            </span>
-        </div>
-
         <div class="post-author">
             {{ .Params.Author }}
         </div>
         <hr>
+        <div style="padding: 0;">
+            <div class="hello">
+                <p>Abstract</p>
+            </div>
+            <div class="description">
+                {{ .Description }}
+            </div>
+            <span class="time">
+               <a href="#" class="keyword">key words</a>
+            </span>
+            <span class="post-tags">
+                {{ range (.GetTerms "tags" ) }}
+                    <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
+                {{ end }}
+            </span>
+        </div>
+        <hr>
+        <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
 
     </div>
     <div class="content">
