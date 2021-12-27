@@ -4,30 +4,29 @@
     <article class="single-post  mt-5 mb-5">
         <div class="box">
             <div class="start">
-                <span class="thumbnail">
-                    <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>
-                </span>
-                <span class="summary">
-                <h2 class="entry-title">
-                    <a href="{{ .Permalink }}">{{ .Title }}</a>   
-                </h2>
+                <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>
+                <div>
+                    <a href="{{ .Permalink }}" class="list-title">{{ .Title }}</a> 
+                </div>  
                 <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}</span>
                 <div class="summarycontent">
                     {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
                 </div>
-                <div class="hello">        
+                <div class="hello">
+                    <span class="time">
+                        <a href="#" class="keyword">key words</a>
+                    </span>     
                     <span class="post-tags">
                         {{ range (.GetTerms "tags" ) }}
-                            <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
+                            <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
                         {{ end }}
                     </span>
                 </div>
-            </span>
         </div>
         </div>
     </article>
     {{end}}
-    <div class="mt-5 justify-content-center">
+    <div class="mt-5 paginator">
         {{ template "_internal/pagination.html" . }}
     </div>
     

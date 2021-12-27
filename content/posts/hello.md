@@ -5,7 +5,6 @@ draft= false
 author= "Vijay Panchal"
 tags= ["new","better"]
 featured_image="/img/sample.png"
-thumbnail= "/images/hello/thumbnail.png"
 description="sjdhfj fhsjdhfj sjfhjksa hddfjhasjdfh kjashdfjkh sakjdf hkjashdf!"
 +++
 
