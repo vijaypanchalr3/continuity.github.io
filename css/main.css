@@ -220,6 +220,11 @@ a{
     text-decoration: none;
     color: rgba(0, 0, 0, 0.733);
 }
+.entry-title{
+    font-family: cm;
+    font-size: 40px;
+    color: #1A7DAB;
+}
 
 
 
@@ -288,23 +293,12 @@ a{
     transform: translate(10px);
 }
 
-.start{
-    display: flex;
-}
 
-.entry-title {
-    font-family: cm;
-    margin: 0;
-    font-size: 30px;
-    color: #1A7DAB;
-    text-align: center;
+.start img{
+    float: left;
+    width: 45%;
 }
-.thumbnail img{
-    width: 100%;
-    margin-top: 8px;
-}
-.summary{
-    padding: 10px;
+.start {
     justify-content: center;
     width: 100%;
     text-align: center;
@@ -314,12 +308,22 @@ a{
     color: rgba(0, 0, 0, 0.603);
 
 }
-.summary .summarycontent{
+.start .summarycontent{
     font-size: 14px;
     text-align: start;
 }
-.hello{
-    width: 100%;
+.start .site-title{
+    font-family: cm;
+    font-size: 25px;
     justify-content: center;
     text-align: center;
+}
+
+.page-list{
+    width: 100%;
+}
+.paginator{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
