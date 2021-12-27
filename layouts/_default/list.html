@@ -1,31 +1,30 @@
 {{ define "main"}}
 <section class="post-list">
     {{ range .Paginator.Pages }}
-    <article class="single-post">
-        <h2 class="entry-title mt-5 mb-5">
-            <a href="{{ .Permalink}}">{{ .Title }}</a>
-            
-        </h2>
-        <div class="post-meta">
-                <div class="hello">
-                    <span class="time">
-                       <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-                    </span>
+    <article class="single-post  mt-5 mb-5">
+        <div class="box">
+            <div class="start">
+                <span class="thumbnail">
+                    <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>
+                </span>
+                <span class="summary">
+                <h2 class="entry-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>   
+                </h2>
+                <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}</span>
+                <div class="summarycontent">
+                    {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
+                </div>
+                <div class="hello">        
                     <span class="post-tags">
                         {{ range (.GetTerms "tags" ) }}
                             <a href="{{ .Permalink }}" class="btn btn-primary">{{ .LinkTitle}}</a>
                         {{ end }}
                     </span>
                 </div>
-        
-                <div class="post-author">
-                    {{ .Params.Author }}
-                </div>
+            </span>
         </div>
-        <div class="content">
-            {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
         </div>
-        <hr>
     </article>
     {{end}}
     <div class="mt-5 justify-content-center">

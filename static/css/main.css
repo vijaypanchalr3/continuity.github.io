@@ -1,3 +1,49 @@
+
+/*  #####################################################
+    # font styling
+    #
+    #
+    ##################################################### */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+      local('MaterialIcons-Regular'),
+      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  .material-icons.md-18 { font-size: 18px; }
+  .material-icons.md-24 { font-size: 24px; }
+  .material-icons.md-36 { font-size: 36px; }
+  .material-icons.md-48 { font-size: 48px; }
+
 @font-face {
     font-family: 'jetbrains mono';
     font-style: normal;
@@ -19,17 +65,35 @@
 *{
     font-family: "jetbrains mono";
 }
+
+/*  ###########################################
+    #global styling
+    #
+    #
+    #
+    #
+    ############################################
+*/
 body{
     margin: 0;
     padding: 0;
 }
 #site-footer{
-    height: 50px;
+    height: 20px;
     background-color: rgb(201, 201, 201);
-    font-size: larger;
-    padding: 10px;
+    font-size: 12px;
+    padding: 0;
+}
+a{
+    text-decoration: none;
 }
 
+/*  ################################################
+    #
+    # Homepage styling
+    # -hcontainer
+    #
+    ################################################ */
 .hcontainer{
     height: 100vh;
     overflow: auto;
@@ -63,22 +127,14 @@ body{
     background-size: cover;
 }
 
-a {
-    text-decoration: none;
-}
-.entry{
-    margin-top: 50px;
-    margin-left: 5px;
-    font-size: 20px;
-    margin-bottom: 0;
-    color: black; 
-}
-.entry-title {
-    font-family: cm;
-    margin-bottom: 0;
-    font-size: 50px;
-    color: #1A7DAB;
-}
+/*  ###########################################
+    # Single page styling
+    #
+    #
+    #############################################
+*/
+
+
 
 
 .description{
@@ -88,7 +144,7 @@ a {
 
 .mynav{
     background-color: #1a7dabc2;
-    height: 100px;
+    height: 70px;
 }
 .keyword{
     font-size: 15px;
@@ -136,29 +192,13 @@ a {
     transform: scale(1.2);
 }
 
-.post-meta{
-    width: 100%;
 
-    color: rgb(109, 109, 109);
-    
-    margin-bottom: 50px;
-    font-size: 13px;
-}
-
-.post-meta .post-author{
-    margin-top: 10px;
-    margin-left: 10px;
-    color: rgb(33, 58, 83);
-    font-size: 15px;
-}
 .content li{
     color: rgb(102, 102, 102);
     list-style: url(/refs/egg_black_24dp.svg);
 }
 
-.content img{
-    width: 100%;
-}
+
 
 .sitename{
     padding: 0;
@@ -169,7 +209,7 @@ a {
 
 .sitenamesize{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
     color: black;
 }
@@ -180,58 +220,106 @@ a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.733);
 }
+
+
+
+
+
+
+
+/*  ###########################################
+    #
+    #
+    # main containt styling
+    #
+    #
+    ###########################################
+*/
+.content img{
+    width: 100%;
+}
 .content h1{
     color: #1A7DAB;
+    font-size: 30px;
 }
 .content h2{
     color: #1A7DAB;
+    font-size: 28px;
 }
 .content h3{
     color: #1A7DAB;
+    font-size: 24px;
+}
+.content h4{
+    color: #1A7DAB;
+    font-size: 20px;
+}
+.content h5{
+    color: #1A7DAB;
+    font-size: 20px;
+}
+.content h6{
+    color: #1A7DAB;
+    font-size: 18px;
 }
 .content a{
     text-decoration: red;
 }
 
+/*  ###########################################
+    #
+    # List styling    #
+    #
+    ###########################################
+*/
+/* .entry{
+    margin-left: 5px;
+    font-size: 20px;
+    margin-bottom: 0;
+    color: black;
+} */
+.box{
+    box-sizing: content-box;
+    background-color: rgba(212, 212, 212, 0.219);
+    border-radius: 15px;
+    padding: 10px;
+}
+.box::hover{
+    transform: translate(10px);
+}
 
+.start{
+    display: flex;
+}
 
+.entry-title {
+    font-family: cm;
+    margin: 0;
+    font-size: 30px;
+    color: #1A7DAB;
+    text-align: center;
+}
+.thumbnail img{
+    width: 100%;
+    margin-top: 8px;
+}
+.summary{
+    padding: 10px;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.post-date{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.603);
 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-    src: local('Material Icons'),
-      local('MaterialIcons-Regular'),
-      url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-      url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-      url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
-  }
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-  
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
-  
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
-  
-    /* Support for IE. */
-    font-feature-settings: 'liga';
-  }
-  .material-icons.md-18 { font-size: 18px; }
-  .material-icons.md-24 { font-size: 24px; }
-  .material-icons.md-36 { font-size: 36px; }
-  .material-icons.md-48 { font-size: 48px; }
+}
+.summary .summarycontent{
+    font-size: 14px;
+    text-align: start;
+}
+.hello{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}

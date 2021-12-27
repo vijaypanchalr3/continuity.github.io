@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <div class="authboxes">
+        <div class="authbox">
+            <div class="authimage">
+            
+            </div>
+            <div class="authinformation">
+                <p class="authname">{{ .$.Params.name }}</p>
+                {{ .Summary }}
+            </div>
+        </div>
+    </div>
+{{ end }}
