@@ -3,11 +3,12 @@
     {{ range .Paginator.Pages }}
     <article class="single-post  mt-5 mb-5">
         <div class="box">
+            <div class="list-title">
+                <a href="{{ .Permalink }}" class="list-title">{{ .Title }}</a> 
+            </div>
+            <hr size="3" class="listline">
             <div class="start">
-                <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>
-                <div>
-                    <a href="{{ .Permalink }}" class="list-title">{{ .Title }}</a> 
-                </div>  
+                <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>  
                 <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}</span>
                 <div class="summarycontent">
                     {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
@@ -22,11 +23,11 @@
                         {{ end }}
                     </span>
                 </div>
-        </div>
+            </div>
         </div>
     </article>
     {{end}}
-    <div class="mt-5 paginator">
+    <div class="paginator">
         {{ template "_internal/pagination.html" . }}
     </div>
     

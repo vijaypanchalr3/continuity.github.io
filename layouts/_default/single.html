@@ -1,14 +1,14 @@
 {{ define "main" }}
-<article class="single-post">
+<article class="s">
     <p class="entry">blog</p>
     <a href="/posts/" class="entry-title">
-        {{ .Title }}
+       {{ .Title }}
     </a>
     <div class="post-meta">
         <div class="post-author">
             {{ .Params.Author }}
         </div>
-        <hr>
+        <hr size="3" class="thickline">
         <div style="padding: 0;">
             <div class="hello">
                 <p>Abstract</p>
@@ -25,12 +25,13 @@
                 {{ end }}
             </span>
         </div>
-        <hr>
+        <hr size="3" class="thickline">
         <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
 
     </div>
     <div class="content">
             {{ .Content }}
     </div>
-</article>
+</article> 
+
 {{ end }}
