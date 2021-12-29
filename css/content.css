@@ -100,8 +100,9 @@ list
 .navlist{
     justify-content: center;
 }
-
-
+.post-author{
+    color: rgb(121, 121, 121);
+}
 
 
 
@@ -151,7 +152,7 @@ list
 
 }
 .start .summarycontent{
-    text-align: start;
+    text-align: justify;
 }
 .start .site-title{
     font-family: cm;
@@ -183,4 +184,10 @@ list
     padding: 0;
     color: #1A7DAB;
     border-radius: 20%;
+}
+.description{
+    text-align: justify;
+}
+.keyword{
+    color:rgb(121,121,121)
 }
