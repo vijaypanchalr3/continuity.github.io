@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="s">
-    <p class="entry">blog</p>
+    <img class="thumb" src="{{ .Params.thumbnail }}">
     <a href="/posts/" class="entry-title">
        {{ .Title }}
     </a>
@@ -8,7 +8,7 @@
         <div class="post-author">
             {{ .Params.Author }}
         </div>
-        <hr size="3" class="thickline">
+        <hr size="5" class="thickline">
         <div style="padding: 0;">
             <div class="hello">
                 <p>Abstract</p>
@@ -25,7 +25,7 @@
                 {{ end }}
             </span>
         </div>
-        <hr size="3" class="thickline">
+        <hr size="5" class="thickline">
         <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
 
     </div>

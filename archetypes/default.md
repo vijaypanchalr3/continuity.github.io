@@ -4,5 +4,7 @@ date= {{ .Date }}
 draft= false
 author= "Vijay Panchal"
 tags= []
+thumbnail="/images/ "
+description= " "
 +++
 

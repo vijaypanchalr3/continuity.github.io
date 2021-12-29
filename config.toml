@@ -2,6 +2,6 @@ baseurl = "https://vijaypanchalr3.github.io/"
 languageCode= "en-us"
 title = "continuity"
 paginate = 7
-summaryLength= 30
+summaryLength= 20
 [params]
 dateFormat = "03:04PM, Jan 2, 2006 "
