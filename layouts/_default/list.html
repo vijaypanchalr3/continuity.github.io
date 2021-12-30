@@ -9,17 +9,19 @@
             <hr size="5" class="listline">
             <div class="start">
                 <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>  
-                <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}</span>
+                <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}{{ range (.GetTerms "tags" ) }}
+                    <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
+                {{ end }}</span>
                 <div class="summarycontent">
                     {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
                 </div>
                 <div class="hello">
                     <span class="time">
-                        <a href="#" class="keyword">key words</a>
+                        <a href="#" class="keyword">category</a>
                     </span>     
                     <span class="post-tags">
-                        {{ range (.GetTerms "tags" ) }}
-                            <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
+                        {{ range (.GetTerms "categories" ) }}
+                            <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
                         {{ end }}
                     </span>
                 </div>

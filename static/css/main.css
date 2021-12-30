@@ -79,6 +79,26 @@ body{
     padding: 0;
     position: relative;
 }
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #1A7DAB rgba(194, 194, 194, 0);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(194, 194, 194);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #1A7DAB;
+    border-radius: 20px;
+    border: 3px solid rgb(194, 194, 194);
+  }
 #site-footer{
     height: 20px;
     background-color: rgb(201, 201, 201);
@@ -89,22 +109,7 @@ a{
     text-decoration: none;
 }
 
-.thickline{
-    padding: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #156083;
-    border-radius: 20%;
 
-}
-.navline{
-    padding: 0;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    color: #000000;
-    border-radius: 50%;
-
-}
 /*  ################################################
     #
     # Homepage styling
@@ -144,15 +149,6 @@ a{
     background-size: cover;
 }
 
-.keyword{
-    font-size: 15px; 
-    color: black;
-}
-.hello{
-    font-family: cm;
-    color: #1A7DAB;
-    font-size: 25px;
-}
 .hcontainer .section .li-items{
     display: flex;
     justify-content: center;    
