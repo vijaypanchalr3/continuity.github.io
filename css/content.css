@@ -1,8 +1,20 @@
+/* the colors are material design TEAL 50 */
 :root {
     --blue: #1A7DAB;
     --initialfontcolor: black;
-    --initialfontbg: rgb(230, 225, 225);
-    --initialfontshadow: red;
+    --initialfontbg: #EFEFEF;
+    --initialfontshadow: #1A7DAB;
+    --color1: #006064;
+    --color2: #00838F;
+    --color3: #0097A7;
+    --color4: #00ACC1;
+    --color5: #00BCD4;
+    --color6: #26C6DA;
+    --color7: #4DD0E1;
+    --color8: #80DEEA;
+    --color9: #B2EBF2;
+    --color10: #E0F7FA;
+
   }
 
 .content img{
@@ -12,42 +24,49 @@
     margin-right: 10px;
 }
 .content h1{
-    color: #1A7DAB;
-    font-size: 30px;
+    color: var(--color2);
+    font-size: 70px;
+    letter-spacing: -1.5px;
     text-decoration: underline 3px;
 }
 .content h2{
-    color: #1A7DAB;
-    font-size: 40px;
-    border-left: solid 20px #F0ECE3;
+    color: var(--color2);
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    border-left: solid 20px var(--color2);
     padding: 10px;
     padding: 15px;
-    font-family: cm;
+    font-family: roboto-light;
+    background-color: #E26A2C05;
 }
 .content h3{
-    color: #1A7DAB;
-    font-size: 35px;
-    border-left: solid 15px #DFD3C3;
+    color: var(--color2);
+    font-size: 48px;
+    font-family: roboto;
+    border-left: solid 15px #1A7DAB;
     padding: 10px;
     font-family: cm;
+    background-color: #2ce2b405;
 }
 .content h4{
-    color: #1A7DAB;
-    font-size: 30px;
-    font-family: cm;
+    color: var(--color3);
+    font-size: 34px;
+    font-family: roboto;
+    letter-spacing: 0.25px;
     border-left: solid 10px #C7B198;
     padding: 10px;
 }
 .content h5{
-    color: #1A7DAB;
+    color: var(--color4);
     border-left: solid 7px #A68DAD;
-    padding: 25px;             
-    font-family: cm;
+    padding: 24px;             
+    font-family: roboto;
     font-size: 20px;
 }
 .content h6{
     color: #1A7DAB;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: roboto;
 }
 .content a{
     text-decoration: red;
@@ -62,6 +81,10 @@
 }
 .content{
     text-align: justify;
+    font-family: roboto;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
     color: #352817;
 }
 .initial::first-letter{
@@ -77,7 +100,7 @@
 }
 #progressbar{
     --scrollamount: 0%;
-    background-image: linear-gradient(to left, #24a1db 0%, #b1f4cf 100%);
+    background-image: linear-gradient(to left, var(--color1) 0%, var(--color10) 100%);
     z-index: 1;
     width: var(--scrollamount);
     height: 7px;
