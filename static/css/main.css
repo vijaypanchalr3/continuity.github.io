@@ -419,29 +419,6 @@ Content styling
 }
 
 
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-width: 450px) {
-    .sidenav {padding-top: 9px;
-                display: none;
-    }
-    .sidenav a {font-size: 9px;}
-    .main {
-        margin-left: 0; /* Same as the width of the sidebar */
-        padding: 0;
-      }
-    .content img{
-        margin-right: 0;
-        width: 100%;
-        border-radius: 5px;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
-    #progressbar{
-        height: 2px;
-    }
-  }
-
-
 
 
 
@@ -630,3 +607,29 @@ hr{
   .post-tags{
     font-size: medium;
   }
+   /* Style the button that is used to open and close the collapsible content */
+
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+    .sidenav {padding-top: 9px;
+                display: none;
+    }
+    .sidenav a {font-size: 9px;}
+    .main {
+        margin-left: 0; /* Same as the width of the sidebar */
+        padding: 0;
+      }
+    .content img{
+        margin-right: 0;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    #progressbar{
+        height: 4px;
+    }
+
+  }
+

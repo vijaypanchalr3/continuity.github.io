@@ -2,50 +2,17 @@
 <div class="hcontainer">
     <div class="section">
         <div class="li-items">
-            <div class="home-content">
-                <img src="/refs/logo.svg" alt="">
-                <h1>Continuity</h1>
-                <h1 class="material-icons md-48">expand_circle_down</h1>
-                </div>
+            {{- partial "home/pg1" . -}}
         </div>
         
     </div>
     <div class="section">
         <div class="li-items">
-            <span class="material-icons md-48">reorder</span>
-            <ul class="hnav">
-                <li><a href="/"><span class="material-icons md-32">home</span><span>Home</span></a></li>
-                <li><a href="/posts/"><span class="material-icons md-32">explore</span><span>Explore</span></a></li>
-                <li><a href="/About.md"><span class="material-icons md-32">account_box</span><span>About</span></a></li>
-                <li><button class="material-icons md-32 margin_down">expand_circle_down</button></li>
-            </ul>
+            {{- partial "home/pg2" . -}}
         </div>
         <div class="section">
             <div class="li-items">
-                <div class="container">
-                    <!-- <div class="recent_font"><span class="material-icons md-48">update</span><span>Recents</span></div> -->
-                    <div class="row align-items-center">
-                        {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
-                            <div class="col column">
-                                <div class="recents">
-                                    <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>
-                                
-                                    <a href="{{ .Permalink }}" class="title">{{ .Title }}</a>
-                                    <div class="summarycontent">
-                                        {{ .Params.Description }}
-                                    </div>
-                                    <div>
-                                        {{ range (.GetTerms "tags" ) }}
-                                            <a href="{{ .Permalink }}" class="btn btn-outline-primary">{{ .LinkTitle}}</a>
-                                        {{ end }}
-                                    </div>
-                                    <h3 class="btn btn-warning read"><a href="{{ .Permalink }}">Read more</a></h3>
-                                </div>
-                                
-                            </div>
-                        {{end}}
-                    </div>
-                  </div>
+                {{- partial "home/pg3" . -}}
             </div>
         </div>
     </div>
