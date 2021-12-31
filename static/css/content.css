@@ -1,7 +1,15 @@
+:root {
+    --blue: #1A7DAB;
+    --initialfontcolor: black;
+    --initialfontbg: rgb(230, 225, 225);
+    --initialfontshadow: red;
+  }
 
 .content img{
-    width: 100%;
+    width: 82%;
+    float: left;
     border-radius: 10px;
+    margin-right: 10px;
 }
 .content h1{
     color: #1A7DAB;
@@ -10,29 +18,31 @@
 }
 .content h2{
     color: #1A7DAB;
-    font-size: 30px;
+    font-size: 40px;
     border-left: solid 20px #F0ECE3;
     padding: 10px;
     padding: 15px;
+    font-family: cm;
 }
 .content h3{
     color: #1A7DAB;
-    font-size: 24px;
+    font-size: 35px;
     border-left: solid 15px #DFD3C3;
     padding: 10px;
+    font-family: cm;
 }
 .content h4{
     color: #1A7DAB;
-    font-size: 20px;
-    
+    font-size: 30px;
+    font-family: cm;
     border-left: solid 10px #C7B198;
     padding: 10px;
 }
 .content h5{
     color: #1A7DAB;
     border-left: solid 7px #A68DAD;
-    padding: 10px;             
-              
+    padding: 25px;             
+    font-family: cm;
     font-size: 20px;
 }
 .content h6{
@@ -48,28 +58,117 @@
 }
 .content li{
     color: rgb(102, 102, 102);
-    list-style: url(/refs/egg_black_24dp.svg);
+    list-style: url(/refs/egg_black_black.svg);
 }
 .content{
     text-align: justify;
     color: #352817;
 }
-/* .content p::first-letter{
-    font-size: 150%;
-} */
-/* 
-list
+.initial::first-letter{
+    float: left;
+    font-size: 55px;
+    padding: 10px;
+    color: var(--initialfontcolor);
+    font-family: old;
+    background-color: var(--initialfontbg);
+    box-shadow: 4px 4px var(--initialfontshadow);
+    margin-right: 8px;
+
+}
+#progressbar{
+    --scrollamount: 0%;
+    background-image: linear-gradient(to left, #24a1db 0%, #b1f4cf 100%);
+    z-index: 1;
+    width: var(--scrollamount);
+    height: 7px;
+    
+    position: fixed;
+    left: -2px;
+    top: 0;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.sidenav {
+    /* height: auto;  */
+    width: 250px;
+    position: fixed;
+    z-index: 1; 
+    left: 5px;
+    margin-top: 20px;
+    background-color: #ebdbb200;
+    overflow-x: hidden;
+    padding-top: 5px;
+    padding-left: 0;
+    /* border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(133, 133, 133, 0.13); */
+    border: solid 4px #24a1db;
+    border-radius: 10px;
+
+  }
+  
+  /* The navigation menu links */
+.sidenav a{
+    padding: 0px 0px 0px 0px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #552e2e;
+    display: block;
+    margin-left: 0;
+    transition: all 100ms ease-in-out;
+}
+.sidenav h4{
+      color: #1A7DAB;
+      text-align: center;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #552e2e80;
+    
+  }
+
+  /* Style page content */
+.main {
+    margin-left: 250px; /* Same as the width of the sidebar */
+    padding: 0px 30px; 
+  }
+.s .thumb{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sidenav ul{
+    list-style: url(/refs/egg_black_24dp.svg);
+}
 
 
------------------------------------------------------------------------------------
------------------------------------------------------------------------------------
-*/
-/*  ###########################################
-    # Single page styling    border: solid #156083;
-    #
-    #
-    #############################################
-*/
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-width: 450px) {
+    .sidenav {padding-top: 9px;
+                display: none;
+    }
+    .sidenav a {font-size: 9px;}
+    .main {
+        margin-left: 0; /* Same as the width of the sidebar */
+        padding: 0;
+      }
+    .content img{
+        margin-right: 0;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    #progressbar{
+        height: 2px;
+    }
+  }
 
 
 
@@ -81,24 +180,40 @@ list
 }
 .desc_box{
     border-radius: 10px;
-    background-color: rgba(189, 189, 189, 0.349);
+    background-image: linear-gradient(135deg, #f5f7fa 0%, rgb(228, 246, 248) 100%);
     padding: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 30px;
     margin-top: 10px;
     overflow-x: hidden;
     
 }
 .desc_box p{
     text-align: justify;
-    color: #552e2e;
+    color: #5f2929;
+    margin-top: 10px;
 }
 .desc_box h3{
-    font-family: cm;
+    font-family: old;
     color: #1A7DAB;
-    font-size: 25px;
+    font-size: 40px;
     margin: 0;
 }
-
+.intresting{
+    background-color: rgb(255, 251, 239);
+    padding: 30px;
+    border-left:solid 10px burlywood;
+    width: 90%;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+}
+.intresting p{
+    font-family: elsie;
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.699);
+}
 
 
 
@@ -135,76 +250,5 @@ list
     box-shadow: 2px 2px 5px rgba(156, 156, 156, 0.384);
     font-size: 13px;
 }
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-.sidenav {
-    /* height: auto;  */
-    width: 250px;
-    position: fixed;
-    z-index: 1; 
-    left: 5px;
-    margin-top: 20px;
-    background-color: #ebdbb200;
-    overflow-x: hidden;
-    padding-top: 5px;
-    padding-left: 0;
-    /* border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(133, 133, 133, 0.13); */
-    border: solid 4px #1a7daba8;
-    border-radius: 10px;
 
-  }
-  
-  /* The navigation menu links */
-.sidenav a{
-    padding: 0px 0px 0px 0px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #282828ad;
-    display: block;
-    margin-left: 0;
-    transition: all 100ms ease-in-out;
-}
-.sidenav h4{
-      color: #1A7DAB;
-      text-align: center;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-    color: #000000;
-    
-  }
-
-  /* Style page content */
-.main {
-    margin-left: 250px; /* Same as the width of the sidebar */
-    padding: 0px 30px; 
-  }
-.s .thumb{
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-}
-
-.sidenav ul{
-    list-style: url(/refs/egg_black_24dp.svg);
-}
-
-
-  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-width: 450px) {
-    .sidenav {padding-top: 9px;
-                display: none;
-    }
-    .sidenav a {font-size: 9px;}
-    .main {
-        margin-left: 0; /* Same as the width of the sidebar */
-        padding: 0;
-      }
-  }
 

@@ -17,3 +17,14 @@ function myFunction() {
   }
 }
 
+let scrollper = () => {
+  let docEl = document.documentElement,
+      docbody = document.docbody,
+      scrolltop = docEl['scrollTop'] || docbody['scrollTop'],
+      scrollbot = (docEl['scrollHeight'] || docbody['scrollHeight'])- window.innerHeight,
+      scrollpercent = scrolltop / scrollbot * 100 + '%';
+
+      document.getElementById('progressbar').style.setProperty('--scrollamount',scrollpercent);
+}
+
+document.addEventListener('scroll',scrollper);

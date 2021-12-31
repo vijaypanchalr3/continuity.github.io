@@ -7,4 +7,6 @@ tags= []
 thumbnail="/images/ "
 description= " "
 +++
+{{< initial >}}
 
+{{< /initial >}}

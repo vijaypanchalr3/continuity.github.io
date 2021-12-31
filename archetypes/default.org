@@ -6,3 +6,7 @@
   #+tag[]:
   #+thumbnail:/images/
   #+description: 
+
+{{< initial >}}
+
+{{< /initial >}}

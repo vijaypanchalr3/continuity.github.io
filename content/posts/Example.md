@@ -8,7 +8,9 @@ thumbnail="/images/example/thumbnail.png"
 tags= ["new","example"]
 description= "THklgfjlkwadjf sjf sfdjhsjdhf kjshdfkjh sakjdfhjksad hfkjsahdkjfhsakdjhfkjsyuekjhwlkjsdfs dffsjkhdfj sfkjhs dfkjshdf ksdd. sdjfkhkjsd fkjshdfjk skjdjhdfj shdff."
 +++
-jdf sjfk kdf fkljf lkskdj fjsdlsdfk lkkj. sak flfjskf klhljhlhdfjh djf.sdf kdhdfj fdlsd dfhlkshd ffl. jlasdshfj sadfhljashd fd. ljhassjlfdh.
+{{< initial >}}
+Pdf sjfk kdf fkljf lkskdj fjsdlsdfk lkkj. sak flfjskf klhljhlhdfjh djf.sdf kdhdfj fdlsd dfhlkshd ffl. jlasdshfj sadfhljashd fd. ljhassjlfdh. slkdl lflksjdlfkjlksdjdf ljflkjls dfjksjfk alksjkj fjksjskljf sjdklf sjkljlksadldkfj askldjkjsdflk jsaldk. kdjlkfj lfjk jflkajsdkjskad jflkasjdfjklsdjfksdkfjaksd flskajdf asfdlkjd fjklsajdfjlskdfjlk ajfdlkajdlkfjlkasd jflk ajsdlff jklsd jflkadflajsdlkfj lksdjfsadjflk jsdflk jldfkjlksad jfljdfljlsdadfjf sdf lsd fsdfd fsdfdjkj
+{{< /initial >}}
 ## hello this
 sdfjkl ksdjks dfkjjkk . sdjfjhsjad fjkhsdjf. fdkkl siodhdfj asfhljkshd jfkhjsadh j.
 d
