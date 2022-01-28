@@ -6,6 +6,7 @@
 <title>Categories</title>
 <link rel=stylesheet href=/css/bs/bootstrap.min.css>
 <link rel=stylesheet href=/css/main.css>
+<link rel=stylesheet href=/css/single.css>
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
@@ -31,8 +32,6 @@
 <a class=nav-link href=/>Home</a>
 <a class=nav-link href=/posts/>Content</a>
 <a class=nav-link href=#>About</a>
-<a class=nav-link href=/tags>Tags</a>
-<a href=/categories class=nav-link>Catogories</a>
 <a class=nav-link href=https://github.com/vijaypanchalr3>Github</a>
 </div>
 </li>
@@ -40,54 +39,64 @@
 </div></div>
 </nav>
 </header><main class=site-main>
-<div class=container-fluid>
-<section class=post-list>
-<article class="single-post mt-5 mb-5">
-<div class=box>
-<div class=list-title>
-<a href=https://vijaypanchalr3.github.io/categories/example/ class=list-title>example</a>
+<div><div class=rsidebar>
+<div class=sidebox>
+<p class=stitles>Tags</p>
+<ul class=cloud>
+<li class=tags_count>
+<a href=/tags/fine data-weight=4> fine <small id=tags_size>(4)</small></a>
+</li>
+<li class=tags_count>
+<a href=/tags/hello data-weight=3> hello <small id=tags_size>(3)</small></a>
+</li>
+<li class=tags_count>
+<a href=/tags/linux data-weight=3> linux <small id=tags_size>(3)</small></a>
+</li>
+<li class=tags_count>
+<a href=/tags/emacs data-weight=2> emacs <small id=tags_size>(2)</small></a>
+</li>
+<li class=tags_count>
+<a href=/tags/new data-weight=2> new <small id=tags_size>(2)</small></a>
+</li>
+<li class=tags_count>
+<a href=/tags/org data-weight=2> org <small id=tags_size>(2)</small></a>
+</li>
+</ul>
 </div>
-<hr size=5 class=listline>
-<div class=start>
-<a href=https://vijaypanchalr3.github.io/categories/example/><img src></a>
-<span class=post-date><time>08:32PM, Dec 26, 2021 </time></span>
-<div class=summarycontent>
-<a href=https://vijaypanchalr3.github.io/categories/example/>Read more</a>
+<div class=sidebox>
+<p class=stitles>categories</p>
+<ul class=cloud>
+<li class=tags_count>
+<a href=/categories/linux data-weight=3> linux <small id=tags_size>(3)</small></a>
+</li>
+</ul>
 </div>
-<div class=hello>
-<span class=time>
-<a href=# class=keyword>category</a>
-</span>
-<span class=post-tags>
-</span>
+</div><div class=main>
+<div class=container>
+<div class="row m-2 list-box">
+<article>
+<a href=https://vijaypanchal.link/categories/linux/ class=post-box>
+<div class=thumb>
+<picture>
+<img src alt>
+</picture>
 </div>
+<div class=inner>
+<p class=list-title>linux</p>
+<p class=list-description>
+</p>
+<p class=time>by on <time>12:00AM, Jan 2, 2022 </time></p>
 </div>
-</div>
+</a>
 </article>
-<article class="single-post mt-5 mb-5">
-<div class=box>
-<div class=list-title>
-<a href=https://vijaypanchalr3.github.io/categories/site/ class=list-title>site</a>
-</div>
-<hr size=5 class=listline>
-<div class=start>
-<a href=https://vijaypanchalr3.github.io/categories/site/><img src></a>
-<span class=post-date><time>08:32PM, Dec 26, 2021 </time></span>
-<div class=summarycontent>
-<a href=https://vijaypanchalr3.github.io/categories/site/>Read more</a>
-</div>
-<div class=hello>
-<span class=time>
-<a href=# class=keyword>category</a>
-</span>
-<span class=post-tags>
+<div class=list-tags>
+<span>
 </span>
 </div>
+<hr style="border-top:2px dashed #000;background-color:#fff;margin-top:10px">
 </div>
-</div>
-</article>
-<div class=paginator>
-</div></section>
+</div><div class=paginator>
+</div></div>
 </div>
 </main>
 <footer id=site-footer>
@@ -97,5 +106,6 @@
 </footer>
 <script src=/js/bs/bootstrap.min.js></script>
 <script src=/js/main.js></script>
+<script src=/js/wordcloud2.js></script>
 </body>
 </html>
