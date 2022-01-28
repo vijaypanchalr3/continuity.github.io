@@ -60,7 +60,7 @@
 
 @font-face {
     font-family: 'jetbrains mono';
-    font-style: normal;
+    font-style:normal;
     font-weight: 400;
     src: local('jetbrains mono'), url('/fonts/JetBrainsMono-VariableFont_wght.ttf');
 }
@@ -71,10 +71,34 @@
     src: local('elsie'), url('/fonts/Elsie-Regular.ttf');
 }
 @font-face {
-    font-family: 'slabo';
+    font-family: 'playfair';
     font-style: normal;
     font-weight: 400;
-    src: local('slabo'), url('/fonts/Slabo27px-Regular.ttf');
+    src: local('playfair'), url('/nfonts/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'playfair';
+    font-style: italic;
+    font-weight: 400;
+    src: local('playfair'), url('/nfonts/PlayfaitDisplay-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'lora';
+    font-style: normal;
+    font-weight: 400;
+    src: local('lora'), url('/nfonts/Lora-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'lora';
+    font-style: italic;
+    font-weight: 400;
+    src: local('lora'), url('/nfonts/Lora-Italic-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'monteserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('monteserrat'), url('/nfonts/Montserrat-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'et-bembo';
@@ -515,25 +539,27 @@ Content styling
     opacity: 1;
 } */
 /* ----------------------------------
-
-
-
-
+-------------------------------------
+-------------------------------------
+-------------------------------------
 -----------------------------------*/
 .single-title{
     width: 100%;
     z-index: 1;
+    
     text-align: center;
+    padding: 0 20px;
 }
 .single-title a.literal-title{
     text-decoration: none;
-    font-family: cursive;
+    font-family: playfair;
     color: black;
     font-size: 3em;
 }
 .single-title p.description {
     font-size: 2em;
     margin-top: 20px;
+    font-family: lora;
 }
 
 .single-title .single-time{
@@ -542,7 +568,7 @@ Content styling
     color: rgba(0, 0, 0, 0.644);
 }
 .single-hr{
-    width: 20%;
+    width: 40%;
     margin: auto;
     height: 2px;
     color: black;
@@ -550,17 +576,23 @@ Content styling
     margin-top: 10px;
     border-top: 2px dashed black;
 }
-
+.post-tags{
+    text-align: center;
+    font-size: 0.8em;
+}
 
 
 .content{
     text-align: justify;
     font-size: 20px;
-    font-family: slabo;
+    font-family: monteserrat;
     letter-spacing: 1px;
     word-spacing: 2px;
     color: #352817;
     margin-top: 40px;
+}
+p{
+    font-family: monteserrat;
 }
 
 .content img{
@@ -572,7 +604,7 @@ Content styling
 .content h1{
     color: #000000;
     font-family: et-bembo;
-    font-size: 50px;
+    font-size: 2em;
     letter-spacing: 1.5px;
     text-align: center;
     background-color: #E26A2C05;
@@ -580,7 +612,7 @@ Content styling
 .content h2{
     color: #000000;
     font-family: et-bembo;
-    font-size: 50px;
+    font-size: 1.8em;
     letter-spacing: 1.5px;
     text-align: center;
     background-color: #E26A2C05;
@@ -588,7 +620,7 @@ Content styling
 .content h3{
     color: #000000;
     font-family: et-bembo;
-    font-size: 45px;
+    font-size: 1.6em;
     letter-spacing: 1.5px;
     text-align: center;
     background-color: #E26A2C05;
@@ -596,7 +628,7 @@ Content styling
 .content h4{
     color: #000000;
     font-family: et-bembo;
-    font-size: 40px;
+    font-size: 1.5em;
     letter-spacing: 1.5px;
     text-align: center;
     background-color: #E26A2C05;
@@ -604,7 +636,7 @@ Content styling
 .content h5{
     color: #000000;
     font-family: et-bembo;
-    font-size: 35px;
+    font-size: 1.3px;
     letter-spacing: 1.5px;
     text-align: center;
     background-color: #E26A2C05;
@@ -630,11 +662,15 @@ Content styling
     list-style: url(/refs/egg_black_black.svg);
 }
 .content pre{
-    background-color: #0D1117 !important;
+    background-color: #00493d00 !important;
     padding: 10px;
     border-radius: 10px;
     border: solid 2px silver;
     font-size: 15px;
+}
+.content code{
+    font-family: jetbrains mono;
+    color: black;
 }
 /* .content code{
     padding: 10px;
@@ -861,9 +897,7 @@ Content styling
     /* border-top: solid 1px black;
     border-bottom: solid 1px black; */
 }
-.list-tags{
-    text-align: center;
-}
+
 @media screen and (max-width: 450px) {
     .sidenav {padding-top: 9px;
                 display: none;
@@ -882,6 +916,12 @@ Content styling
         border-radius: 5px;
         margin-top: 8px;
         margin-bottom: 8px;
+    }
+    .single-title a.literal-title{
+        font-size: 2.3em;
+    }
+    .single-title p.description {
+        font-size: 1.6em;
     }
     #progressbar{
         height: 4px;
