@@ -1,5 +1,43 @@
 {{ define "main"}}
-<section class="post-list">
+{{- partial "list-sidebar.html" . -}}
+
+<div class="main">
+    <div class="container">
+        {{ range .Paginator.Pages }}
+            <div class="row m-2 list-box">
+                <article>
+                    <a href="{{ .Permalink }}" class="post-box">
+                        <div class="thumb">
+                            <picture>
+                                <img src="{{ .Params.image }}" alt="">
+                            </picture>
+                        </div>
+                        <div class="inner">
+                            <p class="list-title">{{ .Title }}</p>
+                            <p class="list-description">
+                                {{ .Params.description }}
+                            </p>
+                            <p class="time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
+                            <!-- {{- partial "list-tags.html" . -}} -->
+                        </div>
+                    </a>
+                </article>
+                <div class="list-tags">
+                    <span>
+                        {{ range (.GetTerms "tags" ) }}
+                            <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
+                        {{ end }}
+                    </span>
+                </div>
+                <hr style="border-top: 2px dashed black; background-color: #fff;margin-top: 10px;">
+            </div>
+        {{end}}
+    </div>
+    {{- partial "list/paginator" . -}}
+</div>
+
+
+<!-- <section class="post-list">
     {{ range .Paginator.Pages }}
     <article class="single-post  mt-5 mb-5">
         <div class="box">
@@ -8,7 +46,7 @@
             </div>
             <hr size="5" class="listline">
             <div class="start">
-                <a href="{{ .Permalink }}"><img src="{{ .Params.thumbnail }}"></a>  
+                <a href="{{ .Permalink }}"><img src="{{ .Params.image }}"></a>  
                 <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}{{ range (.GetTerms "tags" ) }}
                     <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
                 {{ end }}</span>
@@ -31,5 +69,6 @@
     {{end}}
     {{- partial "list/paginator" . -}}
     
-</section>
+</section> -->
+
 {{ end }}

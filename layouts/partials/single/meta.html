@@ -1,35 +1,8 @@
-<img class="thumb" src="{{ .Params.thumbnail }}">
-<a href="/posts/" class="entry-title">
-{{ .Title }}
-</a>
-<div class="post-meta">
-    <div class="post-author">
-        {{ .Params.Author }}
-    </div>
-    <div>
-        <span class="time">
-            <a href="/tags/" class="keyword">Tag</a>
-        </span>
-        <span class="post-tags">
-            {{ range (.GetTerms "tags" ) }}
-                <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
-            {{ end }}
-        </span>
-    </div>
-    <div>
-        <span class="time">
-            <a href="/categories/" class="keyword">categories</a>
-        </span>
-        <span class="post-tags">
-            {{ range (.GetTerms "categories" ) }}
-                    <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
-            {{ end }}
-        </span>
-    </div>
-    <time class="post-date">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+<!-- <a href="/posts/"><img class="thumb" name="thumbnail" src="{{ with .Params.image }}{{ . }}{{ end }}" ></a>
+
+
+ -->
+
+
     
-    <div class="desc_box">
-        <h3>Introduction</h3>
-        <p>{{ .Description }}</p>
-    </div>
-</div>
+

@@ -1,12 +1,12 @@
 {{ define "main" }}
-<div class="single">
-    <div id="progressbar"></div>
-    {{- partial "single/toc" . -}}
-    <article class="s main">
-        {{- partial "single/meta" . -}}
-        <div class="content">
-                {{ .Content }}
-        </div>
-    </article>
-</div>
+{{- partial "single/title.html" . -}}
+{{- partial "single/single-sidebar.html" . -}}
+<div id="progressbar"></div>
+<article class="main">
+    <div class="content">
+        {{ .Content }}
+    </div>
+        
+</article>
+
 {{ end }}

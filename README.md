@@ -12,3 +12,16 @@ Thing to do,
 - [ ] about/author page
 - [ ] my Portfolio in author page
 - [ ] Blog
+
+
+
+## shortcodes
+
+### intitial
+This will do first letter bigger
+
+### intresting
+same as md's '>' but some css. Out of the box '>' not working in hugo, so i made this shortcode.
+
+### time
+*not working*

@@ -1,0 +1,18 @@
+<div class="single-title">
+    <a href="/posts/" class="literal-title">{{ .Title }}</a>
+    <p class="description">this is discription kljdf sl jk dk fsd flkjs hdfj kljh is ldkf jkl asjdf lkf jsl dk ffjl kasjd fkl j alk.</p>
+    <div class="single-tags">
+        <a href="/tags/" class="keyword">Tag</a>
+        {{ range (.GetTerms "tags" ) }}
+            <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
+        {{ end }}
+    </div>
+    <div class="post-tags">
+        <a href="/categories/" class="keyword">categories</a>
+        {{ range (.GetTerms "categories" ) }}
+                <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
+        {{ end }}
+    </div>
+    <hr class="single-hr">
+    <time class="single-time">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+</div>

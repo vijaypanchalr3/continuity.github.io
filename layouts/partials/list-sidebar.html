@@ -1,0 +1,27 @@
+<div class="rsidebar">
+    <div class="sidebox">
+        <p class="stitles">Tags</p>
+        <ul class="cloud">
+            {{ range $.Site.Taxonomies.tags.ByCount }}
+            {{ if gt .Count 1 }}
+              <li class="tags_count">
+                <a href="/tags/{{ .Name }}" data-weight="{{ .Count }}"> {{ .Name }} <small id="tags_size">({{ .Count }})</small></a>
+              </li>
+            {{ end }}
+            {{end}}
+        </ul>
+    </div>
+    <div class="sidebox">
+        <p class="stitles">categories</p>
+        <ul class="cloud">
+            {{ range $.Site.Taxonomies.categories.ByCount }}
+            {{ if gt .Count 1 }}
+              <li class="tags_count">
+                <a href="/categories/{{ .Name }}" data-weight="{{ .Count }}"> {{ .Name }} <small id="tags_size">({{ .Count }})</small></a>
+              </li>
+            {{ end }}
+            {{end}}
+        </ul>
+    </div>
+    
+</div>

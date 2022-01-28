@@ -7,6 +7,7 @@
     <title>{{ .Title }}</title>
     <link rel="stylesheet" href="/css/bs/bootstrap.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/single.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -17,7 +18,7 @@
 <body>
     {{- partial "header/index" . -}}
     <main class="site-main">
-        <div class="container-fluid">{{ block "main" . }}{{ end }}</div>
+        <div>{{ block "main" . }}{{ end }}</div>
     </main>
     <footer id="site-footer">
         <div class="copyright text-center">
@@ -26,5 +27,6 @@
     </footer>
     <script src="/js/bs/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/wordcloud2.js"></script>
 </body>
 </html>
