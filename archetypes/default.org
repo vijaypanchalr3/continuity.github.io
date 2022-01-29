@@ -5,6 +5,7 @@
 #+draft: true
 #+tag[]:
 #+image:/images/
+#+description: 
 
 {{< initial >}}
 

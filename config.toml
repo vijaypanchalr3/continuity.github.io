@@ -3,6 +3,7 @@ languageCode= "en-us"
 title = "continuity"
 paginate = 7
 summaryLength= 20
+autonumbering=true
 [params]
 dateFormat = "03:04PM, Jan 2, 2006 "
 [taxonomies]

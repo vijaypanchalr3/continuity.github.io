@@ -5,6 +5,7 @@
 #+draft: false
 #+tags[]: linux, emacs, org, hello, fine, new
 #+image: /images/example/thumbnail.png
+#+autonumbering: true
 {{< initial >}}
 This is my new function.
 thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklfj This is my new function.
@@ -19,7 +20,6 @@ jdfj jdhfjhsfjd hsfj sjfhjsfd fhjshjkfasjdfasjkd fkdsfjf sjad
 * hello this is my first
 ** it's second
 *** welcome to third
-**** it's fourth
 #+begin_src python
 import numpy as np
 
@@ -27,10 +27,15 @@ x = np.arange(1,1000,0.01)
 
 print(x)
 #+end_src
-{{< toc >}}
+**** yes this is that bloh
 
 #+begin_src python
 hugo = 45
+
+
+**** yes i'm alive
+
+
 hugo +=1
 
 print(hugo)

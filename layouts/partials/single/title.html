@@ -1,6 +1,6 @@
 <div class="single-title">
     <a href="/posts/" class="literal-title">{{ .Title }}</a>
-    <p class="description">this is discription kljdf sl jk dk fsd flkjs hdfj kljh is ldkf jkl asjdf lkf jsl dk ffjl kasjd fkl j alk.</p>
+    <p class="description">{{ .Params.description }}</p>
     <div class="post-tags">
         <a href="/tags/" class="keyword">Tag</a>
         {{ range (.GetTerms "tags" ) }}
