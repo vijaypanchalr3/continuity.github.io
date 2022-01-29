@@ -114,7 +114,7 @@
     src: local('old'), url('/fonts/CloisterBlack.ttf');
 }
 *{
-    font-family: slabo;
+    font-family: 'Times New Roman', Times, serif;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
 }
@@ -895,7 +895,7 @@ border-bottom: solid 1px black; */
         padding: 0;
     }
     #progressbar{
-        height: 2px;
+        height: 4px;
     }
     .sidenav-tab-button{
         display: block;
