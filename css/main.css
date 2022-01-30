@@ -398,8 +398,10 @@ h6{font-size: var(--fs-h6);}
     text-align: right;
     box-shadow: var(--material-light-shadow);
 }
-.section-titles strong{
+.home-about .section-titles strong{
     display: block;
+    font-family: var(--ff-cursive);
+    line-height: 1.8em;
 }
 .section-subtitles a{
     text-decoration: none;
@@ -480,12 +482,13 @@ h6{font-size: var(--fs-h6);}
 /* resume */
 .resume .section-titles{
     color: var(--color-manjaro);
+    margin-top: 1em;
     margin-bottom: 2em;
 }
 
 .resume-page{
     box-shadow: var(--material-light-shadow);
-    padding: 20px;
+    padding: 1em;
 }
 .resume-page-header{
     display: flex;
@@ -558,7 +561,7 @@ h6{font-size: var(--fs-h6);}
 }
 @media screen and (max-width: 450px) {
     .home-about{
-        margin: 1em 0;
+        margin: 4em 0;
         column-gap: 0;
     }
     .resume-page-header{
@@ -849,7 +852,34 @@ ul.cloud a[data-weight="9"] { --size: 9;background-color: #102e1f; } */
     color:var(--color-dark-grey)
 }
 
+.page-toc{
+    background-color: white;
+    display: none;
+    border-radius: 0.2em;
+    box-shadow: var(--material-light-shadow);
+    overflow-x:scroll;
+}
 
+
+.page-toc h2{
+    color: var(--color-manjaro);
+    margin: 10px 0;
+    text-align: center;
+}
+.page-toc ul{
+    list-style: decimal;
+    margin-left: 1em;
+    border-left: solid 1px var(--color-light-grey);
+    color: var(--color-dark-grey);
+}
+.page-toc ul li{
+    font-family: var(--ff-main);
+    font-size: var(--fs-main);
+    
+}
+.page-toc ul li a{
+    color: var(--color-dark-grey);
+}
 .content{
     text-align: justify;
     font-size: 1.1em;
@@ -962,7 +992,7 @@ ul.cloud a[data-weight="9"] { --size: 9;background-color: #102e1f; } */
     color: var(--color-fg);
     font-family: old;
     background-color: var(--color-light-grey);
-    box-shadow: var(--material-light-shadow-strong);
+    box-shadow: var(--material-light-shadow);
     margin-right: 8px;
 
 }
@@ -971,6 +1001,9 @@ ul.cloud a[data-weight="9"] { --size: 9;background-color: #102e1f; } */
     .content-area{
         width: 100%;
         padding: 20px;
+    }
+    .page-toc{
+        display: block;
     }
 }
 
@@ -1066,26 +1099,7 @@ border-bottom: solid 1px black; */
     color: #4d3938;
 }
 
-.page-toc{
-    border-radius: 10px;
-    background-image: linear-gradient(-45deg, #f5f7fa 0%, var(--color10) 100%);
-    padding: 20px;
-    margin-bottom: 30px;
-    margin-top: 10px;
-    width: 100%;
-    position: relative;
-    left: var(--tocleft);
-    overflow-x: hidden;
-}
 
-
-.page-toc h3{
-    font-family: old;
-    color: #1A7DAB;
-    font-size: 40px;
-    margin: 0;
-    text-align: center;
-}
   
 /* 
 Content styling
