@@ -1,73 +1,28 @@
 {{ define "main"}}
-{{- partial "list-sidebar.html" . -}}
-
-<div class="main list-main">
-    <div class="container list-bag">
-        {{ range .Paginator.Pages }}
-            <div class="row m-2 list-box">
-                <article>
-                    <a href="{{ .Permalink }}" class="post-box">
-                        <div class="thumb">
-                            <picture>
-                                <img src="{{ .Params.image }}" alt="">
-                            </picture>
-                        </div>
-                        <div class="inner">
-                            <p class="list-title">{{ .Title }}</p>
-                            <p class="list-description">
-                                {{ .Params.description }}
-                            </p>
-                            <p class="time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
-                            <!-- {{- partial "list-tags.html" . -}} -->
-                        </div>
-                    </a>
+<div class="main-area">
+    <div class="mainboxes">
+        {{ range .Paginator.Pages.ByDate.Reverse }}
+            <a href="{{ .Permalink }}" class="recent-post-card">
+                <article class="mainbox">
+                    <h1 class="mainbox-title">{{ .Title }}</h1>
+                    <div class="mainbox-img">
+                        <picture>
+                            <img src="{{ .Params.image }}" alt="">
+                        </picture>
+                    </div>
+                    <div class="mainbox-description">
+                        
+                        <p class="literal-description">
+                        {{ .Params.description }}
+                        </p>
+                        <p class="time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
+                    </div>
                 </article>
-                <div class="list-tags">
-                    <span>
-                        {{ range (.GetTerms "tags" ) }}
-                            <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
-                        {{ end }}
-                    </span>
-                </div>
-            </div>
-        {{end}}
+            </a>
+        {{ end }}
+    {{- partial "list/paginator" . -}}
     </div>
-    {{- partial "list/paginator" . -}}
+    {{- partial "list-sidebar.html" . -}}
 </div>
-
-
-<!-- <section class="post-list">
-    {{ range .Paginator.Pages }}
-    <article class="single-post  mt-5 mb-5">
-        <div class="box">
-            <div class="list-title">
-                <a href="{{ .Permalink }}" class="list-title">{{ .Title }}</a> 
-            </div>
-            <hr size="5" class="listline">
-            <div class="start">
-                <a href="{{ .Permalink }}"><img src="{{ .Params.image }}"></a>  
-                <span class="post-date"><time>{{ dateFormat .Site.Params.dateFormat .Date }}</time>{{ .Params.Author }}{{ range (.GetTerms "tags" ) }}
-                    <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
-                {{ end }}</span>
-                <div class="summarycontent">
-                    {{ .Summary }}<a href="{{ .Permalink }}">Read more</a>
-                </div>
-                <div class="hello">
-                    <span class="time">
-                        <a href="#" class="keyword">category</a>
-                    </span>     
-                    <span class="post-tags">
-                        {{ range (.GetTerms "categories" ) }}
-                            <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
-                        {{ end }}
-                    </span>
-                </div>
-            </div>
-        </div>
-    </article>
-    {{end}}
-    {{- partial "list/paginator" . -}}
-    
-</section> -->
-
+<time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
 {{ end }}

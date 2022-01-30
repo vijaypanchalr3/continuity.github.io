@@ -1,12 +1,19 @@
 {{ define "main" }}
-{{- partial "single/title.html" . -}}
-{{- partial "single/single-sidebar.html" . -}}
+<button class="goto-top">
+    <a href="#"><span class="material-icons">
+        expand_less
+        </span></a>
+</button>
 <div id="progressbar"></div>
-<article class="main">
-    <div class="content" autonumering>
-        {{ .Content }}
-    </div>
-        
-</article>
+{{- partial "single/title.html" . -}}
+<div class="content-area">
+    <article>
+        <div class="content">
+            {{ .Content }}
+        </div>
+            
+    </article>
+    <!-- {{- partial "single/single-sidebar.html" . -}} -->
+</div>
 
 {{ end }}
