@@ -8,6 +8,10 @@
 {{- partial "single/title.html" . -}}
 <div class="content-area">
     <article>
+        <div class="page-toc">
+            <h2>Table Of contents</h2>
+            {{ .Page.TableOfContents }}
+        </div>
         <div class="content">
             {{ .Content }}
         </div>
