@@ -1,97 +1,165 @@
 <!doctype html><html lang=en>
 <head>
-<meta name=generator content="Hugo 0.92.1">
-<meta charset=utf-8>
+<meta name=generator content="Hugo 0.92.1"><meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <title>continuity</title>
-<link rel=stylesheet href=/css/main.css>
 <link rel=stylesheet href=/css/bs/bootstrap.min.css>
+<link rel=stylesheet href=/css/main.css>
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
 <link rel=manifest href=/site.webmanifest>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel=stylesheet>
-</head>
+<link rel=preload as=font href=/nfonts/Lora-VariableFont_wght.ttf type=font/ttf crossorigin=anonymous>
+<link rel=preload as=font href=/nfonts/PlayfairDisplay-VariableFont_wght.ttf type=font/ttf crossorigin=anonymous>
+<link rel=preload as=font href=/nfonts/Lora-Italic-VariableFont_wght.ttf type=font/ttf crossorigin=anonymous>
+<link rel=preload as=font href=/nfonts/HomemadeApple-Regular.ttf type=font/ttf crossorigin=anonymous></head>
 <body>
-<div class=home-ani>
-<div class=hcontainer>
-<div class=section>
-<div class=li-items><div class=home-content>
-<img src=/refs/logo.svg alt>
-<h1>Continuity</h1>
-<h1 class="material-icons md-48">expand_circle_down</h1>
-</div></div>
+<button class=goto-top>
+<a href=#><span class=material-icons>
+expand_less
+</span></a>
+</button>
+<header class=home-header>
+<div class=home-logo>
+<span class=home-logo-image>
+<img src=/refs/logo.svg alt=continuity>
+</span>
+<span class=home-logo-name>
+<p>continuity</p>
+</span>
 </div>
-<div class=section>
-<div class=li-items><span class="material-icons md-48">reorder</span>
-<ul class=hnav>
-<li><a href=/><span class="material-icons md-32">home</span><span>Home</span></a></li>
-<li><a href=/posts/><span class="material-icons md-32">explore</span><span>Explore</span></a></li>
-<li><a href=/About.md><span class="material-icons md-32">account_box</span><span>About</span></a></li>
-<li><button class="material-icons md-32 margin_down">expand_circle_down</button></li>
-</ul></div>
-<div class=section>
-<div class=li-items><div class=container>
-<div class=home>
-<div class=home-box>
+<button class=nav-toggle aria-label="toggle navigation"><span class=menu></span></button>
+<nav class=home-nav>
+<ul class=home-nav-list>
+<li class=home-nav-item><a href=# class=home-nav-link>home</a></li>
+<li class=home-nav-item><a href=#recent class=home-nav-link>My recent blogs</a></li>
+<li class=home-nav-item><a href=#resume class=home-nav-link>Resume</a></li>
+<li class=home-nav-item><a href=/posts/ class=home-nav-link>All blogs</a></li>
+</ul>
+</nav>
+</header>
+<section class=home-about>
+<h1 class=section-titles>Hello, from <strong>Vijay Panchal</strong></h1>
+<p class=section-subtitles>I am a physics student and this is my personal site. <a href=#>This is my resume page</a>.</p>
+</section>
+<section class=home-recents id=recent>
+<h1 class="section-titles recent-title">Recents,</h1>
+<div class=recents-box>
+<div class=recent-post>
 <article>
-<a href=https://vijaypanchal.link/posts/hello/ class=home-post>
-<div class=thumb>
+<a href=https://vijaypanchal.link/posts/hello/ class=recent-post-card>
+<div>
 <picture>
 <img src=/images/example/thumbnail.png alt>
 </picture>
 </div>
-<div class=inner>
-<p class=list-title>This is blog from my emacs</p>
-<p class=list-description>
+<div class=post-inner>
+<p class=post-title>This is blog from my emacs</p>
+<p class=post-description>
 </p>
-<p class=time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
+<p class=post-time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
 </div>
 </a>
 </article>
 </div>
-<div class=home-box>
+<div class=recent-post>
 <article>
-<a href=https://vijaypanchal.link/posts/hello-copy-2/ class=home-post>
-<div class=thumb>
+<a href=https://vijaypanchal.link/posts/hello-copy-2/ class=recent-post-card>
+<div>
 <picture>
 <img src=/images/example/thumbnail.png alt>
 </picture>
 </div>
-<div class=inner>
-<p class=list-title>This is blog my emacs</p>
-<p class=list-description>
+<div class=post-inner>
+<p class=post-title>This is blog my emacs</p>
+<p class=post-description>
 </p>
-<p class=time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
+<p class=post-time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
 </div>
 </a>
 </article>
 </div>
-<div class=home-box>
+<div class=recent-post>
 <article>
-<a href=https://vijaypanchal.link/posts/hello-copy/ class=home-post>
-<div class=thumb>
+<a href=https://vijaypanchal.link/posts/hello-copy/ class=recent-post-card>
+<div>
 <picture>
 <img src=/images/example/thumbnail.png alt>
 </picture>
 </div>
-<div class=inner>
-<p class=list-title>This is blog my emacs</p>
-<p class=list-description>
+<div class=post-inner>
+<p class=post-title>This is blog my emacs</p>
+<p class=post-description>
 hello this is description of m first blog. it's not quite great but hey blog is not quite great either.
 </p>
-<p class=time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
+<p class=post-time>by Vijay Panchal on <time>12:00AM, Jan 2, 2022 </time></p>
+</div>
+</a>
+</article>
+</div>
+<div class=recent-post>
+<article>
+<a href=https://vijaypanchal.link/posts/hello2/ class=recent-post-card>
+<div>
+<picture>
+<img src alt>
+</picture>
+</div>
+<div class=post-inner>
+<p class=post-title>Hello</p>
+<p class=post-description>
+</p>
+<p class=post-time>by Vijay Panchal on <time>04:22PM, Jan 1, 2022 </time></p>
 </div>
 </a>
 </article>
 </div>
 </div>
-</div></div>
+</div>
+</section>
+<section class=resume id=resume>
+<h1 class=section-titles>My resume, </h1>
+<div class=resume-page>
+<div class=resume-page-header>
+<picture>
+<img src=/refs/profile.png alt class=profile>
+</picture>
+<div class=important-data>
+<h4 class=name>Name <strong>Panchal vijaykumar rameshbhai</strong></h4>
+<p class=section-subtitles>A Physics student</p>
+<p class=personal-info>
+<strong>Email</strong> vijayrameshpanchal@gmail.com
+</p>
+</div>
+</div>
+<div class=resume-main>
+<div class=resume-main-box>
+<h2 class=section-titles>Education</h2>
+<ul class=info>
+<li>B.Sc. <strong>M. G. Science institute, Ahmedabad</strong></li>
+<li>11 & 12 <strong>M. B. karnavat high school, palanpur</strong></li>
+</ul>
+</div>
+<div class=resume-main-box>
+<h2 class=section-titles>Skills</h2>
+<ul class=info>
+<li>Physics of the bachelor level</li>
+<li>maths of Physics</li>
+<li>English fluent</li>
+<li>gdddd</li>
+</ul>
+</div>
+<div class=resume-main-box>
+<h2 class=section-titles>Achivements</h2>
+<ul class=info>
+<li>none</li>
+</ul>
 </div>
 </div>
 </div>
-</div>
-<script src=/js/bs/main.js></script>
+</section>
+<script src=/js/main.js></script>
 </body>
 </html>

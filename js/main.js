@@ -23,7 +23,8 @@ let scrollper = () => {
   docbody = document.docbody,
   scrolltop = docEl['scrollTop'] || docbody['scrollTop'],
   scrollbot = (docEl['scrollHeight'] || docbody['scrollHeight'])- window.innerHeight,
-  scrollpercent = scrolltop / scrollbot * 100 + '%';
+  scrollamount = scrolltop / scrollbot
+  scrollpercent = scrollamount * 100 + '%';
   // divElement = document.getElementById('page_toc');
   // elemHeight = divElement.offsetHeight;
   // elemupHeight = divElement.offsetTop;
@@ -32,7 +33,22 @@ let scrollper = () => {
   // } else {
   //   document.getElementById('navbar').classList.remove("none");
   // }
+  if (scrollamount > 0.1) {
+    document.querySelector('.goto-top').classList.add('none')
+  } else {document.querySelector('.goto-top').classList.remove('none')}
   document.getElementById('progressbar').style.setProperty('--scrollamount',scrollpercent);
 }
 
 document.addEventListener('scroll',scrollper);
+
+const navtoggle = document.querySelector('.nav-toggle');
+const navlinks = document.querySelectorAll('.home-nav-link');
+navtoggle.addEventListener('click', ()=> {
+  document.body.classList.toggle('nav-open')
+})
+navlinks.forEach(link => {
+  link.addEventListener('click',() => {
+    document.body.classList.remove('nav-open');
+  })
+})
+
