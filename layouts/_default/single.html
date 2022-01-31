@@ -1,22 +1,50 @@
 {{ define "main" }}
-<button class="goto-top">
-    <a href="#"><span class="material-icons">
-        expand_less
-        </span></a>
-</button>
+
+<a href="#" class="goto-top"><span class="material-icons">
+    expand_less
+    </span>
+</a>
 <div id="progressbar"></div>
 {{- partial "single/title.html" . -}}
 <div class="content-area">
-    <article>
+    <article class="article-area">
         <div class="page-toc">
-            <h2>Table Of contents</h2>
-            {{ .Page.TableOfContents }}
+            <h2 class="page-toc-title">Table Of contents</h2>
+            <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
         </div>
+        
         <div class="content">
             {{ .Content }}
         </div>
-            
     </article>
+    <div class="extra-area">
+        <div class="desktop-page-toc">
+            <h2 class="page-toc-title">Table Of contents</h2>
+            <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
+        </div>
+        <div class="sidenav-box">
+            <h2 class="page-toc-title">Tags</h2>
+            {{ range $.Site.Taxonomies.tags.ByCount }}
+            {{ if gt .Count 1 }}
+                <button type="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
+                    <span class="badge single-badge">{{ .Count }}</span>
+                </button>
+            {{ end }}
+            {{end}}
+        </div>
+        <div class="sidenav-box m-bs bg mt-5">
+            <h2 class="page-toc-title">categories</h2>
+            <ul class="categories-area">
+              {{ range $.Site.Taxonomies.categories.ByCount }}
+                {{ if gt .Count 1 }}
+                  <li class="single-category">
+                    <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
+                  </li>
+                {{ end }}
+              {{end}}
+            </ul>
+        </div>
+    </div>
     <!-- {{- partial "single/single-sidebar.html" . -}} -->
 </div>
 

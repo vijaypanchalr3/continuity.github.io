@@ -1,7 +1,7 @@
 ﻿#+title: This is blog from my emacs
 #+author: Vijay Panchal
 #+date: <2022-01-02 Sun>
-#+categories[]: linux
+#+categories[]: emacs
 #+draft: false
 #+tags[]: linux, emacs, org, hello, fine, new
 #+image: /images/example/thumbnail.png

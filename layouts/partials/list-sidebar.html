@@ -1,26 +1,26 @@
 <div class="sidenav">
-    <div class="sidenav-box">
-        <p class="section-subtitles">Tags</p>
-        <ul class="cloud">
-            {{ range $.Site.Taxonomies.tags.ByCount }}
+    <div class="sidenav-box bg m-bs">
+        <p class="section-subtitles" style="border-radius: 0.2em 0.2em 0 0;">Tags</p>
+        <div class="tag-area">
+          {{ range $.Site.Taxonomies.tags.ByCount }}
             {{ if gt .Count 1 }}
-              <li>
-                <a href="/tags/{{ .Name }}" data-weight="{{ .Count }}"> {{ .Name }} <small id="tags_size">({{ .Count }})</small></a>
-              </li>
+                <button type="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
+                    <span class="badge single-badge">{{ .Count }}</span>
+                </button>
             {{ end }}
-            {{end}}
-        </ul>
+          {{end}}
+        </div>
     </div>
-    <div class="sidenav-box">
-        <p class="section-subtitles">categories</p>
-        <ul class="cloud">
-            {{ range $.Site.Taxonomies.categories.ByCount }}
+    <div class="sidenav-box bg m-bs">
+        <p class="section-subtitles" style="border-radius: 0.2em 0.2em 0 0;">categories</p>
+        <ul class="categories-area">
+          {{ range $.Site.Taxonomies.categories.ByCount }}
             {{ if gt .Count 1 }}
-              <li class="tags_count">
-                <a href="/categories/{{ .Name }}" data-weight="{{ .Count }}"> {{ .Name }} <small id="tags_size">({{ .Count }})</small></a>
+              <li class="single-category">
+                <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
               </li>
             {{ end }}
-            {{end}}
+          {{end}}
         </ul>
     </div>
     

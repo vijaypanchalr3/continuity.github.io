@@ -1,12 +1,11 @@
 <div class="single-title">
     <a href="/posts/" class="literal-title">{{ .Title }}</a>
     <p class="description">{{ .Params.description }}</p>
-    <div class="post-tags">
-        <a href="/tags/" class="keyword">Tag</a>
-        {{ range (.GetTerms "tags" ) }}
-            <a href="{{ .Permalink }}" class="badge bg-dark tag_shadow">{{ .LinkTitle}}</a>
-        {{ end }}
-    </div>
+    
+    <div class="post-tags"><span class="material-icons me-md-3">local_offer</span>
+        <span>{{ range (.GetTerms "tags" ) }}
+            <a href="{{ .Permalink }}" class="tag m-bs bg">{{ .LinkTitle}}</a>
+        {{ end }}</span></div>
     <!-- <div class="post-tags">
         <a href="/categories/" class="keyword">categories</a>
         {{ range (.GetTerms "categories" ) }}

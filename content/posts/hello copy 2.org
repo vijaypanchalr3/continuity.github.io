@@ -1,6 +1,6 @@
 ﻿#+title: This is blog my emacs
 #+author: Vijay Panchal
-#+date: <2022-01-02 Sun>
+#+date: <2022-01-30>
 #+categories[]: linux
 #+draft: false
 #+tags[]: fine
@@ -32,11 +32,15 @@ print(x)
 #+begin_src python
 hugo = 45
 hugo +=1
-
+hdshhjds fhjdshfjhsdjf hasjfhjkashkj hs dk
 print(hugo)
 #+end_src
 
 This is my new function.
+
+
+[[/refs/profile.png][]]
+
 thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklfj This is my new function.
 thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklfj This is my new function.
 thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklfj This is my new function.

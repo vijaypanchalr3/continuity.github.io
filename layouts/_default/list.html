@@ -20,9 +20,8 @@
                 </article>
             </a>
         {{ end }}
-    {{- partial "list/paginator" . -}}
     </div>
     {{- partial "list-sidebar.html" . -}}
+    {{ template "_internal/pagination.html" . }}
 </div>
-<time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
 {{ end }}
