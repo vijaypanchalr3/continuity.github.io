@@ -167,7 +167,7 @@
     --color-dark-grey: #4A5258;
     --color-light-grey: #E2E1E0;
     --color-manjaro: #00bd7e;
-
+    --br: 0.2em;
     --ff-title: playfair;
     --ff-main: 'Times New Roman', Times, serif;
     --ff-descriptive: lora;
@@ -219,7 +219,14 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 
 .bg{background-color: var(--color-bg);}
 .m-bs{box-shadow: var(--material-light-shadow);}
-
+.bg-grey-checks{
+    background-image: url(/refs/grey-checks.png);
+    background: repeat();
+}
+.bg-dark-checks{
+    background-image: url(/refs/dark-checks.png);
+    background: repeat();}
+.br{border-radius: var(--br);}
 /*-------------------------------------------------------------------- 
           ----
         -- ---
@@ -272,6 +279,31 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 .none{
     display: block;
 }
+
+/* footer first :) */
+.social-links{
+    width: 300px;
+    margin: 0em auto;
+    padding: 1em 0;
+}
+.social-links ul{
+    display: flex;
+    margin-right: 1em;
+
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+}
+.social-links i{
+    color: var(--color-manjaro);
+    font-size: 2em;
+}
+.copyright{
+    text-align: center;
+    font-size: 1em;
+    color: var(--color-bg);
+}
+
 .home-header{
     display: flex;
     justify-content: space-between;
@@ -498,6 +530,35 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     transform: translateY(-5px);
 }
 
+/* reated page */
+.related{
+    margin: 1em;
+}
+.related h2{
+    text-align: left;
+}
+.related ul{
+    list-style: none;
+    font-family: var(--ff-title);
+    font-size: var(--fs-h5);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    padding: 1em;
+    grid-gap: 0.3em;
+}
+.related li{
+    padding: 2px;
+    text-align: center;
+    transition: var(--material-transition);
+}
+.related li:hover{
+    transform: translateY(-5px);
+    box-shadow: var(--material-light-shadow-hover);
+
+}
+.related li a{
+    color: var(--color-fg);
+}
 
 /* resume */
 .resume .section-titles{
@@ -632,7 +693,8 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 
 
 .sili{
-    background-color: var(--color-light-grey);
+    /* background-color: var(--color-light-grey); */
+    
 }
 .sili-header{
     box-shadow: var(--material-light-shadow);
@@ -1500,3 +1562,4 @@ Content styling
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+

@@ -1,4 +1,4 @@
-﻿#+title: This is blog my emacs
+﻿#+title: This is blog my emacs new new new 
 #+author: Vijay Panchal
 #+date: <2022-01-02 Sun>
 #+categories[]: emacs
@@ -16,7 +16,7 @@ thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklf
 {{< /initial >}}
 
 jdfj jdhfjhsfjd hsfj sjfhjsfd fhjshjkfasjdfasjkd fkdsfjf sjad
-** it's second
+* it's second
 just look this sdlf ljsdjfhsdjh jksdljsahdk jfh
 ** hello
 ** yes

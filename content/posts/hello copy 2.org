@@ -14,9 +14,8 @@ thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklf
 thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklfj 
 {{< /initial >}}
 
-** this is 
+* this is 
 jdfj jdhfjhsfjd hsfj sjfhjsfd fhjshjkfasjdfasjkd fkdsfjf sjad
-* hello this is my first
 ** it's second
 *** welcome to third
 **** it's fourth

@@ -33,7 +33,7 @@
             <!-- <p class="section-welcome">Welcome</p> -->
             <p class="section-subtitles">I am a physics student and this is my personal site named <strong>continuity.</strong> <a href="#resume">Check my resume page</a>.</p>
         </section>
-        <section class="home-recents" id="recent">
+        <section class="home-recents bg-grey-checks" id="recent">
             <h1 class="section-titles recent-title">Recents,</h1>
             <div class="recents-box">
                 {{ range ( where .Site.RegularPages "Type" "posts" | first 4 ) }}
@@ -51,7 +51,6 @@
                                         {{ .Params.description }}
                                     </p>
                                     <p class="post-time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
-                                    <!-- {{- partial "list-tags.html" . -}} -->
                                 </div>
                             </a>
                         </article>
@@ -101,6 +100,7 @@
                 </div>
             </div>
         </section>
+        {{- partial "footer" . -}}
     <script src="/js/main.js"></script>
 </body>
 </html>

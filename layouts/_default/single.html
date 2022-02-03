@@ -16,6 +16,7 @@
         <div class="content">
             {{ .Content }}
         </div>
+        {{ template "_internal/disqus.html" . }}
     </article>
     <div class="extra-area">
         <div class="desktop-page-toc">
@@ -26,9 +27,9 @@
             <h2 class="page-toc-title">Tags</h2>
             {{ range $.Site.Taxonomies.tags.ByCount }}
             {{ if gt .Count 1 }}
-                <button type="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
+                <a href="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
                     <span class="badge single-badge">{{ .Count }}</span>
-                </button>
+                </a>
             {{ end }}
             {{end}}
         </div>
@@ -44,8 +45,18 @@
               {{end}}
             </ul>
         </div>
-    </div>
-    <!-- {{- partial "single/single-sidebar.html" . -}} -->
 </div>
-
+</div>
+<div class="related bg m-bs">
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+    <h2 class="section-subtitles">See Also</h2>
+    <ul>
+        {{ range . }}
+        <li class="m-bs br"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
 {{ end }}
