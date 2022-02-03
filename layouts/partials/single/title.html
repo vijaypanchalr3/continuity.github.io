@@ -2,7 +2,7 @@
     <a href="/posts/" class="literal-title">{{ .Title }}</a>
     <p class="description">{{ .Params.description }}</p>
     
-    <div class="post-tags"><span class="material-icons me-md-3">local_offer</span>
+    <div class="post-tags"><i class="fas fa-tags"></i>
         <span>{{ range (.GetTerms "tags" ) }}
             <a href="{{ .Permalink }}" class="tag m-bs bg">{{ .LinkTitle}}</a>
         {{ end }}</span></div>

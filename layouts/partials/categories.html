@@ -1,0 +1,9 @@
+<ul class="categories-area">
+    {{ range $.Site.Taxonomies.categories.ByCount }}
+      {{ if gt .Count 1 }}
+        <li class="single-category">
+          <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
+        </li>
+      {{ end }}
+    {{end}}
+  </ul>

@@ -1,0 +1,12 @@
+<div class="related bg m-bs">
+    {{ $related := .Site.RegularPages.Related . | first 4 }}
+    {{ with $related }}
+    <h2 class="section-subtitles">See Also</h2>
+    <ul>
+        {{ range . }}
+        <li class="m-bs br"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>

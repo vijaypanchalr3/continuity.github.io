@@ -3,13 +3,9 @@
 <head>
     {{- partial "meta.html" . -}}
 </head>
-<body>
-    <button class="goto-top">
-        <a href="#"><span class="material-icons">
-            expand_less
-            </span></a>
-    </button>
-    <header class="home-header">
+<body class="bg-grey-checks">
+    <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
+    <header class="home-header bg">
         <div class="home-logo">
             <span class="home-logo-image">
                 <img src="/refs/logo.svg" alt="continuity">
@@ -28,38 +24,17 @@
             </ul>
         </nav>
     </header>
-        <section class="home-about">
+        <section class="home-about bg m-bs">
             <h1 class="section-titles">Hello, from <strong>Vijay Panchal</strong></h1>
             <!-- <p class="section-welcome">Welcome</p> -->
             <p class="section-subtitles">I am a physics student and this is my personal site named <strong>continuity.</strong> <a href="#resume">Check my resume page</a>.</p>
         </section>
         <section class="home-recents bg-grey-checks" id="recent">
             <h1 class="section-titles recent-title">Recents,</h1>
-            <div class="recents-box">
-                {{ range ( where .Site.RegularPages "Type" "posts" | first 4 ) }}
-                    <div class="recent-post">
-                        <article>
-                            <a href="{{ .Permalink }}" class="recent-post-card">
-                                <div>
-                                    <picture>
-                                        <img src="{{ .Params.image }}" alt="">
-                                    </picture>
-                                </div>
-                                <div class="post-inner">
-                                    <p class="post-title">{{ .Title }}</p>
-                                    <p class="post-description">
-                                        {{ .Params.description }}
-                                    </p>
-                                    <p class="post-time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
-                                </div>
-                            </a>
-                        </article>
-                    </div>
-                {{end}}
-            </div>
+            {{- partial "recents" . -}}
           </div>
         </section>
-        <section class="resume" id="resume">
+        <section class="resume bg m-bs" id="resume">
             <h1 class="section-titles">My resume, </h1>
             <div class="resume-page">
                 <div class="resume-page-header">

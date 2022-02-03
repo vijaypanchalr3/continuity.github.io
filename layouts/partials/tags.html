@@ -1,0 +1,9 @@
+<div class="tag-area">
+    {{ range $.Site.Taxonomies.tags.ByCount }}
+      {{ if gt .Count 1 }}
+          <a type="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
+              <span class="badge single-badge">{{ .Count }}</span>
+          </a>
+      {{ end }}
+    {{end}}
+  </div>

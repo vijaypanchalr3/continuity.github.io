@@ -1,27 +1,11 @@
 <div class="sidenav">
     <div class="sidenav-box bg m-bs">
         <p class="section-subtitles" style="border-radius: 0.2em 0.2em 0 0;">Tags</p>
-        <div class="tag-area">
-          {{ range $.Site.Taxonomies.tags.ByCount }}
-            {{ if gt .Count 1 }}
-                <button type="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
-                    <span class="badge single-badge">{{ .Count }}</span>
-                </button>
-            {{ end }}
-          {{end}}
-        </div>
+        {{- partial "tags" . -}}
     </div>
     <div class="sidenav-box bg m-bs">
         <p class="section-subtitles" style="border-radius: 0.2em 0.2em 0 0;">categories</p>
-        <ul class="categories-area">
-          {{ range $.Site.Taxonomies.categories.ByCount }}
-            {{ if gt .Count 1 }}
-              <li class="single-category">
-                <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
-              </li>
-            {{ end }}
-          {{end}}
-        </ul>
+        {{- partial "categories" . -}}
     </div>
     
 </div>

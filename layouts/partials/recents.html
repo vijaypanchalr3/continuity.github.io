@@ -1,0 +1,20 @@
+<div class="recents-box">
+    {{ range ( where .Site.RegularPages "Type" "posts" | first 4 ) }}
+        <a href="{{ .Permalink }}" class="recent-post-card bg br m-bs">
+            <article>
+                    <div>
+                        <picture>
+                            <img src="{{ .Params.image }}" alt="">
+                        </picture>
+                    </div>
+                    <div class="post-inner">
+                        <p class="post-title">{{ .Title }}</p>
+                        <p class="post-description">
+                            {{ .Params.description }}
+                        </p>
+                        <p class="post-time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
+                    </div>
+            </article>
+        </a>
+    {{end}}
+</div>
