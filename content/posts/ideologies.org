@@ -5,10 +5,10 @@
 #+categories[]: Philosophy
 #+draft: false
 #+tag[]: Ideologies Formal-systems
-#+image:/blogs/ideologies/thumbnail.png
-#+description: This is how ideologies effect us.
+#+image: /blogs/ideologies/thumbnail.png
+#+description: This is how ideologies effect us. thudh hhdfjjksdhfjhsd kjfdsjhfjksd. sdfkjkfh skjdhkjdhfhfkjhsdkjff jksdfhfj hsdf.
 
 [[/blogs/ideologies/thumbnail.png]]
 {{< initial >}}
-
+This is how ideologies effect us. thudh hhdfjjksdhfjhsd kjfdsjhfjksd. sdfkjkfh skjdhkjdhfhfkjhsdkjff jksdfhfj hsdf.
 {{< /initial >}}

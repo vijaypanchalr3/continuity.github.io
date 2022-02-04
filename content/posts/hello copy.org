@@ -4,7 +4,7 @@
 #+categories[]: emacs
 #+draft: false
 #+description: hello this is description of m first blog. it's not quite great but hey blog is not quite great either.
-#+tags[]: linux, emacs, org, fine, new, hello
+#+tags[]: Ideologies Formal-systems
 #+image: /images/example/thumbnail.png
 {{< initial >}}
 This is my new function.
