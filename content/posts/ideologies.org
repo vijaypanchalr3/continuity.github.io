@@ -1,14 +1,13 @@
-﻿
-#+title: Ideolgies effect 
+﻿#+title: Ideolgies effect 
 #+author: Vijay Panchal
 #+date: <2022-02-04 Fri>
 #+categories[]: Philosophy
-#+draft: false
-#+tag[]: Ideologies Formal-systems
+#+draft: true
+#+tag[]: ideologies formal-systems
 #+image: /blogs/ideologies/thumbnail.png
-#+description: This is how ideologies effect us. thudh hhdfjjksdhfjhsd kjfdsjhfjksd. sdfkjkfh skjdhkjdhfhfkjhsdkjff jksdfhfj hsdf.
+#+description: 
 
 [[/blogs/ideologies/thumbnail.png]]
 {{< initial >}}
-This is how ideologies effect us. thudh hhdfjjksdhfjhsd kjfdsjhfjksd. sdfkjkfh skjdhkjdhfhfkjhsdkjff jksdfhfj hsdf.
+
 {{< /initial >}}
