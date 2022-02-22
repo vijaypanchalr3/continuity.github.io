@@ -185,7 +185,7 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 .bg{background-color: var(--color-bg);}
 .m-bs{box-shadow: var(--material-light-shadow);}
 .bg-grey-checks{
-    background-image: url(/refs/grey-checks.png);
+    background-image: url(/refs/background-dots.png);
     background: repeat();
 }
 .bg-dark-checks{
@@ -389,7 +389,8 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 }
 .home-about{
     display: grid;
-    margin: 2.3em 2px 4em 2px;
+    padding-top: 6em;
+    margin: 2.3em 1em 4em 1em;
     grid-gap: 4em;
     grid-template-areas:
         'header header header'
@@ -605,6 +606,7 @@ padding-bottom: 1em;}
     .home-about{
         margin: 2.3em 2px 1em 2px;
         column-gap: 0;
+        padding-top: 2em;
     }
     .resume-page-header{
         display: block;
@@ -896,6 +898,7 @@ padding-bottom: 1em;}
     color: var(--color-manjaro);
     margin: 10px 0;
     text-align: center;
+    font-size: 1.5em;
 }
 .page-toc-content ul{
     list-style: decimal;
@@ -1487,3 +1490,49 @@ Content styling
     border-bottom-right-radius: 5px;
   }
 
+  /* this is space for shortcode */
+  .quote-box-outer{
+      border: 0;
+      box-shadow: var(--material-light-shadow);
+      background-color: var(--color-bg);
+      padding: 1em;
+  }
+
+
+  .quote-box-inner{
+      border: solid 1px var(--color-manjaro);
+      background-color: var(--color-bg);
+      font-family: var(--ff-cursive);
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      margin: auto;
+      text-align: justify;
+      position: relative;
+      width: 100%;
+      
+  }
+  .quote-box-inner::before,
+  .quote-box-inner::after{
+      content: ' ';
+      height: 1em;
+      width: 1em;
+      display: block;
+      background-color: var(--color-manjaro);
+      position: absolute;
+      overflow: hidden;
+  }
+  .quote-box-inner::before{top: -1em;left: -1em;}
+  .quote-box-inner::after{bottom: -1em;right: -1em;}
+  .quote-box-inner p{
+      font-family: var(--ff-title);
+      color: var(--color-dark-grey);
+      font-size: 1.4em;
+  }
+  .quote-box-inner cite{
+      text-align: right;
+      display: block;
+
+  }
+  
