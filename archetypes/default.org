@@ -3,7 +3,7 @@
 #+date:
 #+categories[]:
 #+draft: true
-#+tag[]:
+#+tags[]:
 #+image:/images/
 #+description: 
 

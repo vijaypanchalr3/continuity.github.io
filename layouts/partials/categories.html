@@ -1,6 +1,6 @@
 <ul class="categories-area">
     {{ range $.Site.Taxonomies.categories.ByCount }}
-      {{ if gt .Count 1 }}
+      {{ if gt .Count 0}}
         <li class="single-category">
           <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
         </li>

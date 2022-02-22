@@ -16,20 +16,6 @@ thuis k fksjkdfjkl jflkjklsdjfkl jasldfjlksajdf lkajsdkfl alksdfklsadjflkjasdklf
 {{< /initial >}}
 
 jdfj jdhfjhsfjd hsfj sjfhjsfd fhjshjkfasjdfasjkd fkdsfjf sjad
-* it's second
-just look this sdlf ljsdjfhsdjh jksdljsahdk jfh
-** hello
-** yes
-*** welcome to third
-**** it's fourth
-**** yes 
-** it's second
-** hello
-** yes
-*** welcome to third
-*** third
-**** it's fourth
-**** yes s
 #+begin_src python
 import numpy as np
 

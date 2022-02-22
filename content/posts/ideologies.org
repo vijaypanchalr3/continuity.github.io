@@ -3,7 +3,7 @@
 #+date: <2022-02-04 Fri>
 #+categories[]: Philosophy
 #+draft: true
-#+tag[]: ideologies formal-systems
+#+tags[]: ideologies formal-systems
 #+image: /blogs/ideologies/thumbnail.png
 #+description: 
 
@@ -11,3 +11,4 @@
 {{< initial >}}
 
 {{< /initial >}}
+ 
