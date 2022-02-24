@@ -1081,12 +1081,12 @@ padding-bottom: 1em;}
 }
 .initial::first-letter{
     float: left;
-    font-size: 5em;
-    padding: 10px;
+    font-size: 4em;
+    padding-top: 10px;
     color: var(--color-fg);
     font-family: old;
     background-color: var(--color-light-grey);
-    box-shadow: var(--material-light-shadow);
+    /* box-shadow: var(--material-light-shadow); */
     margin-right: 8px;
 
 }
