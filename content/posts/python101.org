@@ -5,6 +5,7 @@
 #+draft: false
 #+tags[]: Programming-languages 101
 #+image:/images/
+#+toc:false
 #+description: Introduction and starting of python's Introductory book. This book will available in chapter via blogs, after that i will upload it as pdf file.
 
 {{< initial >}}

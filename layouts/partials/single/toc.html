@@ -1,4 +1,6 @@
+{{if ne .Params.toc false}}
 <nav id="navbar" class="section-nav">
     <h4>Table of content</h4>
     {{ .TableOfContents }}
 </nav>
+{{end}}
