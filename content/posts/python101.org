@@ -8,7 +8,7 @@
 #+description: Introduction and starting of python's Introductory book. This book will available in chapter via blogs, after that i will upload it as pdf file.
 
 {{< initial >}}
-Python is well known *scripting language*. We will see more about scripting languages further. At a time of writing this python is available in /version 3.10/. You can download from official website of python [[https://www.python.org/downloads/]]. In this series, i'll go from simple installation to more subtle topics. My idea of audience will be of new students who wanna try python or a science students who starting to learn python or tinker who wanna automate daily stuff in python.
+Python is well known *scripting language*. We will see more about scripting languages further. At a time of writing this python is available in /version 3.10/. You can download from official website of [[https://www.python.org/downloads/][python]]. In this series, i'll go from simple installation to more subtle topics. My idea of audience will be of new students who wanna try python or a science students who starting to learn python or tinker who wanna automate daily stuff in python.
 {{< /initial >}}
 
 Python is a [[https://en.wikipedia.org/wiki/High-level_programming_language][high level programming language]], designed by Guido van rossum. It's main objective is code readability. First appeared in 1991, it is one of the leading languages in 2022. It is used in web developing, in data science and analysis, in scietific computing etc. It has reputation for being so slow than other high level programming languages like C, C++, java, Rust etc. Main reason is how it got executed.
