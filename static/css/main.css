@@ -305,7 +305,7 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     max-width: 100px;
 }
 .home-logo-name{
-    font-size: 3em;
+    font-size: 2em;
     margin-left: 1em;
 }
 .home-nav{
@@ -1618,5 +1618,5 @@ Content styling
       text-align: right;
       display: block;
 
-  }
+}
   

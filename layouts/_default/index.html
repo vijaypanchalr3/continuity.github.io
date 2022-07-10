@@ -5,37 +5,19 @@
 </head>
 <body class="bg-grey-checks">
     <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
-    <header class="home-header bg">
-        <div class="home-logo">
-            <span class="home-logo-image">
-                <img src="/refs/logo.svg" alt="continuity">
-            </span>
-            <span class="home-logo-name">
-                <p>continuity</p>
-            </span>
-        </div>
-        <button class="nav-toggle m-bs" aria-label="toggle navigation"><i class="fas fa-bars"></i></button>
-        <nav class="home-nav">
-            <ul class="home-nav-list">
-                <li class="home-nav-item"><a href="#" class="home-nav-link">home</a></li>
-                <li class="home-nav-item"><a href="#recent" class="home-nav-link">My recent blogs</a></li>
-                <li class="home-nav-item"><a href="/resume.html" class="home-nav-link">Resume</a></li>
-                <li class="home-nav-item"><a href="/posts/" class="home-nav-link">All blogs</a></li>
-            </ul>
-        </nav>
-    </header>
-        <section class="home-about bg m-bs">
-            <h1 class="section-titles">Hello, from <strong>Vijay Panchal</strong></h1>
-            <!-- <p class="section-welcome">Welcome</p> -->
-            <p class="section-subtitles">I am a physics student and this is my personal site named <strong>continuity.</strong><a href="/resume.html">Check my resume page</a>.</p>
-        </section>
-        <section class="home-recents bg-grey-checks" id="recent">
-            <h1 class="section-titles recent-title">Recents,</h1>
-            {{- partial "recents" . -}}
-          </div>
-        </section>
-        
-        {{- partial "footer" . -}}
+    {{- partial "header/index" . -}}
+    <section class="home-about bg m-bs">
+        <h1 class="section-titles">Hello, from <strong>Vijay Panchal</strong></h1>
+        <!-- <p class="section-welcome">Welcome</p> -->
+        <p class="section-subtitles">I am a physics student and this is my personal site named <strong>continuity.</strong><a href="/resume.html">Check my resume page</a>.</p>
+    </section>
+    <section class="home-recents bg-grey-checks" id="recent">
+        <h1 class="section-titles recent-title">Recents,</h1>
+        {{- partial "recents" . -}}
+      </div>
+    </section>    
+    {{- partial "footer" . -}}
     <script src="/js/main.js"></script>
+    <script src="/js/bs/bootstrap.min.js"></script>
 </body>
 </html>
