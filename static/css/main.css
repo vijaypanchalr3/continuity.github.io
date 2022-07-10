@@ -82,7 +82,7 @@
     font-family: 'handwriting';
     font-style: normal;
     font-weight: 400;
-    src: local('handwriting'), url('/nfonts/HomemadeApple-Regular.ttf');
+    src: local('handwriting'), url('/fonts/DancingScript-VariableFont_wght.ttf');
 }
 /* @font-face {
     font-family: 'roboto';
@@ -142,7 +142,7 @@
 :root {
     --color-bg: #ffffff;
     --color-fg: #000000;
-    --color-accent: #0097A7;
+    --color-accent: #004850;
     --color-dark-grey: #4A5258;
     --color-light-grey: #E2E1E0;
     --color-manjaro: #00bd7e;
@@ -150,7 +150,6 @@
     --ff-title: playfair;
     --ff-main: et-bembo;
     --ff-descriptive: lora;
-    --ff-et: et-bembo;
     --ff-mono: jetbrains mono;
     --ff-cursive: handwriting;
     --fs-h1: 4em;
@@ -330,7 +329,7 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 2em;
-    font-family: var(--ff-cursive);
+    font-family: var(--ff-descriptive);
     align-items: center;
     margin: 0;
     padding: 0;
@@ -873,7 +872,7 @@ padding-bottom: 1em;}
 .post-tags{
     display: flex;
     justify-content: start;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 .post-tags i{
     margin-right: 1em;
@@ -900,8 +899,9 @@ padding-bottom: 1em;}
 }
 .author a{
     text-align: start;
+    font-family: var(--ff-cursive);
     display: block;
-    font-size: larger;
+    font-size: 1.6em;
     margin-left: 10px;
     color: var(--color-manjaro);
 }
@@ -946,7 +946,7 @@ padding-bottom: 1em;}
 }
 .extra-area{
     padding: 0 1em;
-    margin-top: 3em;
+    /* margin-top: 3em; */
 }
 .page-toc,
 .desktop-page-toc{
@@ -1389,10 +1389,16 @@ Content styling
 .nav{
     text-align: center;}
 .sitedescription{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 1.6em;
+    font-family: var(--ff-cursive);
     text-decoration: none;
     color: rgba(0, 0, 0, 0.733);
+}
+.sitedesc::after{
+    content: " ";
+    height: 5px;
+    display: block;
+    background-color: var(--color-manjaro);
 }
 
 
@@ -1426,17 +1432,13 @@ Content styling
   .singleline{
     margin-bottom: 20px;
   }
-  .navline{
-    padding: 0;
-    margin-top: 2px;
-    background-color: #000000;
-    color: #000000;
-    margin-bottom: 2px;
-    border: solid 2px black;
-    border-radius: 10px;
-  
-  }
-  .box{
+/* .sitedescription{
+    font-style: var(--ff-cursive);
+    color: var(--color-manjaro);
+
+
+} */
+.box{
     box-sizing: content-box;
     background-color: rgba(212, 212, 212, 0.219);
     border-radius: 15px;
@@ -1444,10 +1446,10 @@ Content styling
     height: 100%;
     overflow: hidden;
     box-shadow: 15px 15px 20px 2px rgba(201, 201, 201, 0.473);
-  }
-  .box::hover{
+}
+.box::hover{
     transform: translate(10px);
-  }
+}
   
   
   .start img{
