@@ -1,7 +1,4 @@
 <div class="single-title">
-    <a href="/posts/" class="literal-title">{{ .Title }}</a>
-    <p class="description">{{ .Params.description }}</p>
-    
     <div class="post-tags"><i class="fas fa-tags"></i>
         <span>{{ range (.GetTerms "tags" ) }}
             <a href="{{ .Permalink }}" class="tag m-bs bg">{{ .LinkTitle}}</a>
@@ -12,5 +9,14 @@
                 <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
         {{ end }}
     </div> -->
-    <time class="single-time">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+    <div class="literal-title">
+        <a href="/posts/">{{ .Title }}</a>
+        <p >{{ .Params.description }}</p>    
+    </div>
+
+    <div class="author">
+        <a href="/about.html">{{ $.Params.author }}</a>
+        <time class="single-time">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+    </div>
+    
 </div>
