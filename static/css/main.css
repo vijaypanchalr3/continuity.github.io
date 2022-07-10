@@ -504,6 +504,11 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     font-size: 1em;
     font-family: var(--ff-main);
 }
+.time{
+    color:var(--color-fg);
+    font-size: 1em;
+    font-family: var(--ff-mono);
+}
 
 .recent-post-card:hover,
 .recent-post-card:focus{
