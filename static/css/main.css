@@ -44,25 +44,25 @@
     font-family: 'playfair';
     font-style: normal;
     font-weight: 400;
-    src: local('playfair'), url('/nfonts/PlayfairDisplay-VariableFont_wght.ttf');
+    src: local('playfair'), url('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'playfair';
     font-style: italic;
     font-weight: 400;
-    src: local('playfair'), url('/nfonts/PlayfaitDisplay-Italic-VariableFont_wght.ttf');
+    src: local('playfair'), url('/fonts/PlayfaitDisplay-Italic-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'lora';
     font-style: normal;
     font-weight: 400;
-    src: local('lora'), url('/nfonts/Lora-VariableFont_wght.ttf');
+    src: local('lora'), url('/fonts/Lora-VariableFont_wght.ttf');
 }
 @font-face {
     font-family: 'lora';
     font-style: italic;
     font-weight: 400;
-    src: local('lora'), url('/nfonts/Lora-Italic-VariableFont_wght.ttf');
+    src: local('lora'), url('/fonts/Lora-Italic-VariableFont_wght.ttf');
 }
 
 @font-face {
@@ -84,6 +84,20 @@
     font-weight: 400;
     src: local('handwriting'), url('/nfonts/HomemadeApple-Regular.ttf');
 }
+/* @font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 800;
+    src: local('roboto'), url('/fonts/roboto/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('roboto'), url('/fonts/roboto/Roboto-Italic.ttf');
+} */
+
+
 /*     ---
     ---   --
            --
@@ -134,7 +148,7 @@
     --color-manjaro: #00bd7e;
     --br: 0.2em;
     --ff-title: playfair;
-    --ff-main: 'Times New Roman', Times, serif;
+    --ff-main: et-bembo;
     --ff-descriptive: lora;
     --ff-et: et-bembo;
     --ff-mono: jetbrains mono;
@@ -155,6 +169,16 @@ body{
     margin: 0;
     padding: 0;
     font-family: var(--ff-main);
+    font-size: larger;
+}
+em{
+    color: var(--color-dark-grey);
+}
+strong{
+    color: var(--color-accent);
+}
+link{
+    color: red;
 }
 /* :focus{
     outline: none;
@@ -820,8 +844,9 @@ padding-bottom: 1em;}
 }
  .content-area{
     /* Same as the width of the sidebar */
-       display: grid;
-       grid-template-columns: 75% 25%;
+   display: grid;
+   grid-template-columns: 75% 25%;
+
 }
 .single-title{
     width: 100%;
@@ -851,6 +876,11 @@ padding-bottom: 1em;}
     font-family: var(--ff-main);
     color:var(--color-dark-grey)
 }
+.single-footer{
+    text-align: center;
+    width: 100%;
+    border-top: #000000 solid 5px;
+}
 .post-tags{
     display: flex;
     justify-content: center;
@@ -876,6 +906,10 @@ padding-bottom: 1em;}
 .article-area{
     width: 90%;
     justify-self: right;
+    background-color: var(--color-bg);
+    padding: 10px;
+    box-shadow: var(--material-light-shadow);
+    border-radius: 5px;
 }
 .extra-area{
     padding: 0 1em;
@@ -1085,7 +1119,7 @@ padding-bottom: 1em;}
     padding-top: 10px;
     color: var(--color-fg);
     font-family: old;
-    background-color: var(--color-light-grey);
+    /* background-color: var(--color-light-grey); */
     /* box-shadow: var(--material-light-shadow); */
     margin-right: 8px;
 

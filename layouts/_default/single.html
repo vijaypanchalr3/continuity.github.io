@@ -5,16 +5,18 @@
 {{- partial "single/title.html" . -}}
 <div class="content-area">
     <article class="article-area">
-      {{if  .Params.toc}}
-      <div class="page-toc">
+        {{if  .Params.toc}}
+        <div class="page-toc">
             <h2 class="page-toc-title">Table Of contents</h2>
             <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
-      </div>
-      {{end}}
+        </div>    
+        {{end}}
         
         <div class="content">
             {{ .Content }}
         </div>
+        {{- partial "single-footer" . -}}
+
         {{ template "_internal/disqus.html" . }}
     </article>
     <div class="extra-area">

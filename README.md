@@ -1,27 +1,21 @@
 # My blogging site
-Hello, welcome to [my blogging site](https://vijaypanchalr3.github.io). this site is made from help of [hugo](https://gohugo.io) static site generator.
-
-
-
-
+Hello, welcome to [my blogging site](https://vijaypanchalr3.github.io). this site is made from help of [hugo](https://gohugo.io) static site generator.  this s.
 ## website development TODO
 Thing to do,
-- [ ] Make a reading progressbar
-- [ ] sidebar with similar to bootstraps scrollspy functionality
-- [ ] social icons
+- [x] Make a reading progressbar
+- [x] sidebar with similar to bootstraps scrollspy functionality
+- [x] social icons
 - [ ] about/author page
-- [ ] my Portfolio in author page
-- [ ] Blog
-
-
+- [x] my Portfolio in author page
+- [x] Blog
+   
 
 ## shortcodes
 
 ### intitial
 This will do first letter bigger
 
-### intresting
-same as md's '>' but some css. Out of the box '>' not working in hugo, so i made this shortcode.
-
-### time
-*not working*
+###  intresting
+same as md's '>' but some css. Out of the box '>' not working in hugo, so i made this shortcode. this 
+### Time
+	*not working*
