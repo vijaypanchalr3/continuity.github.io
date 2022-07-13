@@ -37,79 +37,53 @@
     font-family: 'jetbrains mono';
     font-style:normal;
     font-weight: 400;
-    src: local('jetbrains mono'), url('/fonts/JetBrainsMono-VariableFont_wght.ttf');
+    src: local('jetbrains mono'), url('/fonts/JetBrainsMono-VariableFont_wght.woff2');
 }
 
 @font-face {
     font-family: 'playfair';
     font-style: normal;
     font-weight: 400;
-    src: local('playfair'), url('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
+    src: local('playfair'), url('/fonts/PlayfairDisplay-VariableFont_wght.woff2');
 }
 @font-face {
     font-family: 'playfair';
     font-style: italic;
     font-weight: 400;
-    src: local('playfair'), url('/fonts/PlayfaitDisplay-Italic-VariableFont_wght.ttf');
+    src: local('playfair'), url('/fonts/PlayfaitDisplay-Italic-VariableFont_wght.woff2');
 }
 @font-face {
     font-family: 'lora';
     font-style: normal;
     font-weight: 400;
-    src: local('lora'), url('/fonts/Lora-VariableFont_wght.ttf');
+    src: local('lora'), url('/fonts/Lora-VariableFont_wght.woff2');
 }
 @font-face {
     font-family: 'lora';
     font-style: italic;
     font-weight: 400;
-    src: local('lora'), url('/fonts/Lora-Italic-VariableFont_wght.ttf');
+    src: local('lora'), url('/fonts/Lora-Italic-VariableFont_wght.woff2');
 }
 
 @font-face {
     font-family: 'et-bembo';
     font-style: normal;
     font-weight: 400;
-    src: local('et-bembo'), url('/fonts/et-book-semi-bold-old-style-figures.ttf');
+    src: local('et-bembo'), url('/fonts/et-book-semi-bold-old-style-figures.woff2');
 }
 
 @font-face {
     font-family: 'old';
     font-style: normal;
     font-weight: 400;
-    src: local('old'), url('/fonts/CloisterBlack.ttf');
+    src: local('old'), url('/fonts/CloisterBlack.woff2');
 }
 @font-face {
     font-family: 'handwriting';
     font-style: normal;
     font-weight: 400;
-    src: local('handwriting'), url('/fonts/DancingScript-VariableFont_wght.ttf');
+    src: local('handwriting'), url('/fonts/DancingScript-VariableFont_wght.woff2');
 }
-/* @font-face {
-    font-family: 'roboto';
-    font-style: normal;
-    font-weight: 800;
-    src: local('roboto'), url('/fonts/roboto/Roboto-Regular.ttf');
-}
-@font-face {
-    font-family: 'roboto';
-    font-style: italic;
-    font-weight: 400;
-    src: local('roboto'), url('/fonts/roboto/Roboto-Italic.ttf');
-} */
-
-
-/*     ---
-    ---   --
-           --
-         --
-          ---
-            ---
-   --        --
-    ---     ---
-        ----
-*/
-
-
 
 /* global styling */
 
@@ -118,9 +92,9 @@
 }
 * {
     -ms-overflow-style: none;  /* IE and Edge */
-
     scrollbar-width: thin;
     scrollbar-color: #0000007c rgba(194, 194, 194, 0);
+    font-display: block;
 }  
 *::-webkit-scrollbar {
     width: 12px;
@@ -142,10 +116,11 @@
 :root {
     --color-bg: #ffffff;
     --color-fg: #000000;
-    --color-accent: #004850;
+    --color-accent: #1C8882;
+    --color-manjaro: #1C8882;
     --color-dark-grey: #4A5258;
     --color-light-grey: #E2E1E0;
-    --color-manjaro: #00bd7e;
+    /* --color-manjaro: #00bd7e; */
     --br: 0.2em;
     --ff-title: playfair;
     --ff-main: et-bembo;
@@ -212,8 +187,10 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     background: repeat();
 }
 .bg-dark-checks{
-    background-image: url(/refs/dark-checks.png);
-    background: repeat();}
+    /* background-image: url(/refs/dark-checks.png); */
+    /* background: repeat(); */
+    background-color: var(--color-accent);
+}
 .br{border-radius: var(--br);}
 /*-------------------------------------------------------------------- 
           ----
@@ -269,8 +246,8 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
 /* footer first :) */
 .social-links{
     width: 300px;
-    margin: 0em auto;
-    padding: 1em 0;
+    margin: 50px auto;
+    /* padding: 0.1em 0; */
 }
 .social-links ul{
     display: flex;
@@ -288,6 +265,7 @@ h6{font-size: var(--fs-h6);font-family: var(--ff-title);}
     text-align: center;
     font-size: 1em;
     color: var(--color-bg);
+    margin: auto;
 }
 
 .home-header{
@@ -729,6 +707,7 @@ padding-bottom: 1em;}
     grid-template-columns: repeat(auto-fit,minmax(100%, 1fr));
     grid-gap: 2em;
     margin-top: 10px;
+    border-radius: 5px;
 }
 /* .mainbox+.mainbox{
     margin-left: 10px;
