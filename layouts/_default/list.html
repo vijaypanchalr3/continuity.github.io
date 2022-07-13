@@ -1,23 +1,19 @@
 {{ define "main"}}
-<div class="main-area">
-    <div class="mainboxes">
+<div class="th-on-grid">
+    <div class="focus tw-tw-grid t-vb-pad l-m-pad r-m-pad b-b-pad">
         {{ range .Paginator.Pages.ByDate.Reverse }}
-            <a href="{{ .Permalink }}" class="recent-post-card m-bs">
-                <article class="mainbox">
-                    <h1 class="mainbox-title">{{ .Title }}</h1>
-                    <div class="mainbox-img">
-                        <picture>
-                            <img src="{{ .Params.image }}" alt="">
-                        </picture>
-                    </div>
-                    <div class="mainbox-description">
-                        
-                        <p class="literal-description">
-                        {{ .Params.description }}
-                        </p>
-                        <p class="time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
-                    </div>
-                </article>
+            <a href="{{ .Permalink }}" class="mycard material-shadow-with-hover v-b-mar">
+                <div class="mycard-head">
+                    <img src="" alt="">
+                </div>
+                <div class="mycard-body">
+                    <h2 class="title small-title-fonts">{{ .Title }}</h2>
+                    <p class="description">{{ .Params.description }}/p>
+                </div>
+                <div class="mycard-footer">
+                    <p>{{ .Params.author }}</p>
+                    <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                </div>
             </a>
         {{ end }}
     </div>

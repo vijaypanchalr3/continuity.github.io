@@ -1,9 +1,9 @@
-<ul class="categories-area">
+<div class="fancy-li">
     {{ range $.Site.Taxonomies.categories.ByCount }}
       {{ if gt .Count 0}}
-        <li class="single-category">
-          <a href="/categories/{{ .Name }}"><p>{{ .Name }}</p><p>{{ .Count }}</p></a>
-        </li>
+      <a type="/tags/{{ .Name }}" href="/tags/{{ .Name }}" class="button c-vs-mar"> {{ .Name }} 
+        <span class="badge single-badge">{{ .Count }}</span>
+      </a>
       {{ end }}
     {{end}}
-  </ul>
+</div>

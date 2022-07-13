@@ -3,8 +3,8 @@
 <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
 <div id="progressbar"></div>
 {{- partial "single/title.html" . -}}
-<div class="content-area">
-    <article class="article-area">
+<div class="th-on-grid">
+    <article class="focus c-b-pad bottom-line">
         {{if  .Params.toc}}
         <div class="page-toc">
             <h2 class="page-toc-title">Table Of contents</h2>
@@ -26,12 +26,12 @@
             <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
         </div>
 	{{end}}
-        <div class="sidenav-box">
-            <h2 class="page-toc-title"><i class="fas fa-tags"></i> Tags</h2>
+        <div class="bbox">
+            <a class="bbox-title">Tags: </a>
             {{- partial "tags" . -}}
         </div>
-        <div class="sidenav-box m-bs bg mt-5">
-            <h2 class="page-toc-title">categories</h2>
+        <div class="bbox t-b-mar">
+            <a class="bbox-title">categories: </a>
             {{- partial "categories" . -}}
         </div>
     </div>

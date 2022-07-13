@@ -1,18 +1,11 @@
 <div class="single-title">
-    <div class="post-tags"><i class="fas fa-tags"></i>
+    <div class="b-m-mar justify-start">
         <span>{{ range (.GetTerms "tags" ) }}
-            <a href="{{ .Permalink }}" class="tag m-bs bg">{{ .LinkTitle}}</a>
+            <a href="{{ .Permalink }}" class="button">{{ .LinkTitle}}</a>
         {{ end }}</span></div>
-    <!-- <div class="post-tags">
-        <a href="/categories/" class="keyword">categories</a>
-        {{ range (.GetTerms "categories" ) }}
-                <a href="{{ .Permalink }}" class="badge bg-danger tag_shadow">{{ .LinkTitle}}</a>
-        {{ end }}
-    </div> -->
-    <div class="literal-title">
-        <a href="/posts/">{{ .Title }}</a>
-        <p >{{ .Params.description }}</p>    
-    </div>
+    
+    <a href="/posts/" class="title big-title-fonts">{{ .Title }}</a>
+    <p class="description custom-desc">{{ .Params.description }}</p>    
 
     <div class="author">
         <a href="/about.html">{{ $.Params.author }}</a>

@@ -1,7 +1,7 @@
-<div class="tag-area">
+<div class="cmpad">
     {{ range $.Site.Taxonomies.tags.ByCount }}
       {{ if gt .Count 0 }}
-          <a type="/tags/{{ .Name }}" href="/tags/{{ .Name }}" class="btn single-tag m-bs"> {{ .Name }} 
+          <a type="/tags/{{ .Name }}" href="/tags/{{ .Name }}" class="button c-vs-mar"> {{ .Name }} 
               <span class="badge single-badge">{{ .Count }}</span>
           </a>
       {{ end }}

@@ -4,7 +4,7 @@
 #+categories[]: Philosophy
 #+draft: false
 #+tags[]: Balance
-#+image:/images/
+#+images:
 #+description: This blog is on balance from hindu religion to modern philosophy. How balance is necessity. Why do we imbalace it ?
 
 {{< initial >}}

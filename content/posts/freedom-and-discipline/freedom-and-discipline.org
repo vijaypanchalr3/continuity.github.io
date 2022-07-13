@@ -1,11 +1,12 @@
 ﻿#+title: Freedom and Discipline
 #+author: Vijay Panchal
 #+date: <2022-02-26 Sat>
-#+categories[]: Similar-to-philosophy
-#+draft: true
-#+tags[]: to-think-on
-#+image:/images/
-#+description: 
+#+categories[]: philosophy
+#+draft: false
+#+tags[]: to-think-on, balance
+#+images: ./thumbnail.png
+#+description: We should allow us to visit deep consequences of freedom.  *What is a freedom ?  How can one define freedom ?*
+
 
 {{< initial >}}
 One evening of this month, oberving my sister's fight with me. I observed that when she is talking, she is using high voice to get value and be listened, i did not find any other reason behind high values. 
@@ -13,6 +14,7 @@ One evening of this month, oberving my sister's fight with me. I observed that w
 
 * Knowing two sides of freedom
 
+When we define freedom we should take in action two important parameters 1. *Time* 2. *Ideologies of people*.  Note, that this two parameters are dependant on each other.  I will give example of freedom in our times.  Suppose, one want to speak against some old man or leaders of community, he can.  One want to initiate any business, he can.  If one want to love others wife, he can't because our social law denies it.  so coming to the point freedom is offspring of ideologies of current time.  If Sumerian common man want a slave, he can pursue but the same thing is completely offending in current society, which defines every man has freedom to live his life independently.  There's always society who defines right and wrong for us because it is very complex to handle crowd of people.  Laws are meant to easy our life from burden of chaos of life and society.  From ancient text of should and should not do to happy god to saving our life from judicial custody in modern time. Freedom will give us happiness defined by current order.
 We should allow us to visit deep consequences of freedom.  *What is a freedom ?  How can one define freedom ?*
 When we define freedom we should take in action two important parameters 1. *Time* 2. *Ideologies of people*.  Note, that this two parameters are dependant on each other.  I will give example of freedom in our times.  Suppose, one want to speak against some old man or leaders of community, he can.  One want to initiate any business, he can.  If one want to love others wife, he can't because our social law denies it.  so coming to the point freedom is offspring of ideologies of current time.  If Sumerian common man want a slave, he can pursue but the same thing is completely offending in current society, which defines every man has freedom to live his life independently.  There's always society who defines right and wrong for us because it is very complex to handle crowd of people.  Laws are meant to easy our life from burden of chaos of life and society.  From ancient text of should and should not do to happy god to saving our life from judicial custody in modern time. Freedom will give us happiness defined by current order.
 

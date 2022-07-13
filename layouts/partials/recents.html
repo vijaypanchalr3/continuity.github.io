@@ -1,18 +1,19 @@
 <div class="recents-box">
-    {{ range ( where .Site.RegularPages "Type" "posts" | first 4 ) }}
-        <a href="{{ .Permalink }}" class="recent-post-card bg br m-bs">
-            <article>
-                    <div>
-                        <picture>
-                            <img src="{{ .Params.image }}" alt="">
-                        </picture>
+    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+        <a href="{{ .Permalink }}" class="mycard material-shadow-with-hover round recents-box">
+                    <div mycard-head>
+                        <p>{{ .Params.image }}</p>
+                        <img src="/image" alt="{{ .Params.image }}" style="border-radius: 5px 5px 0 0 ;">
                     </div>
-                    <div class="post-inner">
-                        <p class="post-title">{{ .Title }}</p>
-                        <p class="post-description">
+                    <div class="mycard-body">
+                        <p class="title">{{ .Title }}</p>
+                        <p class="description">
                             {{ .Params.description }}
                         </p>
-                        <p class="post-time">by {{ .Params.Author }} on <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time></p>
+                        <div class="mycard-footer">
+                            <p>{{ .Params.author }}</p>
+                            <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                        </div>
                     </div>
             </article>
         </a>

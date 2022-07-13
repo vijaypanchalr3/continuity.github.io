@@ -2,9 +2,9 @@
 #+author: Vijay Panchal
 #+date: <2022-02-04 Fri>
 #+categories[]: Philosophy
-#+draft: true
+#+draft: false
 #+tags[]: ideologies formal-systems
-#+image: /blogs/ideologies/thumbnail.png
+#+images : /static/images/example/thumbnail.png
 #+description: 
 
 [[/blogs/ideologies/thumbnail.png]]
