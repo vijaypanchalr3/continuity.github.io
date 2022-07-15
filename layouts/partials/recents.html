@@ -1,21 +1,23 @@
-<div class="recents-box">
-    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
-        <a href="{{ .Permalink }}" class="mycard material-shadow-with-hover round recents-box">
-                    <div mycard-head>
-                        <p>{{ .Params.image }}</p>
-                        <img src="/image" alt="{{ .Params.image }}" style="border-radius: 5px 5px 0 0 ;">
-                    </div>
-                    <div class="mycard-body">
-                        <p class="title">{{ .Title }}</p>
-                        <p class="description">
-                            {{ .Params.description }}
-                        </p>
-                        <div class="mycard-footer">
-                            <p>{{ .Params.author }}</p>
-                            <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
-                        </div>
-                    </div>
-            </article>
-        </a>
-    {{end}}
-</div>
+<section id="recent">
+    <h1 class="title b-b-mar">Recents,</h1>
+    <div class="auto-grid">
+        {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+            <a href="{{ .Permalink }}" class="mycard round v-b-mar material-shadow-with-hover">
+                <!-- <div class="mycard-head">
+                    <img src="{{ .Params.thumbnail }}" alt="thumbnail" style="border-radius: 5px 5px 0 0 ;">
+                </div> -->
+                <div class="mycard-body">
+                    <p class="title">{{ .Title }}</p>
+                    <p class="description">
+                        {{ .Params.description }}
+                    </p>
+                </div>
+                <div class="mycard-footer">
+                    <p>{{ .Params.author }}</p>
+                    <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+                </div>
+            </a>
+        {{end}}
+    </div>
+  </div>
+</section> 

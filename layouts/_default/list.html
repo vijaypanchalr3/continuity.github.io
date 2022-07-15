@@ -4,11 +4,11 @@
         {{ range .Paginator.Pages.ByDate.Reverse }}
             <a href="{{ .Permalink }}" class="mycard material-shadow-with-hover v-b-mar">
                 <div class="mycard-head">
-                    <img src="" alt="">
+                    <img src="{{ .Params.thumbnail }}" alt="">
                 </div>
                 <div class="mycard-body">
                     <h2 class="title small-title-fonts">{{ .Title }}</h2>
-                    <p class="description">{{ .Params.description }}/p>
+                    <p class="description">{{ .Params.description }}</p>
                 </div>
                 <div class="mycard-footer">
                     <p>{{ .Params.author }}</p>

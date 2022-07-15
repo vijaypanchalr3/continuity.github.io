@@ -4,7 +4,7 @@
 #+categories[]: philosophy
 #+draft: false
 #+tags[]: to-think-on, balance
-#+images: ./thumbnail.png
+#+thumbnail: freedom-and-discipline/thumbnail.png
 #+description: We should allow us to visit deep consequences of freedom.  *What is a freedom ?  How can one define freedom ?*
 
 
