@@ -2,7 +2,7 @@
 #+author: Vijay Panchal
 #+date: <2022-02-26 Sat>
 #+categories[]: philosophy
-#+draft: false
+#+draft: true
 #+tags[]: to-think-on, balance
 #+thumbnail: freedom-and-discipline/thumbnail.png
 #+description: We should allow us to visit deep consequences of freedom.  *What is a freedom ?  How can one define freedom ?*

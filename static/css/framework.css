@@ -69,7 +69,9 @@ a:hover, a:focus, a:active {
 
 .r-m-mar{margin-right: 0.5em;}
 .t-b-mar{margin-top: 1em;}
+.t-vb-mar{margin-top: 2em;}
 .b-m-mar{margin-bottom: 0.5em;}
+.b-s-mar{margin-bottom: 5px;}
 .r-b-mar{margin-right: 1em;}
 .c-vs-mar{margin: 0.1em;}
 .v-mar{margin: auto 0;}
@@ -77,13 +79,19 @@ a:hover, a:focus, a:active {
 .v-b-mar{margin: 0 1em;}
 .b-vb-mar{margin-bottom: 2em;}
 .b-b-mar{margin-bottom: 1em;}
-.gap+.gap{margin: 0.5em;}
 .auto-mar{margin: auto;}
 .justify-start{justify-content: start;}
+.justify-center{justify-content: center;}
 .text-start{text-align: start;}
 
 
-
+.page-width{
+    width: 90%;
+}
+@media screen and (max-width: 450px){
+    .page-width{width: 98%;}
+    
+}
 
 .bbox{
     position: relative;
@@ -101,7 +109,7 @@ a:hover, a:focus, a:active {
 }
 
 /* lists with div */
-.fancy-li{
+.full-width-li{
     display: flex;
     flex-direction: column;}
 
@@ -127,7 +135,7 @@ a:hover, a:focus, a:active {
     box-shadow: var(--material-light-shadow-hover);
     transform: translateY(-5px);
     color: var(--color-manjaro);}
-.fancy-li>.button{
+.full-width-li>.button{
     display: inline-flex !important;
     width: 100%;
     justify-content: space-between;}
@@ -182,9 +190,13 @@ a:hover, a:focus, a:active {
     /* margin-top: ; */
 }
 
-.tw-tw-grid{display: grid;grid-template-columns: 50% 50%;gap: 1em 0;}
+.auto-grid{display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    /* grid-auto-flow: row dense; */
+    gap: 1em 0;
+}
 .th-on-grid{display: grid;grid-template-columns: 75% 25%;}
-.auto-grid{display: grid;grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));gap: 0.5em 0;}
+
 
 .focus{
     width: 90%;
@@ -196,6 +208,7 @@ a:hover, a:focus, a:active {
 .mycard{
     display: flex;
     flex-wrap: wrap;
+    /* height: min-content; */
     justify-content: start;
     text-decoration: none;
     background-color: var(--color-bg);
@@ -335,3 +348,21 @@ a:hover, a:focus, a:active {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+
+.page{
+    width: 80%;
+    padding: 2em;
+    background-color: var(--color-bg);
+    margin: 2em auto;
+    box-shadow: var(--material-light-shadow);
+    border-radius: 5px;
+    height: min-content;
+    outline: 2px solid var(--color-accent);
+    outline-offset: -1em;
+
+}
+@media screen and (max-width: 650px){
+    .page{width: 98%;}
+}
+

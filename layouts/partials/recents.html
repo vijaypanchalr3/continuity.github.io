@@ -1,4 +1,4 @@
-<section id="recent">
+<div id="recent" class="page-width auto-mar">
     <h1 class="title b-b-mar">Recents,</h1>
     <div class="auto-grid">
         {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
@@ -20,4 +20,4 @@
         {{end}}
     </div>
   </div>
-</section> 
+</div> 
