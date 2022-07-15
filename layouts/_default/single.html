@@ -11,14 +11,13 @@
             <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
         </div>    
         {{end}}
-        
         <div class="content">
             {{ .Content }}
         </div>
         {{- partial "single-footer" . -}}
-
         {{ template "_internal/disqus.html" . }}
     </article>
+    <!-- {{- partial "related" . -}} -->
     <div class="extra-area">
       {{if  .Params.toc}}
         <div class="desktop-page-toc">
@@ -36,5 +35,10 @@
         </div>
     </div>
 </div>
-{{- partial "related" . -}}
+<div class="th-on-grid">
+    <div class="focus c-m-pad t-b-mar">
+        <h1 class="title b-b-mar">Related: </h1>
+        {{- partial "related" . -}}
+    </div>
+</div>
 {{ end }}

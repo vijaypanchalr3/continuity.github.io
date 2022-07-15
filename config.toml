@@ -14,3 +14,16 @@ dateFormat = "03:04PM, Jan 2, 2006 "
     endLevel = 5
     ordered = false
     startLevel = 2
+
+
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 100
+[[related.indices]]
+  name = 'date'
+  weight = 10

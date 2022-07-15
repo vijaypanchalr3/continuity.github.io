@@ -3,7 +3,7 @@
 #+date: <2022-02-04 Fri>
 #+categories[]: Philosophy
 #+draft: false
-#+tags[]: ideologies formal-systems
+#+tags[]: ideologies formal-systems Balance
 #+images : /static/images/example/thumbnail.png
 #+description: 
 

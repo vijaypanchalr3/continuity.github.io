@@ -1,12 +1,22 @@
-<div class="related bg m-bs">
-    {{ $related := .Site.RegularPages.Related . | first 4 }}
+
+<div class="auto-grid">
+    {{ $related := .Site.RegularPages.Related . | first 2 }}
     {{ with $related }}
-    <h2 class="section-subtitles">See Also</h2>
-    <ul>
-        {{ range . }}
-        <li class="m-bs br"><a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{ end }}
-    </ul>
+
+    {{ range . }}
+        <a href="{{ .Permalink }}" class="mycard round v-b-mar material-shadow-with-hover">
+            <div class="mycard-body">
+                <p class="title">{{ .Title }}</p>
+                <p class="description">
+                    {{ .Params.description }}
+                </p>
+            </div>
+            <div class="mycard-footer">
+                <p>{{ .Params.author }}</p>
+                <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
+            </div>
+        </a>
     {{ end }}
+    {{ end }}
+</div>
 </div>

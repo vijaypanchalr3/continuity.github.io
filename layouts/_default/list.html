@@ -1,4 +1,5 @@
 {{ define "main"}}
+<div id="progressbar" style="display: none;"></div>
 <div class="th-on-grid">
     <div class="focus auto-grid t-vb-pad l-m-pad r-m-pad b-b-pad">
         {{ range .Paginator.Pages.ByDate.Reverse }}
@@ -20,5 +21,4 @@
     {{- partial "list-sidebar.html" . -}}
     {{ template "_internal/pagination.html" . }}
 </div>
-{{- partial "footer" . -}}
 {{ end }}
