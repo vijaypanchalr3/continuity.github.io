@@ -50,6 +50,9 @@
 
 .material-shadow-with-hover{box-shadow: var(--material-light-shadow); transition: var(--material-transition);}
 .material-shadow-with-hover:active,.material-shadow-with-hover:hover{box-shadow: var(--material-light-shadow-hover);transform: translateY(-5px);}
+
+.material-shadow-without-hover{box-shadow: var(--material-light-shadow);}
+.background{background-color: var(--color-bg);}
 .round{border-radius: 5px;}
 
 /* links  */
@@ -83,6 +86,7 @@ a:hover, a:focus, a:active {
 .justify-start{justify-content: start;}
 .justify-center{justify-content: center;}
 .text-start{text-align: start;}
+.gap+.gap{margin-left: 1em;}
 
 
 .page-width{
@@ -90,6 +94,7 @@ a:hover, a:focus, a:active {
 }
 @media screen and (max-width: 450px){
     .page-width{width: 98%;}
+    
     
 }
 
@@ -201,10 +206,9 @@ a:hover, a:focus, a:active {
 .focus{
     width: 90%;
     justify-self: right;
-    background-color: var(--color-bg);
-    box-shadow: var(--material-light-shadow);
     border-radius: 5px;
 }
+
 .mycard{
     display: flex;
     flex-wrap: wrap;
@@ -267,6 +271,7 @@ a:hover, a:focus, a:active {
         width: 100%;
         justify-self: center;
     }
+    .gap+.gap{margin-left: 0;}
     .content img{width: 100%;}
     .mycard{margin: 0;}
 }
