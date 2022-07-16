@@ -1,0 +1,3 @@
+This website is built on hugo. Theming is all mine*. I took inspiration from many designs like Material, bootstrap. I took some codes (AS IT IS) from bootstrap's (exactly nav on top). 
+
+The resume page design is all mine.

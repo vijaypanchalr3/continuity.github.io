@@ -4,7 +4,7 @@
 <div id="progressbar"></div>
 {{- partial "single/title.html" . -}}
 <div class="th-on-grid">
-    <article class="focus c-b-pad bottom-line">
+    <article class="focus background material-shadow-without-hover c-b-pad bottom-line">
         {{if  .Params.toc}}
         <div class="page-toc">
             <h2 class="page-toc-title">Table Of contents</h2>
@@ -36,8 +36,7 @@
     </div>
 </div>
 <div class="th-on-grid">
-    <div class="focus c-m-pad t-b-mar">
-        <h1 class="title b-b-mar">Related: </h1>
+    <div class="focus t-b-mar">
         {{- partial "related" . -}}
     </div>
 </div>
