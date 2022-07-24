@@ -17,3 +17,12 @@ Python is a [[https://en.wikipedia.org/wiki/High-level_programming_language][hig
 In this series, i will follow like rust's official book design. Python is well known so it has many sources but i'll try to align to this rust book design. I will talk about first Installation, Documatation, official writing code style, running hello world program, start a guessing game and than talk about data types etc.
 
 So, be with me in this journey !
+
+
+
+#+begin_src python
+  import numpy as np
+  this insfkj
+  lsfljskjfld
+  jhjh
+#+end_src

@@ -371,3 +371,42 @@ a:hover, a:focus, a:active {
     .page{width: 98%;}
 }
 
+.logo{
+    display: flex;
+    position: relative;
+    color: var(--color-accent);
+    font-family: var(--ff-title);
+    font-weight: 500;
+    gap: 10px;
+
+}
+.logo img{margin: auto;width: 70px;height: 60px;}
+.logo p{
+    color: var(--color-accent);
+    margin: auto;
+    font-size: var(--fs-h1);
+}
+
+.navbar{
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:.5em;
+    padding-bottom:.5em;
+}
+.navbar-collapse{
+    flex-basis:100%;flex-grow:1;align-items:center}
+.container-fluid{
+    display:flex;
+    flex-wrap:inherit;
+    align-items:center;
+    justify-content:space-between;
+}
+.navbar-collapse{
+    /* position: absolute; */
+    justify-content: end;
+    /* position: absolute; */
+    justify-self: right;
+}
