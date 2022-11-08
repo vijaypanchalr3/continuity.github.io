@@ -5,7 +5,7 @@ paginate = 6
 summaryLength= 20
 autonumbering=true
 [params]
-dateFormat = "03:04PM, Jan 2, 2006 "
+dateFormat = "Jan 2, 2006 "
 [taxonomies]
   category = 'categories'
   tag = 'tags'
@@ -14,7 +14,6 @@ dateFormat = "03:04PM, Jan 2, 2006 "
     endLevel = 5
     ordered = false
     startLevel = 2
-
 
 
 [related]
