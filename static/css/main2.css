@@ -1,0 +1,160 @@
+@font-face {font-family: 'et-bembo';font-style: normal;font-weight: 400;
+    src: local('et-bembo'), url('/fonts/et-book-semi-bold-old-style-figures.woff2');}
+@font-face {font-family: 'old';font-style: normal;font-weight: 400;
+    src: local('old'), url('/fonts/CloisterBlack.woff2');}
+@font-face {font-family: 'handwriting1';font-style: normal;font-weight: 400;
+    src: local('handwriting1'), url('/fonts/Mynerve-Regular.ttf');}
+@font-face {font-family: 'handwriting2';font-style: normal;font-weight: 400;
+    src: local('handwriting2'), url('/fonts/RockSalt-Regular.ttf');}
+    
+
+
+:root{
+    --paper: url(/refs/dots.svg);
+    --handwriting1: handwriting1;
+    --fs-xxl: 4em;
+    --fs-L:2em;
+    --fs-l:1.5em;
+    --blueink: #214ED3;
+    --orangeink: #F47A33;
+    --aquaink: #058F99;
+    --torqoiseink: #006169;
+}
+
+
+
+.paper{
+    background-image: var(--paper);
+    background-repeat: repeat;
+}
+.devide{
+    background-image: url(/refs/crosses.svg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 20px;
+}
+.orange-ink{
+    text-decoration: none;
+    color: var(--orangeink);
+}
+.blue-ink{
+    color: var(--blueink);
+    text-decoration: none;
+}
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.part0{
+    height:100vh;
+    width: 100%;
+    margin: auto;
+    padding: 8% 0;
+}
+.booktitle{
+    font-family: var(--handwriting1);
+    font-size: var(--fs-xxl);
+    color: #002390;
+    margin: auto;
+    text-align: center;
+    top: 50%;
+}
+.authorname{
+    width: 70%;
+    margin: auto;
+    text-align: right;
+    font-family: var(--handwriting1);
+    font-size: var(--fs-l);
+    margin-bottom: 20px;
+    padding-right: 70px;
+    color: var(--aquaink);
+}
+.authorname p:before{
+    content: "";
+    display: inline-block;    
+    vertical-align: bottom;
+    width: 50px;
+    margin-right: 0;
+    margin-left: 10px;
+    height: 0.5em;
+    border-top: 2px solid var(--aquaink);
+    z-index: -1;
+
+}
+.links0{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.links0 ul{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    list-style: none;
+    justify-content:space-evenly;
+    overflow: hidden;
+
+}
+.links0 ul li{
+    display: block;
+}
+.links0 ul li a{
+    font-family: var(--handwriting1);
+    font-size: var(--fs-L);
+    margin: 20px;
+    color: var(--orangeink);
+}
+.links0 .icon{
+    display: none;
+}
+.links0 .icon img{
+    margin: auto;
+}
+.links0 ul li:is(:hover,:focus){
+    background-image: url(/refs/inkspot.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.links0 ul li:last-child:is(:hover,:focus){
+    background-image: none;
+}
+@media screen and (max-width: 600px) {
+    :root{
+        --fs-xxl: 3em;
+        --fs-L:1.5em;
+        --fs-l:1.2em;
+    }
+    .authorname{width: 100%;}
+    .authorname P::before{
+        display: none;
+    }
+
+    .links0 li:not(:last-child) {display: none;}
+    .links0 ul{
+        flex-direction: column;
+    }
+    .links0 li.icon {
+      float: right;
+      display: block;
+    }
+    .links0.responsive {position: relative;}
+    .links0.responsive .icon {
+      position: absolute;
+      margin-right: 50px;
+      transform: rotate(90deg);
+      right: 0;
+      top: 0;
+      transition: .5s;
+    }
+    .links0.responsive li {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+}

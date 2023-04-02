@@ -3,18 +3,54 @@
 <head>
     {{- partial "meta.html" . -}}
 </head>
-<body class="bg-grey-checks">
+<body>
     <div id="progressbar" style="display: none;"></div>
-    <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
+    <div class="part0 prevent-select paper">
+        <div class="booktitle"><p>Continuity</p></div>
+        <div class="authorname"><p>by Vijay Panchal</p></div>
+        <div class="devide"></div>
+        <div class="links0" id="links0">
+            <ul>
+                <li><a href="#" class="orange-ink">Home</a></li>
+                <li><a href="#" class="orange-ink">About</a></li>
+                <li><a href="#" class="orange-ink">Resume</a></li>
+                <li><a href="#" class="orange-ink">Github</a></li>
+                <li class="icon"><a href="javascript:void(0);"onclick="myFunction()">
+                    <img src="/refs/nav.svg" alt=""width="40px">
+                </a></li>
+            </ul>
+        </div>
+        <div class="links0">
+            <ul>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Publications</a></li>
+            </ul>
+        </div>
+        
+    </div>
+    
+
+
+    <!-- <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
     {{- partial "header/index" . -}}
     <section class="home-about bg m-bs">
         <h1 class="section-titles">Hello, from <strong>Vijay Panchal</strong></h1>
-        <!-- <p class="section-welcome">Welcome</p> -->
-        <p class="section-subtitles">I am a physics student and this is my personal site named continuity. <a href="/resume.html">Check my resume page</a>.</p>
-    </section>
-    {{- partial "recents" . -}}   
-    {{- partial "footer" . -}}
+         <p class="section-welcome">Welcome</p> -->
+      <!-- <p class="section-subtitles">I am a physics student and this is my personal site named continuity. <a href="/resume.html">Check my resume page</a>.</p>
+    </section> -->
+    <!-- {{- partial "recents" . -}}    -->
+    <!-- {{- partial "footer" . -}} -->
     <script src="/js/main.js"></script>
     <script src="/js/bs/bootstrap.min.js"></script>
 </body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("links0");
+      if (x.className === "links0") {
+        x.className += " responsive";
+      } else {
+        x.className = "links0";
+      }
+    }
+    </script>
 </html>
