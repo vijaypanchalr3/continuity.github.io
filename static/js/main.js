@@ -1,4 +1,3 @@
-
 let scrollper = () => {
   let docEl = document.documentElement,
   docbod = document.docbody,
@@ -12,18 +11,18 @@ let scrollper = () => {
   document.getElementById('progressbar').style.setProperty('--scrollamount',scrollpercent);
 }
 
-document.addEventListener('scroll',scrollper);
+// document.addEventListener('scroll',scrollper);
 
-const navtoggle = document.querySelector('.nav-toggle');
-const navlinks = document.querySelectorAll('.home-nav-link');
-navtoggle.addEventListener('click', ()=> {
-  document.body.classList.toggle('nav-open')
-})
-navlinks.forEach(link => {
-  link.addEventListener('click',() => {
-    document.body.classList.remove('nav-open');
-  })
-})
+// const navtoggle = document.querySelector('.nav-toggle');
+// const navlinks = document.querySelectorAll('.home-nav-link');
+// navtoggle.addEventListener('click', ()=> {
+//   document.body.classList.toggle('nav-open')
+// })
+// navlinks.forEach(link => {
+//   link.addEventListener('click',() => {
+//     document.body.classList.remove('nav-open');
+//   })
+// })
 
 function copy(that){
   var inp =document.createElement('input');
@@ -33,3 +32,32 @@ function copy(that){
   document.execCommand('copy',false);
   inp.remove();
   }
+
+/* dark theme toggle */
+const themeToggle = document.querySelector('.theme-toggle');
+var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+function getcurrenttheme(){
+  localStorage.getItem('theme')?theme = localStorage.getItem('theme'):null;
+  return theme;
+}
+
+function Loadtheme(theme){
+  const root = document.querySelector(':root');
+  root.setAttribute('color-scheme',`${theme}`);
+}
+themeToggle.addEventListener('click', ()=>{
+  let theme=getcurrenttheme();
+  if(theme==='dark'){
+    theme ='light';
+  }
+  else{
+    theme = 'dark';
+  }
+  localStorage.setItem('theme',`${theme}`);
+  Loadtheme(theme);
+})
+
+window.addEventListener('DOMContentLoaded',()=> {
+  Loadtheme(getcurrenttheme());
+})
