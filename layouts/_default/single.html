@@ -26,7 +26,11 @@
 </head>
 <body style="font-size: 130%;">
     <!-- {{- partial "header/index" . -}} -->
+    <!-- <div class="dark-mode-button"></div> -->
+    <div class="single-option"><a href="/" class="home-button"><img src="/refs/home.svg" alt=""></a><button class="dark-mode-button" id="dark-mode-toggle"><img src="/refs/dark_mode.svg" alt=""></button></div>
+    <div class="psuedo"></div>
     <header>
+        
         <h1>{{ .Title }}</h1>
         <p style="font-style:italic;text-align: center;">{{ .Params.description }}</p><br/>
         <p class="author">
@@ -37,8 +41,6 @@
         {{ end }}</span></p><br/>
         </p>
     </header>
-    <div class="dark-mode-button"><button id="dark-mode-toggle">Dark Mode</button>
-      <button><a href="/" class="orange-ink">Home</a></button></div>
     
     <main>
         <div>{{ block "main" . }}{{ end }}</div>
