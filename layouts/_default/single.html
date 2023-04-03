@@ -1,43 +1,85 @@
-{{ define "main" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+<!-- <link rel="stylesheet" href="/css/bs/bootstrap.min.css"> -->
+<!-- <link rel="stylesheet" href="/css/main.css"> -->
+    <link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+    <link rel="stylesheet" href="/css/main2.css">
+    <link rel="stylesheet" href="https://latex.now.sh/prism/prism.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="font" href="/fonts/Lora-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/Lora-Italic-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/PlayfairDisplay-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/PlayfaitDisplay-Italic-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/JetBrainsMono-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/et-book-semi-bold-old-style-figures.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/DancingScript-VariableFont_wght.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/fonts/CloisterBlack.woff2" type="font/woff2" crossorigin="anonymous">
+    <!-- <script src="https://kit.fontawesome.com/56fc5c5e17.js" crossorigin="anonymous"></script> -->
+</head>
+<body style="font-size: 130%;">
+    <!-- {{- partial "header/index" . -}} -->
+    <header>
+        <h1>{{ .Title }}</h1>
+        <p style="font-style:italic;text-align: center;">{{ .Params.description }}</p><br/>
+        <p class="author">
+        <a href="/about.html" style="text-decoration: none;">{{ $.Params.author }}</a><br/>
+        <time>{{ dateFormat .Site.Params.dateFormat .Date }}</time><br/>
+        <p>Keywords: <span>{{ range (.GetTerms "tags" ) }}
+            <a href="{{ .Permalink }}" style="text-decoration: none;margin-left: 10px;">{{ .LinkTitle}}</a>
+        {{ end }}</span></p><br/>
+        </p>
+    </header>
+    <div class="dark-mode-button"><button id="dark-mode-toggle">Dark Mode</button></div>
+    
+    <main>
+        <div>{{ block "main" . }}{{ end }}</div>
+    </main>
+    <!-- {{- partial "footer" . -}} -->
+    <script src="/js/main.js"></script>
+    <script>
+        var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-<a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
-<div id="progressbar"></div>
-{{- partial "single/title.html" . -}}
-<div class="th-on-grid">
-    <article class="focus background material-shadow-without-hover c-b-pad bottom-line">
-        {{if  .Params.toc}}
-        <div class="page-toc">
-            <h2 class="page-toc-title">Table Of contents</h2>
-            <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
-        </div>    
-        {{end}}
-        <div class="content">
-            {{ .Content }}
-        </div>
-        {{- partial "single-footer" . -}}
-        {{ template "_internal/disqus.html" . }}
-    </article>
-    <!-- {{- partial "related" . -}} -->
-    <div class="extra-area">
-      {{if  .Params.toc}}
-        <div class="desktop-page-toc">
-            <h2 class="page-toc-title"><i class="fas fa-scroll"></i> Table Of contents</h2>
-            <div class="page-toc-content">{{ .Page.TableOfContents }}</div>
-        </div>
-	{{end}}
-        <div class="bbox">
-            <a class="bbox-title">Tags: </a>
-            {{- partial "tags" . -}}
-        </div>
-        <div class="bbox t-b-mar">
-            <a class="bbox-title">categories: </a>
-            {{- partial "categories" . -}}
-        </div>
-    </div>
-</div>
-<div class="th-on-grid">
-    <div class="focus t-b-mar">
-        {{- partial "related" . -}}
-    </div>
-</div>
-{{ end }}
+function getcurrenttheme(){
+  localStorage.getItem('theme')?theme = localStorage.getItem('theme'):null;
+  return theme;
+}
+
+function Loadtheme(theme){
+  const root = document.querySelector(':root');
+  if(theme==='dark'){
+    document.body.classList.toggle("latex-dark");
+  }
+  // document.body.classList.toggle("latex-dark");
+//   root.setAttribute('color-scheme',`${theme}`);
+}
+// themeToggle.addEventListener('click', ()=>{
+  
+// })
+document
+  .querySelector("#dark-mode-toggle")
+    .addEventListener('click', () => {
+        let theme=getcurrenttheme();
+        if(theme==='dark'){
+            theme='light'
+        }
+      else{
+         theme='dark'
+        }
+        localStorage.setItem('theme',`${theme}`);
+        Loadtheme(theme);
+    });
+window.addEventListener('DOMContentLoaded',()=> {
+  Loadtheme(getcurrenttheme());
+})
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

@@ -12,7 +12,9 @@
 :root{
     --paper: url(/refs/dots.svg);
     --handwriting1: handwriting1;
+    --handwriting2: handwriting2;
     --fs-xxl: 4em;
+    --fs-xl:3em;
     --fs-L:2em;
     --fs-l:1.5em;
     --blueink: #214ED3;
@@ -35,6 +37,7 @@
     width: 50%;
     margin: auto;
     margin-bottom: 50px;
+    margin-top: 50px;
     height: 20px;
 }
 .orange-ink{
@@ -70,11 +73,10 @@
     text-align: right;
     font-family: var(--handwriting1);
     font-size: var(--fs-l);
-    margin-bottom: 20px;
     padding-right: 70px;
     color: var(--aquaink);
 }
-.authorname p:before{
+/* .authorname p:before{
     content: "";
     display: inline-block;    
     vertical-align: bottom;
@@ -85,7 +87,7 @@
     border-top: 2px solid var(--aquaink);
     z-index: -1;
 
-}
+} */
 .links0{
     margin: auto;
     display: flex;
@@ -111,6 +113,8 @@
 }
 .links0 .icon{
     display: none;
+    position: relative;
+    transition: 0.5s;
 }
 .links0 .icon img{
     margin: auto;
@@ -126,6 +130,7 @@
 @media screen and (max-width: 600px) {
     :root{
         --fs-xxl: 3em;
+        --fs-xl:2em;
         --fs-L:1.5em;
         --fs-l:1.2em;
     }
@@ -136,7 +141,7 @@
 
     .links0 li:not(:last-child) {display: none;}
     .links0 ul{
-        flex-direction: column;
+        flex-direction: column;    
     }
     .links0 li.icon {
       float: right;
@@ -149,6 +154,7 @@
       transform: rotate(90deg);
       right: 0;
       top: 0;
+      /* transform: translateX(10px); */
       transition: .5s;
     }
     .links0.responsive li {
@@ -157,4 +163,53 @@
       text-align: left;
     }
 
+}
+/* 
++++++++++++++++++
++  About page   +
++++++++++++++++++
+*/
+.about{
+    width: 70%;
+    margin: auto;
+    height: 80vh;
+    padding: 1em;
+    padding-top: 2%;
+    /* background-color: rgba(250, 235, 215, 0.445); */
+}
+.about-title{
+    font-family: var(--handwriting1);
+    font-size: var(--fs-xl);
+    color: #002390;
+    text-align: center;
+}
+.about-description{
+    font-family: var(--handwriting1);
+    font-size: var(--fs-l);
+    word-wrap: normal;
+    color: var(--torqoiseink);
+}
+@media screen and (max-width: 900px) {
+    .about{
+        width: 100%;
+}}
+
+
+.dark-mode-button{
+    display: block;
+    position: fixed;
+    top: 10%;
+    right: -10px;
+}
+.dark-mode-button button{
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    text-align: center;
+}
+.t-block{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
