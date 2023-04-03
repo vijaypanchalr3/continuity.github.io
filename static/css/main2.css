@@ -19,11 +19,19 @@
     --handwriting2: handwriting2;
     --cmun:cmun;
     --cmui:cmui;
-    --fs-xxl: 4em;
-    --fs-xl:3em;
-    --fs-L:2em;
-    --fs-l:1.5em;
-    --fs-n:1.2em;
+    --fs-xxl: 35pt;
+    --Huge: 24.88pt;
+    --huge:20.74pt;
+    --LARGE:17.28pt;
+    --Large:14.4pt;
+    --large:12pt; 
+    --normal:10pt;
+    --small:9pt;
+    --tiny:7pt;
+    --fs-xl:var(--Huge);
+    --fs-L:var(--LARGE);
+    --fs-l:var(--Large);
+    --fs-n:var(--large);
     --blueink: #214ED3;
     --orangeink: #F47A33;
     --aquaink: #058F99;
@@ -100,12 +108,12 @@
 .links0 ul li:last-child:is(:hover,:focus){background-image: none;}
 
 @media screen and (max-width: 600px) {
-    :root{
+    /* :root{
         --fs-xxl: 3em;
         --fs-xl:2em;
         --fs-L:1.5em;
         --fs-l:1.2em;
-        --fs-n:0.8em;}
+        --fs-n:0.8em;} */
 
     .authorname{width: 100%;}
     .authorname P::before{display: none;}
@@ -135,9 +143,9 @@
 
 
 /* List page */
-.list-title{display: flex;width: 60%;margin: auto;flex-direction: row;justify-content: space-between;font-family: var(--handwriting1);font-size: var(--fs-xl);color: var(--blueink);}
+.list-title{display: flex;width: 60%;margin: auto;flex-direction: row;justify-content: space-between;font-family: var(--handwriting1);font-size: var(--fs-xxl);color: var(--blueink);}
 .list-title p,.list-titleimg{margin: auto 0;}
-.list-title img{margin-right: 20px;width: 50px;height: 50px;opacity: 0.6;}
+.list-title img{margin-right: 20px;width: 60px;height: 60px;opacity: 0.6;}
 
 .icon{width: 30px;height: 30px;margin: auto 0;}
 .icon img{width:100%;margin: auto;}
@@ -163,7 +171,7 @@
 .list-grid{display: flex;flex-direction: column;}
 
 .cards{margin: 10px 0;background-color: rgb(255, 255, 255);padding: 10px;border-radius: 5px;box-shadow: var(--material-light-shadow);text-decoration: none;}
-.card-body h2{font-family: var(--cmun);color: var(--torqoiseink);font-size: var(--fs-xl);}
+.card-body h2{font-family: var(--cmun);color: var(--torqoiseink);font-size: var(--fs-L);}
 .card-body p{font-family: var(--cmui);color: rgb(46, 46, 46);font-size:var(--fs-l);}
 
 .time{background-color: rgb(169, 169, 169);color: black;font-size: var(--fs-l);width: max-content;padding: 2px 20px;}
@@ -177,7 +185,7 @@
     .nav{width: 80%;}}
 
 @media screen and (max-width: 650px){
-    .list-page{width: 100%;}
+    .list-page{width: 95%;}
     .link2{width: 100%;}
     .list-title{width: 100%;}
     .nav{width: 100%;}}
