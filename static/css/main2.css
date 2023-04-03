@@ -156,19 +156,19 @@
 
 
 .link2{width: 60%;margin: auto;padding: 20px 0;text-align: center;}
-.link2 a{text-decoration: none;font-family: var(--handwriting1);color: var(--orangeink);font-size: var(--fs-l);}
+.link2 a{text-decoration: none;font-family: var(--handwriting1);color: var(--orangeink);font-size: var(--fs-L);}
 .link2 img{width: 20px;transform: rotate(-90deg);margin-left: 10px;}
 
 
 .list-grid{display: flex;flex-direction: column;}
 
 .cards{margin: 10px 0;background-color: rgb(255, 255, 255);padding: 10px;border-radius: 5px;box-shadow: var(--material-light-shadow);text-decoration: none;}
-.card-body h2{font-family: var(--cmun);color: var(--torqoiseink);font-size: var(--fs-L);}
-.card-body p{font-family: var(--cmui);color: rgb(46, 46, 46);font-size:var(--fs-n);}
+.card-body h2{font-family: var(--cmun);color: var(--torqoiseink);font-size: var(--fs-xl);}
+.card-body p{font-family: var(--cmui);color: rgb(46, 46, 46);font-size:var(--fs-l);}
 
-.time{background-color: rgb(169, 169, 169);color: black;font-size: var(--fs-n);width: max-content;padding: 2px 20px;}
+.time{background-color: rgb(169, 169, 169);color: black;font-size: var(--fs-l);width: max-content;padding: 2px 20px;}
 
-.card-footer{font-family: var(--cmun);font-size: var(--fs-n);color: var(--red);}
+.card-footer{font-family: var(--cmun);font-size: var(--fs-l);color: var(--red);}
 
 @media screen and (max-width: 900px){
     .list-page{width: 80%;}
@@ -200,12 +200,7 @@
 
 
 
-.pagination{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style: none;
-}
+.pagination{display: flex;flex-direction: row;justify-content: space-evenly;list-style: none;}
 .pagination .page-item a{color: var(--orangeink);}
 .pagination .active a{color: var(--torqoiseink);}
 .pagination .page-item a{text-decoration: none;font-size: var(--fs-n);font-family: var(--handwriting1);}
