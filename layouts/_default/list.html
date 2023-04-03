@@ -1,24 +1,57 @@
-{{ define "main"}}
-<div id="progressbar" style="display: none;"></div>
-<div class="th-on-grid">
-    <div class="focus background auto-grid material-shadow-without-hover t-vb-pad l-m-pad r-m-pad b-b-pad">
-        {{ range .Paginator.Pages.ByDate.Reverse }}
-            <a href="{{ .Permalink }}" class="mycard material-shadow-with-hover v-b-mar">
-                <div class="mycard-head">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{- partial "meta.html" . -}}
+</head>
+<body class="paper">
+    {{- partial "header/index" . -}}
+    <div class="link2">
+        <a href="/projects/"> Goto my Projects<img src="/refs/nav.svg"></a>
+    </div>
+    <div class="link2">
+        <a href="/posts/"> Goto my Blogs<img src="/refs/nav.svg"></a>
+    </div>
+   
+    <main class="list-page prevent-select">
+        <!-- <div id="progressbar" style="display: none;"></div> -->
+        <div class="list-grid">
+            {{ range .Paginator.Pages.ByDate.Reverse }}
+            
+            <a href="{{ .Permalink }}" class="cards">
+                <div class="time"><time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time></div>
+                <!-- <div class="mycard-head">
                     <img src="{{ .Params.thumbnail }}" alt="">
+                </div> -->
+                <div class="card-body">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Params.description }}</p>
                 </div>
-                <div class="mycard-body">
-                    <h2 class="title small-title-fonts">{{ .Title }}</h2>
-                    <p class="description">{{ .Params.description }}</p>
-                </div>
-                <div class="mycard-footer">
+                <div class="card-footer">
                     <p>{{ .Params.author }}</p>
-                    <time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time>
                 </div>
             </a>
-        {{ end }}
-    </div>
-    {{- partial "list-sidebar.html" . -}}
-    {{ template "_internal/pagination.html" . }}
-</div>
-{{ end }}
+            {{ end }}
+        </div>
+        {{ template "_internal/pagination.html" . }}
+    </main>
+    <!-- {{- partial "footer" . -}} -->
+<!-- <script src="/js/bs/bootstrap.min.js"></script> -->
+<script src="/js/main.js"></script>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("link4");
+      var icon = document.getElementById("icon");
+      if (x.className === "link4") {
+        x.className += " responsive";
+        // icon.className+= " responsive";
+        
+      } else {
+        // icon.classname = "icon";
+        x.className = "link4";
+      }
+    }
+    </script>
+</html>
+
+

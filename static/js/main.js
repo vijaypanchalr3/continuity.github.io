@@ -11,7 +11,7 @@ let scrollper = () => {
   document.getElementById('progressbar').style.setProperty('--scrollamount',scrollpercent);
 }
 
-// document.addEventListener('scroll',scrollper);
+document.addEventListener('scroll',scrollper);
 
 // const navtoggle = document.querySelector('.nav-toggle');
 // const navlinks = document.querySelectorAll('.home-nav-link');

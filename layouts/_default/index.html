@@ -3,29 +3,35 @@
 <head>
     {{- partial "meta.html" . -}}
 </head>
-<body>
-    <div id="progressbar" style="display: none;"></div>
-    <div class="part0 prevent-select paper">
+<body class="paper">
+    
+    <div id="progressbar"></div>
+    <div class="part0 prevent-select">
         <div class="booktitle"><p>Continuity</p></div>
+        <div class="logo"><img src="/refs/logo.svg" alt="continuity"></div>
         <div class="authorname"><p>by Vijay Panchal</p></div>
         <div class="devide"></div>
-        <div class="links0" id="links0">
+        <div class="links1">
             <ul style="width: 100%;text-align: center;margin: auto;">
                 <li><a href="/" class="orange-ink">Home</a></li>
                 <li><a href="/about.html" class="orange-ink">About</a></li>
                 <li><a href="/resume.html" class="orange-ink">Resume</a></li>
-                <li><a href="/posts/" class="orange-ink">Blogs</a></li>
                 <li><a href="https://github.com/vijaypanchalr3/" class="orange-ink">Github</a></li>
-                <li class="icon"><a href="javascript:void(0);"onclick="myFunction()">
-                    <img src="/refs/nav.svg" alt=""width="40px">
-                </a></li>
+                <!-- <li class="icon"><a href="javascript:void(0);"onclick="myFunction()"> -->
+                    <!-- <img src="/refs/nav.svg" alt=""width="40px"> -->
+                <!-- </a></li> -->
+            </ul>
+        </div>
+        <div class="links1">
+            <ul style="width: 100%;text-align: center;margin: auto;">
+                <li><a href="/posts/" class="orange-ink">Blogs</a></li>
+                <li><a href="/projects/ " class="orange-ink">Projects</a></li>
             </ul>
         </div>
        
         
     </div>
     
-
 
     <!-- <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
     {{- partial "header/index" . -}}
@@ -39,14 +45,5 @@
     <script src="/js/main.js"></script>
     <script src="/js/bs/bootstrap.min.js"></script>
 </body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("links0");
-      if (x.className === "links0") {
-        x.className += " responsive";
-      } else {
-        x.className = "links0";
-      }
-    }
-    </script>
+
 </html>
