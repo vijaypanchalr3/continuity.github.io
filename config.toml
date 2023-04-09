@@ -12,7 +12,7 @@ dateFormat = "Jan 2, 2006 "
 [markup]
 [markup.tableOfContents]
     endLevel = 5
-    ordered = false
+    ordered = true
     startLevel = 2
 
 

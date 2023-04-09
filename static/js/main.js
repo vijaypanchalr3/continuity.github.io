@@ -33,5 +33,26 @@ function copy(that){
   inp.remove();
   }
 
-/* dark theme toggle */
-const themeToggle = document.querySelector('.theme-toggle');
+/* dark theme toggle for css class*/
+
+var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+function getcurrenttheme(){
+  localStorage.getItem('theme')?theme = localStorage.getItem('theme'):null;
+  return theme;}
+
+function Loadtheme(theme){
+  // const root = document.querySelector(':root');
+  if(theme==='dark'){
+    document.body.classList.toggle("latex-dark");}}
+
+document.querySelector("#dark-mode-toggle").addEventListener('click', () => {
+  let theme=getcurrenttheme();
+  if(theme==='dark'){
+        theme='light'}
+  else{
+    theme='dark'}
+  localStorage.setItem('theme',`${theme}`);
+  Loadtheme(theme);});
+window.addEventListener('DOMContentLoaded',()=> {
+  Loadtheme(getcurrenttheme());
+});
