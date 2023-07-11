@@ -39,7 +39,7 @@
     --red:#AB0B0B;
     --material-light-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
-
+html{scroll-behavior:smooth}
 
 .paper{background-image: var(--paper);background-repeat: repeat;}
 
@@ -53,12 +53,12 @@
 
 
 .prevent-select {-webkit-user-select: none;-ms-user-select: none;user-select: none;}
-.part0{height:100vh;width: 100%;margin: auto;/* padding: 1% 0; */}
+.part0{height:80vh;width: 100%;margin: auto;/* padding: 1% 0; */}
 
 
 
 .logo{/* position: absolute; */display: flex;margin: auto;margin-top: -70px;margin-bottom: -40px;justify-content: center;/* margin: 0; *//* padding: 0; *//* top: 10%; *//* left: 40%; */transform: rotate(-10deg);}
-.logo img{width: 150px;height:150px;filter:opacity(0.4);}
+.logo img{width: 150px;height:150px;filter:opacity(0.5);}
 
 @media screen and (max-width:900px) {
     .logo img{width: 130px;height: 130px;}}
@@ -73,6 +73,9 @@
 .authorname{margin: auto 0;text-align: center;font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--aquaink);}
 
 
+.aboutme{font-family: var(--handwriting1);display: flex;margin: auto;flex-direction: column;width: 60%;}
+.aboutme h2{text-align: left;font-size: var(--fs-xl);color:var(--torqoiseink);}   
+.aboutme p{font-size: var(--fs-L);color: var(--orangeink);}
 
 .links1{margin: auto;display: flex;justify-content: center;}
 .links1 ul{display: flex;flex-direction: row;width: 70%;list-style: none;justify-content:space-evenly;overflow: hidden;}
