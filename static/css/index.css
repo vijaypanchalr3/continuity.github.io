@@ -41,16 +41,18 @@ html{scroll-behavior:smooth}
 .prevent-select {-webkit-user-select: none;-ms-user-select: none;user-select: none;}
 .part0{width: 60%;margin: auto; padding: 1vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
 
-.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: contain;}
+.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: 350pt;}
 
 .booktitle{font-family: var(--handwriting1);font-size: var(--fs-xxl);color: #002390;margin: auto 0;text-align: center;}
 
 .logo{position: relative; display: flex;margin: auto;margin-top: -40pt;justify-content: center;transform: rotate(-10deg);}
 .logo img{width: 90pt;height:90pt;filter:opacity(0.7);}
 
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
+    .part0{width: 90%;}
     .logo img{width: 130px;height: 130px;}}
 @media screen and (max-width:600px) {
+    .part0{width: 98%;}
     .logo{margin-top: -50px;margin-bottom: -20px;}
     .logo img{width: 100px;height: 100px;}}
 
@@ -62,9 +64,9 @@ html{scroll-behavior:smooth}
 .aboutme h2{text-align: left;font-size: var(--fs-xl);color:var(--torqoiseink);}   
 .aboutme p{font-size: var(--fs-L);color: var(--orangeink);}
 
-.links1{margin: auto;display: flex;justify-content: center;width: 85%;}
-.links1 ul{display: flex;flex-direction: row;list-style: none;justify-content:space-around;overflow: hidden;}
-.links1 ul li{display: block; padding: 0 20pt 0 0; height: 40pt;}
+.links1{margin: auto;display: flex;justify-content: center;width: 95%;}
+.links1 ul{display: flex;flex-direction: row;list-style: none;justify-content:space-around;overflow:visible;}
+.links1 ul li{display: block; padding: 0 10pt 0 0; height: 40pt;}
 .links1 ul li a{font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--orangeink);text-align: center; margin-left: 20pt;}
 .links1 ul li:is(:hover,:focus){background-image: url(/refs/inkspot.svg);background-size: 80pt 30pt;background-repeat: no-repeat;}
 
@@ -83,7 +85,7 @@ footer{
     justify-content: center;
 }
 footer ul a{
-    margin-left: 20pt;
+    margin-left: 10%;
     border-radius: 50%;
 }
 footer .copyright{
