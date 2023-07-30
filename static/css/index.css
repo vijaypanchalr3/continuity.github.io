@@ -39,9 +39,9 @@ html{scroll-behavior:smooth}
 
 
 .prevent-select {-webkit-user-select: none;-ms-user-select: none;user-select: none;}
-.part0{width: 60%;margin: auto; padding: 1vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
+.part0{width: 60%;height: 150vh; margin: auto;padding: 0; padding-top: 10vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
 
-.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: 350pt;}
+.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: 350pt;margin-bottom: 12vh;}
 
 .booktitle{font-family: var(--handwriting1);font-size: var(--fs-xxl);color: #002390;margin: auto 0;text-align: center;}
 
@@ -83,6 +83,10 @@ footer{
     display: flex;
     margin-left: -20pt;
     justify-content: center;
+    position: absolute;
+    top: 120vh;
+    left:0;
+
 }
 footer ul a{
     margin-left: 10%;
