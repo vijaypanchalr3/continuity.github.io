@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {{- partial "meta.html" . -}}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preload" as="font" href="/fonts/Pecita.otf" type="font/otf" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/56fc5c5e17.js" crossorigin="anonymous"></script>
 </head>
-<body class="paper">
+<body>
     
     <div id="progressbar"></div>
-    <div class="part0 prevent-select">
-        <div class="booktitle"><p>Continuity</p></div>
-        <div class="logo"><img src="/refs/logo.svg" alt="continuity"></div>
-        <div class="authorname"><p>by Vijay Panchal</p></div>
-        <div class="devide"></div>
+    <div class="part0 prevent-select paper">
+        <div class="header">
+            <div class="booktitle"><p>Continuity</p></div>
+            <div class="logo"><img src="/refs/logo.svg" alt="continuity"></div>
+            <div class="authorname"><p>by Vijay Panchal</p></div>
+        </div>
+        <!-- <div class="devide"></div> -->
         <div class="links1">
             <ul style="width: 100%;text-align: center;margin: auto;">
                 <li><a href="/" class="orange-ink">Home</a></li>
                 <li><a href="#about" class="orange-ink">About</a></li>
                 <li><a href="#resume" class="orange-ink">Resume</a></li>
                 <li><a href="https://github.com/vijaypanchalr3/" class="orange-ink">Github</a></li>
-                <!-- <li class="icon"><a href="javascript:void(0);"onclick="myFunction()"> -->
-                    <!-- <img src="/refs/nav.svg" alt=""width="40px"> -->
-                <!-- </a></li> -->
-            </ul>
-        </div>
-        <div class="links1">
-            <ul style="width: 100%;text-align: center;margin: auto;">
                 <li><a href="/posts/" class="orange-ink">Blogs</a></li>
                 <li><a href="/projects/ " class="orange-ink">Projects</a></li>
             </ul>
         </div>
-    </div>
-    <div class="aboutme part0" id="about">   
-        <h2>About me,</h2>
-        <p>
-            I'm Vijay Panchal, this is my diary. Well, i didn't find people who can debates on my favorite subjects. So, i started this site for blogging, but actually i'm using as portfolio website. 
+        <div class="spas">
+            <p>Hello,
+                I'm physicist and this is my personal website which is continuous in space-time. 😜
+            </p>
+        </div>
+        <footer>
+            <div>
+            <ul class="social">
+                <a href="/"><i class="fab fa-brands fa-orcid fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fab fa-brands fa-github fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fab fa-brands fa-instagram fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fa fa-solid fa-envelope fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fa fa-solid fa-user fa-lg" style="color: #1a5fb4;"></i></a>
+            </ul>
+            <span class="copyright">
+                <i class="fa fa-solid fa-copyright"></i><p>continuity by vijay panchal</p>
+            </span>
             
-        </p>
+            </div>
+        </footer>
     </div>
-    <div class="aboutme part0" id="resume">   
-        <a href="/">Download my Resume in PDF</a>
-        <p>
-            I'm Vijay Panchal, this is my diary. Well, i didn't find people who can debates on my favorite subjects. So, i started this site for blogging, but actually i'm using as portfolio website. 
-            
-        </p>
-    </div>
-   
     
-
-    <!-- <a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
-    {{- partial "header/index" . -}}
-    <section class="home-about bg m-bs">
-        <h1 class="section-titles">Hello, from <strong>Vijay Panchal</strong></h1>
-         <p class="section-welcome">Welcome</p> -->
-      <!-- <p class="section-subtitles">I am a physics student and this is my personal site named continuity. <a href="/resume.html">Check my resume page</a>.</p>
-    </section> -->
-    <!-- {{- partial "recents" . -}}    -->
-    <!-- {{- partial "footer" . -}} -->
-    <script src="/js/main.js"></script>
-    <script src="/js/bs/bootstrap.min.js"></script>
 </body>
-
 </html>
