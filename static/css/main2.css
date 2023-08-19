@@ -36,6 +36,7 @@
     --red:#AB0B0B;
     --material-light-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
+body{margin: 0;}
 html{scroll-behavior:smooth}
 
 .paper{background-image: var(--paper);background-repeat: repeat;}
@@ -152,15 +153,13 @@ html{scroll-behavior:smooth}
 .link4.responsive li{float: none;display: block;text-align: left;transition: 0.5s;}
 
 
+.part1{width: 60%;margin: auto;padding: 0; padding-top: 5vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
+@media screen and (max-width:1100px) {
+    .part1{width: 90%;}}
+@media screen and (max-width:600px) {
+    .part1{width: 98%;}}
 
-
-.list-page{width: 60%;margin: auto;}
-
-
-.link2{width: 60%;margin: auto;padding: 20px 0;text-align: center;}
-.link2 a{text-decoration: none;font-family: var(--handwriting1);color: var(--orangeink);font-size: var(--fs-L);}
-.link2 img{width: 20px;transform: rotate(-90deg);margin-left: 10px;}
-
+.list-pages{width: 95%;margin: auto;}
 
 .list-grid{display: flex;flex-direction: column;}
 
@@ -172,7 +171,7 @@ html{scroll-behavior:smooth}
 
 .card-footer{font-family: var(--cmun);font-size: var(--fs-l);color: var(--red);}
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
     .list-page{width: 80%;}
     .link2{width: 80%;}
     .list-title{width: 80%;}
@@ -196,9 +195,9 @@ html{scroll-behavior:smooth}
     background: -moz-linear-gradient(90deg, hsla(172, 100%, 50%, 1) 0%, hsla(224, 92%, 75%, 1) 100%);
     background: -webkit-linear-gradient(0deg, hsla(172, 100%, 50%, 1) 0%, hsla(224, 92%, 75%, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#00FFDD", endColorstr="#87A6FA", GradientType=1 );
-    z-index: 1;width: var(--scrollamount);height: 3px;position: fixed;left: -2px;top: 0;}
-@media screen and (max-width: 450px) {
-    #progressbar{height: 4px;}} 
+    z-index: 1;width: var(--scrollamount);height: 3pt;position: fixed;left: -2px;top: 0;border-radius: 0 0 4pt 0;}
+@media screen and (max-width: 600px) {
+    #progressbar{height: 4px;top: 2pt; border-top-right-radius: 4pt;}} 
 
 
 

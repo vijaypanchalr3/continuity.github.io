@@ -3,8 +3,66 @@
 <head>
     {{- partial "meta.html" . -}}
 </head>
-<body class="paper">
-    {{- partial "header/index" . -}}
+<body>
+    <div id="progressbar"></div>
+    <div class="part1 prevent-select paper">
+        <div class="header">
+            <div class="booktitle"><p>Continuity</p></div>
+            <div class="logo"><img src="/refs/logo.svg" alt="continuity"></div>
+            <div class="authorname"><p>by Vijay Panchal</p></div>
+        </div>
+        <!-- <div class="devide"></div> -->
+        <div class="links1">
+            <ul>
+                <li><a href="/" class="orange-ink">Home</a></li>
+                <li><a href="#about" class="orange-ink">About</a></li>
+                <li><a href="#resume" class="orange-ink">Resume</a></li>
+                <li><a href="https://github.com/vijaypanchalr3/" class="orange-ink">Github</a></li>
+                <li><a href="/posts/" class="orange-ink">Blogs</a></li>
+                <li><a href="/projects/ " class="orange-ink">Projects</a></li>
+            </ul>
+        </div>
+        <div class="list-pages prevent-select">
+            <!-- <div id="progressbar" style="display: none;"></div> -->
+            <div class="list-grid">
+                {{ range .Paginator.Pages.ByDate.Reverse }}
+
+                <a href="{{ .Permalink }}" class="cards">
+                    <div class="time"><time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time></div>
+                    <!-- <div class="mycard-head">
+                        <img src="{{ .Params.thumbnail }}" alt="">
+                    </div> -->
+                    <div class="card-body">
+                        <h2>{{ .Title }}</h2>
+                        <p>{{ .Params.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>{{ .Params.author }}</p>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+            {{ template "_internal/pagination.html" . }}
+            
+        </div>
+        <footer>
+            <div>
+            <ul class="social">
+                <a href="/"><i class="fab fa-brands fa-orcid fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fab fa-brands fa-github fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fab fa-brands fa-instagram fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fa fa-solid fa-envelope fa-lg" style="color: #1a5fb4;"></i></a>
+                <a href="/"><i class="fa fa-solid fa-user fa-lg" style="color: #1a5fb4;"></i></a>
+            </ul>
+            <span class="copyright">
+                <i class="fa fa-solid fa-copyright"></i><p>continuity by vijay panchal</p>
+            </span>
+            
+            </div>
+        </footer>
+    </div>
+    
+    
     <!-- <div class="link2">
         <a href="/projects/"> Goto my Projects<img src="/refs/nav.svg"></a>
     </div>
@@ -12,32 +70,13 @@
         <a href="/posts/"> Goto my Blogs<img src="/refs/nav.svg"></a>
     </div>
     -->
-    <main class="list-page prevent-select">
-        <!-- <div id="progressbar" style="display: none;"></div> -->
-        <div class="list-grid">
-            {{ range .Paginator.Pages.ByDate.Reverse }}
-            
-            <a href="{{ .Permalink }}" class="cards">
-                <div class="time"><time class="">{{ dateFormat .Site.Params.dateFormat .Date }}</time></div>
-                <!-- <div class="mycard-head">
-                    <img src="{{ .Params.thumbnail }}" alt="">
-                </div> -->
-                <div class="card-body">
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Params.description }}</p>
-                </div>
-                <div class="card-footer">
-                    <p>{{ .Params.author }}</p>
-                </div>
-            </a>
-            {{ end }}
-        </div>
-        {{ template "_internal/pagination.html" . }}
-    </main>
+
+
     <!-- {{- partial "footer" . -}} -->
 <!-- <script src="/js/bs/bootstrap.min.js"></script> -->
-<script src="/js/main.js"></script>
+
 </body>
+<script src="/js/main.js"></script>
 <script>
     function myFunction() {
       var x = document.getElementById("link4");

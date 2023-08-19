@@ -29,7 +29,7 @@
 html{scroll-behavior:smooth}
 
 .paper{background-image: var(--paper);background-repeat: repeat;}
-
+.page{ height: 100vh;}
 .devide{background-image: url(/refs/crosses.svg);background-repeat: repeat-x;background-size: contain;background-position: center;width: 50%;margin: auto;margin-bottom: 50px;margin-top: 50px;height: 20px;}
 
 
@@ -39,9 +39,9 @@ html{scroll-behavior:smooth}
 
 
 .prevent-select {-webkit-user-select: none;-ms-user-select: none;user-select: none;}
-.part0{width: 60%;height: 150vh; margin: auto;padding: 0; padding-top: 10vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
+.part0{width: 60%;margin: auto;padding: 0; padding-top: 5vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;}
 
-.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: 350pt;margin-bottom: 12vh;}
+.header{background-image: url(/refs/inkstains1.svg); background-repeat: no-repeat;background-position: center;background-size: 350pt;margin-bottom: 5vh;}
 
 .booktitle{font-family: var(--handwriting1);font-size: var(--fs-xxl);color: #002390;margin: auto 0;text-align: center;}
 
@@ -60,6 +60,11 @@ html{scroll-behavior:smooth}
 .authorname{margin: auto;margin-top: -20pt;text-align: center;font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--aquaink);}
 
 
+
+
+
+
+
 .aboutme{font-family: var(--handwriting1);display: flex;margin: auto;flex-direction: column;width: 60%;}
 .aboutme h2{text-align: left;font-size: var(--fs-xl);color:var(--torqoiseink);}   
 .aboutme p{font-size: var(--fs-L);color: var(--orangeink);}
@@ -70,11 +75,44 @@ html{scroll-behavior:smooth}
 .links1 ul li a{font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--orangeink);text-align: center; margin-left: 20pt;}
 .links1 ul li:is(:hover,:focus){background-image: url(/refs/inkspot.svg);background-size: 80pt 30pt;background-repeat: no-repeat;}
 
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    gap: 3pt;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+    width: max-content;
+
+}
+.hamburger input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+.hamburger::before,.hamburger input,.hamburger::after{
+    content: "";
+    width: 20pt;
+    height: 3pt;
+    background-color: #AB0B0B;
+    transform-origin: left center;
+    transition: opacity 200ms ease-in-out,width 200 ease-in-out;
+}
+.hamburger:has(input:checked)::before {rotate: 45deg;}
+.hamburger:has(input:checked)::after {rotate: -45deg;}
+.hamburger input:checked{
+    opacity: 0;
+    width: 0;
+}
+
 .spas{margin: auto;display: block;text-align: left; width: 78%;}
 .spas p{font-family: var(--handwriting1);text-align: left;font-size: var(--fs-L);color:var(--torqoiseink);}
 
 @media screen and (max-width: 600px) {
-    .links1{display: none;}
+    .links1 ul{display: none;}
+    .hamburger{display: flex;}
 }
 
 footer{
@@ -83,8 +121,8 @@ footer{
     display: flex;
     margin-left: -20pt;
     justify-content: center;
-    position: absolute;
-    top: 120vh;
+    position: relative;
+    bottom: 0;
     left:0;
 
 }
