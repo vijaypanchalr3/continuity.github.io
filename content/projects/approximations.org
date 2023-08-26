@@ -6,6 +6,10 @@
 #+tags[]: MSc project physics
 #+thumbnail: 
 #+description: This was my MSc sem 1 project, in which i discussed about problem with aprroximations and it's ignorance in physics. I took one example of simple pendulum and simulated it with python and pygame.
+#+tableofcontents: true
+#+abstract:true 
+
+
 
 #+ATTR_HTML: :class abstract
 #+begin_1
