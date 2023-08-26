@@ -29,7 +29,7 @@
 html{scroll-behavior:smooth}
 
 .paper{background-image: var(--paper);background-repeat: repeat;}
-.page{ height: 100vh;}
+.page{ height: max-content;}
 .devide{background-image: url(/refs/crosses.svg);background-repeat: repeat-x;background-size: contain;background-position: center;width: 50%;margin: auto;margin-bottom: 50px;margin-top: 50px;height: 20px;}
 
 
@@ -69,20 +69,21 @@ html{scroll-behavior:smooth}
 .aboutme h2{text-align: left;font-size: var(--fs-xl);color:var(--torqoiseink);}   
 .aboutme p{font-size: var(--fs-L);color: var(--orangeink);}
 
-.links1{margin: auto;display: flex;justify-content: center;width: 95%;}
+.links1{margin: auto;display: flex;justify-content: center;width: 95%; margin-left: -13pt;}
 .links1 ul{display: flex;flex-direction: row;list-style: none;justify-content:space-around;overflow:visible;}
 .links1 ul li{display: block; padding: 0 10pt 0 0; height: 40pt;}
 .links1 ul li a{font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--orangeink);text-align: center; margin-left: 20pt;}
 .links1 ul li:is(:hover,:focus){background-image: url(/refs/inkspot.svg);background-size: 80pt 30pt;background-repeat: no-repeat;}
 
 .hamburger{
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 3pt;
     display: none;
     z-index: 2;
     cursor: pointer;
     width: max-content;
+
 
 }
 .hamburger input{
@@ -110,10 +111,16 @@ html{scroll-behavior:smooth}
 .spas{margin: auto;display: block;text-align: left; width: 78%;}
 .spas p{font-family: var(--handwriting1);text-align: left;font-size: var(--fs-L);color:var(--torqoiseink);}
 
-@media screen and (max-width: 600px) {
-    .links1 ul{display: none;}
-    .hamburger{display: flex;}
+
+@media screen and (max-width: 720px) {
+    .links1 ul{display: grid; grid-template-columns: auto auto auto; row-gap: 10pt;column-gap: 10pt;}
+    .hamburger{display: none;}
 }
+@media screen and (max-width: 500px) {
+    .links1 ul{display: grid; grid-template-columns: auto auto ; row-gap: 10pt;column-gap: 10pt;}
+    .hamburger{display: none;}
+}
+
 
 footer{
     width: 100%;
