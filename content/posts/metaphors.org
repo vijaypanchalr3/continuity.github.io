@@ -1,4 +1,4 @@
-﻿#+title: On metaphors 
+﻿#+title: Thoughts on metaphors 
 #+author: vijay panchal
 #+date: <2023-08-26 Sat>
 #+categories[]: philosophy
