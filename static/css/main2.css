@@ -126,11 +126,14 @@ html{scroll-behavior:smooth}
 
 .single-option{display:flex;position: absolute;top: -60pt;left: -60pt;width: 110pt;height: 110pt;border-radius: 50%;background-color: var(--orangeink);}
 .psuedo{position: absolute;top: -20pt;left: -20pt;width: 40pt;height: 40pt;border-radius: 50%;background-color: inherit;}
-.single-option .dark-mode-button{position: absolute;top:80pt;left:60pt; outline: none;border: none;background: none;cursor: pointer;}
+.single-option .dark-mode-button{position: absolute;top:78pt;left:60pt; outline: none;border: none;background: none;cursor: pointer;}
 .single-option img{width: 24pt}
 .single-option .home-button{width: 24pt; position: absolute; top: 60pt;left: 80pt;}
 .single-option .home-button:is(:focus,:active){outline: none;}
 
+.single-header{
+    margin-top: 50pt;
+}
 
 .t-block{width: 100%;display: flex;justify-content: center;margin-top: 40px;margin-bottom: 40px;}
 .content img{margin:auto;}
@@ -168,7 +171,21 @@ html{scroll-behavior:smooth}
 .card-body p{font-family: var(--cmui);color: rgb(46, 46, 46);font-size:var(--fs-l);}
 
 .time{background-color: rgb(169, 169, 169);color: black;font-size: var(--fs-l);width: max-content;padding: 2px 20px;}
-
+.taxonomy-tag span{
+    display: flex;
+    flex-direction: row; 
+    padding: 0;
+}
+.taxonomy-tag span p{
+    padding: 2pt;
+    margin: 0;
+    margin-top: 10pt;
+    border-radius: 5pt;
+    box-shadow: var(--material-light-shadow);
+    margin-right: 10pt;
+    font-size: var(--fs-l);
+    color: var(--red);
+}
 .card-footer{font-family: var(--cmun);font-size: var(--fs-l);color: var(--red);}
 
 @media screen and (max-width: 1100px){
@@ -200,6 +217,12 @@ html{scroll-behavior:smooth}
     #progressbar{height: 4px;top: 2pt; border-top-right-radius: 4pt;}} 
 
 
+.page-title{
+    font-family: var(--handwriting1);
+    color: var(--torqoiseink);
+    font-size: var(--fs-xxl);
+    padding: 2rem;
+}
 
 .pagination{display: flex;flex-direction: row;justify-content: space-evenly;list-style: none;}
 .pagination .page-item a{color: var(--orangeink);}
