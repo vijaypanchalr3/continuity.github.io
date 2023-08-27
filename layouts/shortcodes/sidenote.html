@@ -1,3 +1,8 @@
-<label for="{{.Get 0}}" class="sidenote-toggle sidenote-number"></label>
-<input type="checkbox" id="{{.Get 0}}" class="sidenote-toggle" />
+<label for="sn-{{ .Get "class" }}" class="sidenote-toggle sidenote-number"></label>
+<input type="checkbox" id="sn-{{ .Get "class" }}" class="sidenote-toggle" />
 <span class="sidenote">{{.Inner}}</span>
+
+<!-- 
+<label for="sn-1" class="sidenote-toggle sidenote-number"></label>
+<input type="checkbox" id="sn-1" class="sidenote-toggle" />
+<span class="sidenote">fdsfg sdfkgj;jfgks</span> -->
