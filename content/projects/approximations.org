@@ -53,7 +53,8 @@ Let's discuss coffiecient of linear damping. Linear to the velocity drag is also
 
 *** Damping by quadratic to the velocity approximation
 
-We used quadratic damping approximation as nonlinear damping approximation. This is also called newton's drag and it's better approximation then linear one. As quantitatively it can work with turbulent flow with 1000 to 100000 reynolds number. Where linear approximation works reynold's number upto 1. Quadratic damping is better than linear approximation but we can't have close form solution, it is the reason we use linear damping approximation. In quadratic damping it has following form, \(F_{damping} = k_{q} v^{2}\). Here, \(k_{q} = \frac{1}{8}c_{d}\rho \pi d^{2}\), where \(c_{d}\) is drag coefficient and has value of 0.47. \(\rho\) and \(d\) are density of fluid and diameter.\cite{lubarda2021analysis}\cite{goossens2019review}
+We used quadratic damping approximation as nonlinear damping approximation. This is also called newton's drag and it's better approximation then linear one. As quantitatively it can work with turbulent flow with 1000 to 100000 reynolds number. Where linear approximation works reynold's number upto 1. Quadratic damping is better than linear approximation but we can't have close form solution, it is the reason we use linear damping approximation. In quadratic damping it has following form, \(F_{damping} = k_{q} v^{2}\). Here, \(k_{q} = \frac{1}{8}c_{d}\rho \pi d^{2}\), where \(c_{d}\) is drag coefficient and has value of 0.47. \(\rho\) and \(d\) are density of fluid and diameter.
+\cite{lubarda2021analysis}\cite{goossens2019review}
 
 
 
@@ -65,6 +66,7 @@ Let's derive equation of motion for our system which can be modified as we took 
 First of all, we compared horizontal and vertical forces.
 
 $$
+
    F_{damping}cos(\theta)-Tsin(\theta)=ma_{x}
 $$
 $$
@@ -74,10 +76,12 @@ $$
 Adding equation [[eqn:1]] and equation [[eqn:2]] with multiplication by \(cos(\theta)\) and \(sin(\theta)\) respectively.
 
 $$
+\allowbreak
 F_{damping}sin^{2}(\theta)+F_{damping}cos^{2}(\theta)-mgsin(\theta)=ma_{x}cos(\theta)+ma_{y}sin(\theta)
 $$
 
 $$
+\allowbreak 
 F_{damping}-mgsin(\theta)=m(asin^{2}(\theta)+acos^{2}(\theta))
 $$
 
@@ -252,7 +256,7 @@ As we seen earlier our simulations discuss how exact solution differs from appro
 
 ** Effect on angular frequency of pendulum with approximation and exact solution
 
-As we have seen in our simulation that in linear solution equation [[eqn:17]], we got single constant frequency with \(\theta\) but not in nonlinear one. Nonlinear equation has non constant frequency. We can see from graph of it that how it differs from constant frequency of linear solution. \cite{sobamowo2020exact}\cite{johannessen2014analytical}
+As we have seen in our simulation that in linear solution equation [[eqn:17]], we got single constant frequency with \(\theta\) but not in nonlinear one. Nonlinear equation has non constant frequency. We can see from graph of it that how it differs from constant frequency of linear solution.
 
 #+CAPTION: How angular frequency change with \(\theta_{0}\) in nonlinear solution and shows constant at value \(\sqrt{\frac{g}{l}}\)
 #+NAME: angfre

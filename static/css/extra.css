@@ -168,5 +168,7 @@ footer .copyright p,footer .copyright i{
 .pagination .page-item a{text-decoration: none;font-size: var(--fs-n);font-family: var(--handwriting1);}
 .pagination .disabled, .pagination .disabled a{color: gray;}
 
-
+.content .goto-top{
+    display: none;
+}
 
