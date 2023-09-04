@@ -1,12 +1,10 @@
 ﻿#+title: 
-#+author: 
+#+author: Vijay Panchal
 #+date:
 #+categories[]:
 #+draft: true
 #+tags[]:
-#+image:/images/
 #+description: 
 
-{{< initial >}}
 
-{{< /initial >}}
+ 

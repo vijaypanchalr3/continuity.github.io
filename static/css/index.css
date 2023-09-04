@@ -1,10 +1,21 @@
+/* @font-face {font-family: 'handwriting1';font-style: normal;font-weight: 400;
+    src: local('handwriting1'), url('/fonts/Pecita.otf');} */
+
+
+
 @font-face {font-family: 'handwriting1';font-style: normal;font-weight: 400;
-    src: local('handwriting1'), url('/fonts/Pecita.otf');}
-
-
-
+    src: local('handwriting1'), url('/fonts/Mansalva-Regular.ttf');}
+@font-face {font-family: 'cmun';font-style: normal;font-weight: 400;
+    src: local('cmun'), url('/fonts/cmu/cmunrm.ttf');}
+@font-face {font-family: 'cmui';font-style: normal;font-weight: 400;
+    src: local('cmui'), url('/fonts/cmu/cmunci.ttf');}
+            
+            
 :root{
     --paper: url(/refs/dots.svg);
+    --handwriting2: handwriting1;
+    --cmun:cmun;
+    --cmui:cmui;
     --handwriting1: handwriting1;
     --fs-xxl: 35pt;
     --Huge: 24.88pt;
@@ -29,10 +40,15 @@
 html{scroll-behavior:smooth}
 
 .paper{background-image: var(--paper);background-repeat: repeat;}
-.page{ height: max-content;}
+/* .page{ height: max-content;} */
 .devide{background-image: url(/refs/crosses.svg);background-repeat: repeat-x;background-size: contain;background-position: center;width: 50%;margin: auto;margin-bottom: 50px;margin-top: 50px;height: 20px;}
 
-
+.page{
+    width: 60%;
+    height:max-content;margin: auto; padding: 0;padding-top: 5vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;
+    background-image: var(--paper);
+    background-repeat: repeat;
+}
 .orange-ink{text-decoration: none;color: var(--orangeink);}
 .blue-ink{color: var(--blueink);text-decoration: none;}
 .torqoiseink{color:var(--torqoiseink);text-decoration: none;}
@@ -121,30 +137,4 @@ html{scroll-behavior:smooth}
     .hamburger{display: none;}
 }
 
-
-footer{
-    width: 100%;
-    margin-top: 100pt;
-    display: flex;
-    margin-left: -20pt;
-    justify-content: center;
-    position: relative;
-    bottom: 0;
-    left:0;
-
-}
-footer ul a{
-    margin-left: 10%;
-    border-radius: 50%;
-}
-footer .copyright{
-    display: flex;
-    margin-left: 30pt;
-    flex-direction: row;
-}
-footer .copyright p{
-    margin: 0 auto;
-    margin-left: 15pt;
-    font-family: var(--handwriting1);
-    font-size: var(--fs-l);
-}
+/* 
