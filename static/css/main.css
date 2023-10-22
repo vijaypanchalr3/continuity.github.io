@@ -935,7 +935,7 @@ section{
     /* list-style: url(/refs/egg_black_black.svg); */
 }
 .content pre{
-    background-color: var(--color-bg) !important;
+    /* background-color: var(--color-bg) !important; */
     box-shadow: var(--material-light-shadow);
     padding: 10px;
     border-radius: 0.5em;

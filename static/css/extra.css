@@ -33,8 +33,14 @@
 html{scroll-behavior:smooth}
 
 
-
-
+.abstract{
+    text-align: justify;   
+    font-size: 90%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.abstract h2{text-align: center;}
 
 footer{margin: 0;margin-top: 50pt;
     padding-top: 20pt;padding-bottom: 20pt;
@@ -55,17 +61,18 @@ footer .copyright p,footer .copyright i{
     margin: auto;
     /* margin-left: 15pt; */
     font-family: var(--handwriting);
-    font-size: var(--normal);}
+    font-size: var(--normal);
+    color:#000;}
 
 
 
 
 
-.single-option{display:flex;position: absolute;top: -60pt;left: -60pt;width: 110pt;height: 110pt;border-radius: 50%;background-color: var(--orangeink);}
+.single-option{display:flex;position: absolute;top: -60pt;left: -60pt;width: 110pt;height: 110pt;border-radius: 50%;background-color: var(--orange);}
 .psuedo{position: absolute;top: -20pt;left: -20pt;width: 40pt;height: 40pt;border-radius: 50%;background-color: inherit;}
 .single-option .dark-mode-button{position: absolute;top:78pt;left:60pt; outline: none;border: none;background: none;cursor: pointer;}
-.single-option img{width: 24pt}
-.single-option .home-button{width: 24pt; position: absolute; top: 60pt;left: 80pt;}
+.single-option img{width: 24pt;}
+.single-option .home-button{width: 24pt; position: absolute; top: 60pt;left: 80pt;color: white;}
 .single-option .home-button:is(:focus,:active){outline: none;}
 
 .single-header{
@@ -172,3 +179,16 @@ footer .copyright p,footer .copyright i{
     display: none;
 }
 
+.content pre{
+    background-color: #000 !important;
+    box-shadow: var(--material-light-shadow);
+    padding: 10px;
+    border-radius: 0.5em;
+    font-size: 1em;
+    
+}
+.content code{overflow:scroll !important;color: #fff !important;}
+
+.content {overflow: hidden;}
+.toc ul{list-style: circle !important;}
+pre{width: max-content;}

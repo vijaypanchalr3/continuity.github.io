@@ -34,7 +34,7 @@ function copy(that){
   }
 
 /* dark theme toggle for css class*/
-
+const element = document.querySelector('footer');
 var theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 function getcurrenttheme(){
   localStorage.getItem('theme')?theme = localStorage.getItem('theme'):null;
@@ -43,14 +43,16 @@ function getcurrenttheme(){
 function Loadtheme(theme){
   // const root = document.querySelector(':root');
   if(theme==='dark'){
-    document.body.classList.toggle("latex-dark");}}
+    document.body.classList.toggle("latex-dark");
+  }
+}
 
 document.querySelector("#dark-mode-toggle").addEventListener('click', () => {
   let theme=getcurrenttheme();
   if(theme==='dark'){
-        theme='light'}
-  else{
-    theme='dark'}
+        theme='light';}
+  else;{
+    theme='dark';}
   localStorage.setItem('theme',`${theme}`);
   Loadtheme(theme);});
 window.addEventListener('DOMContentLoaded',()=> {

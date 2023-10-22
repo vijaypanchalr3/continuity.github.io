@@ -49,6 +49,7 @@ html{scroll-behavior:smooth}
     background-image: var(--paper);
     background-repeat: repeat;
 }
+
 .orange-ink{text-decoration: none;color: var(--orangeink);}
 .blue-ink{color: var(--blueink);text-decoration: none;}
 .torqoiseink{color:var(--torqoiseink);text-decoration: none;}
@@ -66,9 +67,11 @@ html{scroll-behavior:smooth}
 
 @media screen and (max-width:1100px) {
     .part0{width: 90%;}
+    .page{width: 90%;}
     .logo img{width: 130px;height: 130px;}}
 @media screen and (max-width:600px) {
     .part0{width: 98%;}
+    .page{width: 98%;}
     .logo{margin-top: -50px;margin-bottom: -20px;}
     .logo img{width: 100px;height: 100px;}}
 
