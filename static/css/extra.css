@@ -187,8 +187,9 @@ footer .copyright p,footer .copyright i{
     font-size: 1em;
     
 }
-.content code{overflow:scroll !important;color: #fff !important;}
+.content code{overflow:scroll !important;color: #fff !important;  font-size: 65%;}
 
-.content {overflow: hidden;}
+/* .content {} */
 .toc ul{list-style: circle !important;}
-pre{width: max-content;}
+pre{width: 100%; }
+mjx-container{overflow: scroll;}
