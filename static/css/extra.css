@@ -1,17 +1,19 @@
 @font-face {font-family: 'handwriting';font-style: normal;font-weight: 400;
     src: local('handwriting'), url('/fonts/Mansalva-Regular.ttf');}
-@font-face {font-family: 'cmun';font-style: normal;font-weight: 400;
-    src: local('cmun'), url('/fonts/cmu/cmunrm.ttf');}
-@font-face {font-family: 'cmui';font-style: normal;font-weight: 400;
-    src: local('cmui'), url('/fonts/cmu/cmunci.ttf');}
+
+@font-face {
+    font-family: 'Libertinus';
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url('./fonts/Libertinus-italic.woff2') format('woff2');
+    }
         
-    
     
             
 :root{
     --handwriting: handwriting;
-    --normal: cmun;
-    --italic: cmui;
+    --text: Libertinus;
     --HUGE: 35pt;
     --Huge: 24.88pt;
     --huge:20.74pt;
@@ -82,8 +84,8 @@ footer .copyright p,footer .copyright i{
 .t-block{width: 100%;display: flex;justify-content: center;margin-top: 40px;margin-bottom: 40px;}
 .content img{margin:auto;}
 
-
 /* lists */
+
 
 .list-title{display: flex;width: 60%;margin: auto;flex-direction: row;justify-content: space-between;font-family: var(--handwriting1);font-size: var(--fs-xxl);color: var(--blueink);}
 .list-title p,.list-titleimg{margin: auto 0;}
@@ -112,10 +114,12 @@ footer .copyright p,footer .copyright i{
 .list-grid{display: flex;flex-direction: column;}
 
 .cards{margin: 10px 0;background-color: #fcfcfc;padding: 10px;border-radius: 5px;box-shadow: var(--material-light-shadow);text-decoration: none;}
-.card-body h2{font-family: var(--cmun);color: var(--torqoiseink);font-size: var(--fs-xl);}
-.card-body p{font-family: var(--cmui);color: rgb(46, 46, 46);font-size:var(--fs-l);}
+.card-body h2{color: var(--torqoiseink);font-size: var(--fs-xl);}
+.card-body p{color: rgb(46, 46, 46);font-size:var(--fs-l);}
+.cards{font-family:var(--text);}
 
 .time{background-color: rgb(169, 169, 169);color: black;font-size: var(--fs-l);width: max-content;padding: 2px 20px;}
+
 .taxonomy-tag span{
     display: flex;
     flex-direction: row; 
@@ -131,7 +135,7 @@ footer .copyright p,footer .copyright i{
     font-size: var(--fs-l);
     color: var(--red);
 }
-.card-footer{font-family: var(--cmun);font-size: var(--fs-l);color: var(--red);}
+.card-footer{font-size: var(--fs-l);color: var(--red);}
 
 @media screen and (max-width: 1100px){
     .listpages{width: 80%;}
