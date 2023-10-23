@@ -189,11 +189,22 @@ footer .copyright p,footer .copyright i{
     padding: 10px;
     border-radius: 0.5em;
     font-size: 1em;
-    
+    width: 100%;     
 }
+
 .content code{overflow:scroll !important;color: #fff !important;  font-size: 65%;}
 
-/* .content {} */
-.toc ul{list-style: circle !important;}
-pre{width: 100%; }
-mjx-container{overflow: scroll;}
+mjx-container{overflow-x: scroll; overflow-y:hidden;margin-top: auto;margin-bottom: auto;}
+
+mjx-container::-webkit-scrollbar {
+    height: 1pt;}
+
+    /* mjx-container::-webkit-scrollbar-track { */
+    /* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3; */
+  /* } */
+   
+mjx-container::-webkit-scrollbar-thumb {
+    background-color: #ffffff71;
+    outline: 1px solid #ffffff71;
+    border-radius: 1pt;
+}

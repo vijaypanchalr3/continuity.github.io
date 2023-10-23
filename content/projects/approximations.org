@@ -54,7 +54,7 @@ Let's discuss coffiecient of linear damping. Linear to the velocity drag is also
 *** Damping by quadratic to the velocity approximation
 
 We used quadratic damping approximation as nonlinear damping approximation. This is also called newton's drag and it's better approximation then linear one. As quantitatively it can work with turbulent flow with 1000 to 100000 reynolds number. Where linear approximation works reynold's number upto 1. Quadratic damping is better than linear approximation but we can't have close form solution, it is the reason we use linear damping approximation. In quadratic damping it has following form, \(F_{damping} = k_{q} v^{2}\). Here, \(k_{q} = \frac{1}{8}c_{d}\rho \pi d^{2}\), where \(c_{d}\) is drag coefficient and has value of 0.47. \(\rho\) and \(d\) are density of fluid and diameter.
-\cite{lubarda2021analysis}\cite{goossens2019review}
+\cite{lubarda2021analysis} \cite{goossens2019review}
 
 
 
