@@ -2,7 +2,7 @@
 #+author: vijay panchal
 #+date: <2023-04-03 Mon>
 #+categories[]: Physics Projects
-#+draft: False
+#+draft: True
 #+tags[]: MSc project physics
 #+thumbnail: 
 #+description: This was my MSc sem 1 project, in which i discussed about problem with aprroximations and it's ignorance in physics. I took one example of simple pendulum and simulated it with python and pygame.

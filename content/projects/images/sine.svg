@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="636"
+   height="420"
+   id="svg378"
+   sodipodi:docname="astable.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   inkscape:export-filename="/home/vijay/Projects/funcgenerator/imgs/astable.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
+  <metadata
+     id="metadata813">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     id="namedview380"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"
+     inkscape:zoom="0.90408653"
+     inkscape:cx="55.304442"
+     inkscape:cy="153.1933"
+     inkscape:window-width="1366"
+     inkscape:window-height="741"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg378"
+     inkscape:document-rotation="0" />
+  <defs
+     id="defs220">
+    <rect
+       x="423.95372"
+       y="103.98984"
+       width="38.046284"
+       height="30.191595"
+       id="rect758" />
+    <rect
+       x="531"
+       y="230.45869"
+       width="77.845472"
+       height="45.833411"
+       id="rect752" />
+    <rect
+       x="221.72303"
+       y="246.73705"
+       width="62.245101"
+       height="36.36801"
+       id="rect558" />
+    <linearGradient
+       id="IDrVuwiLhHJW"
+       x1="0px"
+       x2="32.55764119219941px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop200" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop202" />
+    </linearGradient>
+    <linearGradient
+       id="BsCdfconxwMp"
+       x1="0px"
+       x2="31.240998703626616px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop205" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop207" />
+    </linearGradient>
+    <linearGradient
+       id="mToiBtryzlEd"
+       x1="0px"
+       x2="31.240998703626616px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop210" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop212" />
+    </linearGradient>
+    <linearGradient
+       id="xmsIHIXPRcLt"
+       x1="0px"
+       x2="32.802438933713454px"
+       y1="0px"
+       y2="0px"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#807f7f"
+         id="stop215" />
+      <stop
+         offset="1"
+         stop-color="#807f7f"
+         id="stop217" />
+    </linearGradient>
+  </defs>
+  <rect
+     fill="#000000"
+     stroke="none"
+     x="0"
+     y="0"
+     width="636"
+     height="420"
+     id="rect222"
+     style="fill:#ffffff"
+     sodipodi:insensitive="true" />
+  <path
+     fill="none"
+     stroke="#ff0000"
+     paint-order="fill stroke markers"
+     d="m 310,194 h 24"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path224"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#ff0000"
+     paint-order="fill stroke markers"
+     d="m 310,226 h 24"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path226"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#ff0000"
+     paint-order="fill stroke markers"
+     d="m 398,210 h 24"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path228"
+     style="stroke:#000000;fill:none" />
+  <path
+     fill="none"
+     stroke="#ff0000"
+     paint-order="fill stroke markers"
+     d="m 358,178 v 12"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path230"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#ff0000"
+     paint-order="fill stroke markers"
+     d="M 358,242 V 230"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path232"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#c0c0c0"
+     paint-order="fill stroke markers"
+     d="m 334,178 v 64 l 64,-32 z"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path234"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 310,194 V 50"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path244"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="316"
+     y="128"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text246" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 310,226 V 370"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path248"
+     style="fill:#000000;stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="316"
+     y="304"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text250" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 310.00001,49.999999 217.00252,124.7916"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path252"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 193.00251,146.79159 -74.59048,61.70842"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path254"
+     style="stroke:#000000" />
+  <g
+     transform="rotate(137.48957,84.23032,104.601)"
+     id="g258"
+     style="stroke:#000000">
+    <rect
+       fill="none"
+       stroke="url(#IDrVuwiLhHJW)"
+       x="0"
+       y="-6"
+       width="32.55764"
+       height="12"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="rect256"
+       style="stroke:#000000" />
+  </g>
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 310,50 84,70"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path262"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 418,140 84,70"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path264"
+     style="stroke:#000000" />
+  <g
+     transform="rotate(39.805571,31.277004,604.12384)"
+     id="g268"
+     style="stroke:#000000">
+    <rect
+       fill="none"
+       stroke="url(#BsCdfconxwMp)"
+       x="0"
+       y="-6"
+       width="31.240999"
+       height="12"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="rect266"
+       style="stroke:#000000" />
+  </g>
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 310,370 36,-30"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path272"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 370,320 36,-30"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path274"
+     style="stroke:#000000" />
+  <g
+     transform="rotate(-39.805571,642.54849,-307.83464)"
+     id="g278"
+     style="stroke:#000000">
+    <rect
+       fill="none"
+       stroke="url(#mToiBtryzlEd)"
+       x="0"
+       y="-6"
+       width="31.240999"
+       height="12"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="rect276"
+       style="stroke:#000000" />
+  </g>
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 184.87522,264.52545 29.33079,24.72454"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path282"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 222.70601,279.75 -14,19"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path284"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 249.92303,319.35783 221.42986,295.33936"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path286"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 229.70602,284.60506 -14,19"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path288"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 157.63654,299.52545 21.09627,19.66404"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3.00001"
+     stroke-dasharray="none"
+     id="path292"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 204.73281,339.18949 15.46063,12.68168"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path294"
+     style="stroke:#000000" />
+  <g
+     transform="rotate(37.568592,-379.86161,422.34287)"
+     id="g298"
+     style="stroke:#000000">
+    <rect
+       fill="none"
+       stroke="url(#xmsIHIXPRcLt)"
+       x="0"
+       y="-6"
+       width="32.802441"
+       height="12"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="rect296"
+       style="stroke:#000000" />
+  </g>
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 118.41204,208.5 66.46317,56.02545"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path302"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="154"
+     y="253"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text304" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 249.49314,318.99544 310.00001,370"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path306"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="282"
+     y="349"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text308" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 406,290 45,-37"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path310"
+     style="stroke:#000000;fill:none" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 443,243 16,19"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path312"
+     style="stroke:#000000;fill:none" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 502,210 -45,37"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path314"
+     style="stroke:#000000" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 449,238 16,19"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path316"
+     style="stroke:#000000;fill:none" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 246.17207,316.895 -25.97863,34.97617"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path320"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="234"
+     y="346"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text322" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 184.87522,264.52545 -27.23868,35"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path324"
+     style="stroke:#000000"
+     inkscape:transform-center-x="13.148707"
+     inkscape:transform-center-y="17.924781" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="170"
+     y="298"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text326" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 82.999998,208.58823 v 50.82353"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path328"
+     style="stroke:#000000" />
+  <g
+     id="g818"
+     transform="translate(13,-14.5)">
+    <path
+       fill="none"
+       stroke="#807f7f"
+       paint-order="fill stroke markers"
+       d="M 80,274 H 60"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="path330"
+       style="stroke:#000000" />
+    <path
+       fill="none"
+       stroke="#807f7f"
+       paint-order="fill stroke markers"
+       d="M 76,279 H 64"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="path332"
+       style="stroke:#000000" />
+    <path
+       fill="none"
+       stroke="#807f7f"
+       paint-order="fill stroke markers"
+       d="M 72,284 H 68"
+       stroke-linecap="round"
+       stroke-miterlimit="10"
+       stroke-width="3"
+       stroke-dasharray="none"
+       id="path334"
+       style="stroke:#000000" />
+  </g>
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 118.41203,208.5 H 83.596979"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path336"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="94"
+     y="220"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text338" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 501.25,210 h 32"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path340"
+     style="fill:none;stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="534"
+     y="204"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text342" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 422,210 h 80"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path344"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="462"
+     y="204"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text346" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="M 358,178 V 162"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path348"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="364"
+     y="176"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text350" />
+  <path
+     fill="none"
+     stroke="#807f7f"
+     paint-order="fill stroke markers"
+     d="m 358,242 v 16"
+     stroke-linecap="round"
+     stroke-miterlimit="10"
+     stroke-width="3"
+     stroke-dasharray="none"
+     id="path352"
+     style="stroke:#000000" />
+  <text
+     fill="#ffffff"
+     stroke="none"
+     font-family="sans-serif"
+     font-size="12px"
+     font-style="normal"
+     font-weight="normal"
+     text-decoration="normal"
+     x="364"
+     y="256"
+     text-anchor="start"
+     dominant-baseline="alphabetic"
+     id="text354" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 313,50 a 3,3 0 1 1 0,-1.6e-5 z"
+     id="path356"
+     style="stroke:none;fill:#000000" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 313,370 a 3,3 0 1 1 0,-2e-5 z"
+     id="path358"
+     style="fill:#000000;stroke:#000000" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 121,208.50002 a 3,3 0 1 1 0,-2e-5 z"
+     id="path360"
+     style="fill:#000000;stroke:none" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 505,210 a 3,3 0 1 1 0,-2e-5 z"
+     id="path362"
+     style="stroke:#000000;fill:#000000" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 537,210.00001 a 3,3 0 1 1 0,-2e-5 z"
+     id="path368"
+     style="fill:#000000;stroke:none" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 361,162 a 3,3 0 1 1 0,-2e-5 z"
+     id="path370"
+     style="stroke:none;fill:#000000" />
+  <path
+     fill="#ffffff"
+     stroke="none"
+     paint-order="stroke fill markers"
+     d="m 361,258 a 3,3 0 1 1 0,-2e-5 z"
+     id="path372"
+     style="stroke:none;fill:#000000" />
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="354.09924"
+     y="155.70787"
+     id="text720"
+     transform="rotate(40.322896)"><tspan
+       sodipodi:role="line"
+       id="tspan718"
+       x="354.09924"
+       y="155.70787">R</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="-31.835979"
+     y="517.11389"
+     id="text724"
+     transform="rotate(-49.64505)"><tspan
+       sodipodi:role="line"
+       id="tspan722"
+       x="-31.835979"
+       y="517.11389">R</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="318.93954"
+     y="185.70117"
+     id="text728"
+     transform="rotate(28.939662)"><tspan
+       sodipodi:role="line"
+       id="tspan726"
+       x="318.93954"
+       y="185.70117">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="194.81616"
+     y="512.12695"
+     id="text732"
+     transform="rotate(-37.949713)"><tspan
+       sodipodi:role="line"
+       id="tspan730"
+       x="194.81616"
+       y="512.12695">C</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:12.235px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round"
+     x="338.90756"
+     y="214.24461"
+     id="text740"><tspan
+       sodipodi:role="line"
+       id="tspan738"
+       x="338.90756"
+       y="214.24461"
+       style="stroke-width:0.999997">IC741CP</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="339.50781"
+     y="200.28125"
+     id="text744"><tspan
+       sodipodi:role="line"
+       id="tspan742"
+       x="339.50781"
+       y="200.28125">-</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+     x="335.44141"
+     y="232.33398"
+     id="text748"><tspan
+       sodipodi:role="line"
+       id="tspan746"
+       x="335.44141"
+       y="232.33398">+</tspan></text>
+  <text
+     xml:space="preserve"
+     id="text750"
+     style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';white-space:pre;shape-inside:url(#rect752);display:inline;fill:#000000;stroke:none;stroke-linecap:round;"
+     transform="translate(-7.8632812,-13.415862)"><tspan
+       x="531"
+       y="252.6543"><tspan>Vo</tspan></tspan></text>
+  <g
+     id="g784"
+     transform="rotate(-43.866682,312.98206,431.74577)">
+    <text
+       xml:space="preserve"
+       id="text756"
+       style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';white-space:pre;shape-inside:url(#rect758);display:inline;fill:#000000;stroke:none;stroke-linecap:round;"><tspan
+         x="423.95312"
+         y="126.18555"><tspan>R</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:18.0872px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-width:0.999997;stroke-linecap:round"
+       x="439.67722"
+       y="132.26172"
+       id="text768"><tspan
+         sodipodi:role="line"
+         id="tspan766"
+         x="439.67722"
+         y="132.26172"
+         style="stroke-width:0.999997">1</tspan></text>
+  </g>
+  <g
+     id="g778"
+     transform="rotate(40.650405,381.964,9.9820337)">
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:24px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-linecap:round"
+       x="466.75159"
+       y="113.27806"
+       id="text764"><tspan
+         sodipodi:role="line"
+         id="tspan762"
+         x="466.75159"
+         y="113.27806">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:600;font-size:16.5654px;font-family:'CMU Bright';-inkscape-font-specification:'CMU Bright, Semi-Bold';fill:#000000;stroke:none;stroke-width:0.999999;stroke-linecap:round"
+       x="483.62561"
+       y="119.00881"
+       id="text772"><tspan
+         sodipodi:role="line"
+         id="tspan770"
+         x="483.62561"
+         y="119.00881"
+         style="stroke-width:0.999999">F</tspan></text>
+  </g>
+</svg>
