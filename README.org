@@ -1,7 +1,3 @@
-This website is built on hugo. Theming is all mine*. I took inspiration from many designs like Material, bootstrap. I took some codes (AS IT IS) from bootstrap's (exactly, nav on top). 
+This website is built on hugo. Main page theming is all mine and blog stylesheet is latex-css from Vincent Dörig, here his github page [[https://github.com/vincentdoerig/latex-css]]
 
-There is many problems in this site.
-
-First and foremost is i want make submodules in theming, present theming is mixed with other things like posts and images. I want themes to separate folder and name it *continuity* as theme. Then work and commit it pretty differently then posts and images, i mean this whole pages.
-
-Second problems is theme selection, presently i have only one light theme, i want it to be light/dark. 
+VISIT my site: [[https://vijaypanchalr3.github.io]]

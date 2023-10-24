@@ -96,7 +96,6 @@ footer .copyright p,footer .copyright i{
 }
 .content {
     display: block;
-    overflow-x: hidden;
 }
 .content pre{
     background-color: #000 !important;
