@@ -79,11 +79,6 @@ html{scroll-behavior:smooth}
 .authorname{margin: auto;margin-top: -20pt;text-align: center;font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--aquaink);}
 
 
-
-
-
-
-
 .aboutme{font-family: var(--handwriting1);display: flex;margin: auto;flex-direction: column;width: 60%;}
 .aboutme h2{text-align: left;font-size: var(--fs-xl);color:var(--torqoiseink);}   
 .aboutme p{font-size: var(--fs-L);color: var(--orangeink);}
@@ -92,7 +87,7 @@ html{scroll-behavior:smooth}
 .links1 ul{display: flex;flex-direction: row;list-style: none;justify-content:space-around;overflow:visible;}
 .links1 ul li{display: block; padding: 0 10pt 0 0; height: 40pt;}
 .links1 ul li a{font-family: var(--handwriting1);font-size: var(--fs-L);color: var(--orangeink);text-align: center; margin-left: 20pt;}
-.links1 ul li:is(:hover,:focus){background-image: url(/refs/inkspot.svg);background-size: 80pt 30pt;background-repeat: no-repeat;}
+.links1 ul li:is(:hover,:focus){background-image: url(/refs/inkspot.svg);background-size: 80pt 30pt;background-repeat: no-repeat;outline: none;}
 
 .hamburger{
     display: none;
@@ -102,9 +97,8 @@ html{scroll-behavior:smooth}
     z-index: 2;
     cursor: pointer;
     width: max-content;
-
-
 }
+
 .hamburger input{
     appearance: none;
     padding: 0;
@@ -140,4 +134,3 @@ html{scroll-behavior:smooth}
     .hamburger{display: none;}
 }
 
-/* 

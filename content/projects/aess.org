@@ -125,7 +125,7 @@ the reason we use linear damping approximation. In quadratic damping it
 has following form, \(F_{damping} = k_{q} v^{2}\). Here,
 \(k_{q} = \frac{1}{8}c_{d}\rho \pi d^{2}\), where \(c_{d}\) is drag
 coefficient and has value of 0.47. \(\rho\) and \(d\) are density of
-fluid and diameter.[cite:@lubarda2021analysis][cite:@goossens2019review]
+fluid and diameter.[cite:@lubarda2021analysis] [cite:@goossens2019review]
 
 ** Equation of motion
    :PROPERTIES:
@@ -378,7 +378,7 @@ have turbulant flow by bob of our pendulum.
    :CUSTOM_ID: sec:org12c1446
    :END:
    
-As we have seen in our simulation that in linear solution equation \ref{eq:orgfa1e4db}, we got single constant frequency with \(\theta\) but not in nonlinear one. Nonlinear equation has non constant frequency. We can see from graph of it that how it differs from constant frequency of linear solution. \cite{sobamowo2020exact}\cite{johannessen2014analytical}
+As we have seen in our simulation that in linear solution equation \ref{eq:orgfa1e4db}, we got single constant frequency with \(\theta\) but not in nonlinear one. Nonlinear equation has non constant frequency. We can see from graph of it that how it differs from constant frequency of linear solution. \cite{sobamowo2020exact} \cite{johannessen2014analytical}
 
 #+caption: How angular frequency change with \(\theta_{0}\) in nonlinear
 solution and shows constant at value \(\sqrt{\frac{g}{l}}\)
