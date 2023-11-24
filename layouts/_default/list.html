@@ -5,9 +5,9 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/extra.css">
 </head>
-<body>
+<body class="notebook paper bgdarkshade">
     <div id="progressbar"></div>
-    <div class="part1 prevent-select paper">
+    <div class="page bglightshade">
         <div class="header">
             <div class="booktitle"><p>Continuity</p></div>
             <div class="logo"><img src="/refs/logo.svg" alt="continuity"></div>
@@ -15,6 +15,7 @@
         </div>
         <!-- <div class="devide"></div> -->
         <div class="links1">
+            <label class="hamburger"><input type="checkbox"></label>
             <ul>
                 <li><a href="/" class="orange-ink">Home</a></li>
                 <li><a href="/about.html" class="orange-ink">About</a></li>
@@ -49,14 +50,11 @@
                 {{ end }}
             </div>
             {{ template "_internal/pagination.html" . }}
-            
         </div>
         {{- partial "footer" . -}}
-        
     </div>
-    
-    
 </body>
+
 <script src="/js/main.js"></script>
 <script>
     function myFunction() {

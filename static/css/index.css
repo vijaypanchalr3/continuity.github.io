@@ -43,11 +43,14 @@ html{scroll-behavior:smooth}
 /* .page{ height: max-content;} */
 .devide{background-image: url(/refs/crosses.svg);background-repeat: repeat-x;background-size: contain;background-position: center;width: 50%;margin: auto;margin-bottom: 50px;margin-top: 50px;height: 20px;}
 
+    
+
 .page{
     width: 60%;
-    height:max-content;margin: auto; padding: 0;padding-top: 5vh;box-shadow: var(--material-light-shadow);border-radius: 2pt;
+    height:max-content;margin: auto; padding: 0;padding-top: 5vh;box-shadow: var(--material-light-shadow);border-radius: 4pt;
     background-image: var(--paper);
     background-repeat: repeat;
+    padding-bottom: 5pt;
 }
 
 .orange-ink{text-decoration: none;color: var(--orangeink);}
