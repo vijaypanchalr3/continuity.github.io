@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator using OpAmp</title>
+    
+    <link rel="stylesheet" href="/css/latex-css/style.css">
+    <link rel="stylesheet" href="/css/latex-css/prism.min.css">
+    <link rel="stylesheet" href="/css/extra.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/56fc5c5e17.js" crossorigin="anonymous"></script>
+</head>
+<body style="font-size: 120%; margin: auto;">
+    
+    
+    <div class="single-option sticky"><a href="/" class="home-button"><img src="/refs/home.svg" alt=""></a><button class="dark-mode-button" id="dark-mode-toggle"><img src="/refs/dark_mode.svg" alt=""></button></div>
+    <div class="psuedo sticky"></div>
+    <header class="single-header">
+        <h1>Function Generator using OpAmp</h1>
+        <p style="font-style:italic;text-align: center;">This project showcases DIY Function generator with satisfactory range and accuracy</p><br/>
+        <p class="author">
+        <a href="/about.html" style="text-decoration: none;">vijay panchal</a><br/>
+        <time>Aug 3, 2023 </time><br/>
+        <p>Keywords: <span>
+            <a href="http://localhost:1313/tags/msc/" style="text-decoration: none;margin-left: 10px;">MSc</a>
+        
+            <a href="http://localhost:1313/tags/project/" style="text-decoration: none;margin-left: 10px;">Project</a>
+        
+            <a href="http://localhost:1313/tags/physics/" style="text-decoration: none;margin-left: 10px;">Physics</a>
+        </span></p><br/>
+        </p>
+    </header>
+    <main>
+	      
+        
+          <div>
+            <h2>Contents</h2>
+            <nav id="TableOfContents">
+<ul>
+<li><a href="#sec:org4d403e5">Blocks</a>
+<ul>
+<li><a href="#sec:org6e13760">Block 1: Sine wave generator</a>
+</li>
+<li><a href="#sec:org696290c">Tuning sine wave generator</a>
+<ul>
+<li><a href="#sec:org39fd4f2">Series RC components in Wien bridge</a>
+</li>
+<li><a href="#sec:org87adce6">Parallel RC components in Wien bridge</a>
+</li>
+<li><a href="#sec:org9b4741e">Total signal and Error terms</a>
+</li>
+<li><a href="#sec:org54cc1eb">Fourier analysis of Output signal</a>
+</li>
+<li><a href="#sec:orgb636d31">Output of sine wave after tuning</a>
+</li>
+</ul>
+</li>
+<li><a href="#sec:org29641f3">Block 2: Square wave generator</a>
+<ul>
+<li><a href="#sec:orgf30ebeb">Problems in getting Square wave</a>
+</li>
+<li><a href="#sec:orge9f83c7">Output of square wave</a>
+</li>
+</ul>
+</li>
+<li><a href="#sec:org12e0f06">Block 3: Triangular Wave generator</a>
+<ul>
+<li><a href="#sec:org410e7c3">Working of Integrator</a>
+</li>
+<li><a href="#sec:org80c2387">Output of triangular wave.</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec:orge31cdcf">connection and switching</a>
+</li>
+<li><a href="#sec:orgf8c2d80">Appendix</a>
+<ul>
+<li><a href="#sec:org1562ade">Used components in this project</a>
+<ul>
+<li><a href="#sec:org9b7a59f">Ceramic resistor</a>
+</li>
+<li><a href="#sec:orgd32a6a6">Ceramics capacitor</a>
+</li>
+<li><a href="#sec:orgf376a23">Polypropylene capacitor</a>
+</li>
+<li><a href="#sec:orge75e11e">zener diode</a>
+</li>
+</ul>
+</li>
+<li><a href="#sec:org6c95c01">Data sheet of OpAmp we used (IC uA741CP)</a>
+</li>
+<li><a href="#sec:org34e0dba">Pspice simulations</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+            
+          </div>
+        
+        <div class="indent-pars content">
+
+<a href="#" class="goto-top"><i class="fas fa-chevron-up"></i></a>
+<div id="progressbar"></div><div class="th-on-grid">
+    <article class="focus background material-shadow-without-hover c-b-pad bottom-line">
+        
+        <div class="content">
+            
+<p>
+<div class="abstract">
+  <h2 style="font-size: 1.7rem;line-height: 2rem;margin-top: 3rem;  margin-bottom: 10px;">Abstract</h2>
+  Function generator are useful tools in academia and industries. Mostly
+they are avalaible in market. In this project we are trying to
+understand and study simple frequency generators with use of OpAmp. We
+usec generic OpAmp Ic LM741, which is single package and easy to
+understand with benefit of extensive acedemic experince. 
+</div></p>
+<p>
+Function generator is circuit which generates periodic function with
+predictable frequencies with respect to time. Here, we will study only
+mono frequency generator but it can also generate superposed functions.
+Signals from Function generator comes in many forms but mostly it is
+either sinusoidal or square wave. We will generate sinusoidal, square
+and triangle wave as output.</p>
+<p>
+We used basic circuits with few modification as our need. With use of IC
+LM741 we used OpAmp in our circuit.</p>
+<p>
+For Sinusoidal wave we used Wein Bridge circuit, which is easy to
+understand and impliment. Also, wein bridge circuit is quite less noice
+compare to it&#39;s compitition RC phase shift Oscillator, which have more
+component than Wein bridge and more complicated to understand. For
+Square wave we used standard astable multivibrator cicuit, with little
+modification. Lastly, Triangle wave can be made from just attaching
+Integrator to our square wave output with some regulation.</p>
+<p>
+Now, each circuit ( this wave form generator) has different block,
+basically we divided whole circuit in there block. Main work for us is
+to combine all of this. We wandered across CMOS families, BJTs but
+finally we sattled into physical swith which is coupled for power
+transmission and also for output change.[cite:@gayakwad2012op] [cite:@horowitz1989art] [cite:@wiki]</p>
+<div id="outline-container-sec:org4d403e5" class="outline-2">
+<h2 id="sec:org4d403e5">
+Blocks
+</h2>
+<div id="outline-text-sec:org4d403e5" class="outline-text-2">
+<p>As told in introduction each circuit is in their blocks. First block for
+sine wave which is nothing but wien bridge circuit, second is sqaure
+which is astable multivibrator, third for triangular wave which
+integrator attached to second block (square wave block).</p>
+<figure>
+<img src="../images/blocks.png" alt="../images/blocks.png" title="../images/blocks.png" /><figcaption>
+Block diagram of our function generator
+</figcaption>
+</figure>
+<div id="outline-container-sec:org6e13760" class="outline-3">
+<h3 id="sec:org6e13760">
+Block 1: Sine wave generator
+</h3>
+<div id="outline-text-sec:org6e13760" class="outline-text-3">
+<p>In first block, we have basic circuit of wein bridge. You can see in
+figure 1. In center we have OpAmp (IC LM741). This is amplifier with RC
+component attached with input and output. Here, at one end there is RC
+parallel component and at other end series RC component.</p>
+<p>
+<img src="../images/sine.png" alt="../images/sine.png" title="../images/sine.png" /></p>
+<p>
+Here, frequency is given by,</p>
+<p>
+\[\label{eq:org513cb7c}
+  f =\frac{1}{2 \pi RC}\]</p>
+<p>
+For sustaing oscilation gain must be 3 and for non inverting amplifier
+gain,</p>
+<p>
+\[\label{eq:orgad3dd9a}
+  A = 1+\frac{R_{F}}{R_{1}} = 3\]</p>
+<p>
+So, we get relation \(R_{F}=R_{1}\)</p>
+<figure>
+<img src="../images/sinereal.png" alt="../images/sinereal.png" title="../images/sinereal.png" /><figcaption>
+Our block 1, which consinst of IC741CP
+</figcaption>
+</figure>
+<p>
+Here, you can see our block circuit, at the end we attached two zener
+diode for regulation to the output. As you can see OpAmp in IC LM741
+package. Power supply given from 4 and 7 to 12V and -12V. We chose
+\(R_{1}=12k\Omega\). By relation of \(R_{1}\) and \(R_{F}\), we got
+\(R_{F}=24k\Omega\).</p>
+<p>
+For frequency range we used Potential with max range of \(100k\Omega\).
+So, lowest and maximum frequency whould be (with constant capacitance at
+\(50nF\)),</p>
+<p>
+\[\label{eq:org284eb02}
+  f_{min} = \frac{1}{2\pi\times100k\times 10n} \approx 159 hz\]</p>
+<p>
+\[\label{eq:orgc56dc93}
+  f_{max} = \frac{1}{2\pi\times100\times 10n} \approx 159k hz\]</p>
+<p>
+So, frequency range would be \(159 hz\) to \(159k hz\)</p>
+</div>
+</div>
+<div id="outline-container-sec:org696290c" class="outline-3">
+<h3 id="sec:org696290c">
+Tuning sine wave generator
+</h3>
+<div id="outline-text-sec:org696290c" class="outline-text-3">
+<p>The output of sine wave generator can be little noisy. This will be
+reasonable as we will see it&#39;s working. Any sine wave generator will
+work as frequency extractor from DC or any AC levels. Since, Row signals
+have superposed waves in nearly all the spectrum, one have to rely on
+different filters and component which can attenuate desire frequency and
+theoretically minimize every other frequency.</p>
+<p>
+In wien bridge, this is principle is mostly exploited. We have two RC
+components, one in series make low pass filter and secondly there is
+parallel component which work as high pass filter. In <strong><strong>figure</strong></strong> there
+is highlighted areas of both filters. Here, it is quite straight forward
+see that low pass will block higher frequency and high pass will vice
+versa. So, if we set both filter such that combination will give us some
+band (quite narrow band in fact). Center of this frequencies will cut
+off frequency of both filters. When wien bridge balances than this band
+of frequency will be resonated and give final output.</p>
+<div id="outline-container-sec:org39fd4f2" class="outline-4">
+<h4 id="sec:org39fd4f2">
+Series RC components in Wien bridge
+</h4>
+<div id="outline-text-sec:org39fd4f2" class="outline-text-4">
+<p>Series RC component which works as low pass filter have this type of
+phenomenan, total \(V_{in}\) and \(V_{out}\) will be proportional to the
+to total reactance. With voltage divider low,</p>
+<p>
+ <img src="../images/lowpassfilter1.png" alt="../images/lowpassfilter1.png" title="../images/lowpassfilter1.png" /></p>
+<p>
+ <img src="../images/highpassfilter2.png" alt="../images/highpassfilter2.png" title="../images/highpassfilter2.png" /> </p>
+<p>
+\[\frac{V_o}{V_i}= \frac{X_c}{R+X_c}\]</p>
+<p>
+Where, \(X_c\) is reactance of capacitor valued as \(\frac{-j}{wC}\).
+So,</p>
+<p>
+\[\frac{V_o}{V_i}=\left(\frac{1}{1+w^2R^2C^2}\right)^{\frac{1}{2}}\]</p>
+<p>
+If we take \(w_0\) as breakpoint or curoff point for our RC component
+than \(w_0=\frac{1}{RC}\). Here RC is time constant.</p>
+<p>
+Graph of low pass shown in figure <a href="#fig:filters">3</a>a. Where we can see
+frequency equals to \(w=w_0\) at some point. Also, notice that even
+though we have cutoff frequency at \(w_0\), there is enough frequencies
+around \(w_0\). Basically filters always have some noise which does not
+filtered. Here, if you use higher order filter than this slope of
+voltage to frequency would be slightly higher. With sufficiently high
+order filter you can make abrupt change in frequency domain, but this
+comes with it&#39;s consequences. With higher order filters other noises
+dominates since we will have too much components. We will use second
+order filter here, which is quite balance in accuracy and component
+noise.</p>
+<table>
+<tbody>
+<tr>
+<td><img src="../images/low.png" alt="../images/low.png" title="../images/low.png" /></td>
+<td><img src="../images/high.png" alt="../images/high.png" title="../images/high.png" /></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p>combination of high and low pass fiter
+<img src="../images/highlow.png" alt="../images/highlow.png" title="../images/highlow.png" /></p>
+<figcaption>
+here, we have a) low pass filter, b) high pass filter and c)
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-sec:org87adce6" class="outline-4">
+<h4 id="sec:org87adce6">
+Parallel RC components in Wien bridge
+</h4>
+<div id="outline-text-sec:org87adce6" class="outline-text-4">
+<p>Similarly to that of series RC components, we can define high pass
+filter as parallel RC component. In parallel circuit when frequency
+increases reactance decreases and total reactance decreases. So,
+consequently higher frequency pass and lower frequency will not.
+Reactance of high pass filter would be following,</p>
+<p>
+ <img src="../images/highpassfilter1.png" alt="../images/highpassfilter1.png" title="../images/highpassfilter1.png" /></p>
+<p>
+<img src="../images/lowpassfilter2.png" alt="../images/lowpassfilter2.png" title="../images/lowpassfilter2.png" /> </p>
+<p>
+\[\frac{V_o}{V_i}= \frac{R}{R+X_c}\]</p>
+<p>
+Again, \(X_c\) is capacitance reactance and valued at \(-frac{-j}{wC}\)</p>
+<p>
+\[\frac{V_o}{V_i}=\left(\frac{R^2}{R^2+\frac{1}{w^2C^2}}\right)^{\frac{1}{2}}\]</p>
+<p>
+This relationship is shown in figure <a href="#fig:filters">3</a>b. With cutoff
+frequency at \(w_0\). As we can see here also noise of unwanted
+frequency range are here.</p>
+</div>
+</div>
+<div id="outline-container-sec:org9b4741e" class="outline-4">
+<h4 id="sec:org9b4741e">
+Total signal and Error terms
+</h4>
+<div id="outline-text-sec:org9b4741e" class="outline-text-4">
+<p>In wien bridge we have both the low pass and high pass filters. So,
+total response of that shown in figure <a href="#fig:filters">3</a>c. Here, we
+have gain frequencies in range between cutoff frequency. Since, this
+range amplify in non inverting amplifier and feedback. This frequency
+will resonant and becomes our output signal. From now on, we will say
+\(w_0\) as resonant frequency. Final output in our theoretical studies
+will be this resonant frequency. Practically this frequency is observed
+with error frequencies.</p>
+<p>
+Error terms in here will be in following cases. /1) since we have band,
+we get many frequency output from the band, which is quite distorted in
+itself./ and <em>2) here working of filters are note up to expectation and
+we have noise from whole spectrum of frequency.</em> This is quite headache,
+unfortunately we have both the cases in our experiment.</p>
+</div>
+</div>
+<div id="outline-container-sec:org54cc1eb" class="outline-4">
+<h4 id="sec:org54cc1eb">
+Fourier analysis of Output signal
+</h4>
+<div id="outline-text-sec:org54cc1eb" class="outline-text-4">
+<p>We can minimize this errors by using Fourier analysis of output signal.
+As one can say that DC level is made of superposed infinite number of
+waves with different wavelengths,</p>
+<p>
+\[DC_{level}= \sum_{n}^{\infty}(a_n\cos(w_nt)+b_n\sin(w_nt))\]</p>
+<p>
+Here, \(a_n\) and \(b_n\) are coefficients of Fourier series. What wein
+bridge does is extract desire frequency from DC level.</p>
+<p>
+In our experiment we got distorted sine wave which means their is higher
+frequencies in effect. Also after some values of Potentiometer, there is
+just square signal. Another distortion occur was from lower frequencies
+manly \(\appro 50Hz\) and around \(300Hz\), which are making signal less
+stable and sometimes dominates resonant frequency.</p>
+<p>
+For higher frequency, we got idea to put low pass filter around value of
+resonant frequency that would bring signal to more on resonant
+frequency. This is can be seen in block diagram of sine wave from figure
+<a href="#fig:realsine">2</a> and figure below <a href="#fig:lowpass">4</a>. This should
+give us better results ad we intended.</p>
+<figure>
+<img src="../images/twolow.png" alt="../images/twolow.png" title="../images/twolow.png" /><figcaption>
+low pass filter at the output of our signal
+</figcaption>
+</figure>
+<p>
+For lower frequency, we have high pass filter, which eliminate those
+lower frequencies and stabilize our signal. This can be shown from block
+diagram figure <a href="#fig:realsine">2</a> and figure <a href="#fig:highpass">5</a>.</p>
+<figure>
+<img src="../images/highpassfilter2.png" alt="../images/highpassfilter2.png" title="../images/highpassfilter2.png" /><figcaption>
+high pass filter at the output of our signal
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="outline-container-sec:orgb636d31" class="outline-4">
+<h4 id="sec:orgb636d31">
+Output of sine wave after tuning
+</h4>
+<div id="outline-text-sec:orgb636d31" class="outline-text-4">
+<p>The output which we expected from our upper analysis at different
+frequency is shown below in figure <a href="#fig:sineout">[fig:sineout</a>]. The
+frequency range of sine wave output is given below in table. You should
+know that this</p>
+<table>
+<tbody>
+<tr>
+<td><img src="../images/sine6k.png" alt="../images/sine6k.png" title="../images/sine6k.png" /></td>
+<td><img src="../images/sine10k.png" alt="../images/sine10k.png" title="../images/sine10k.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/sine20k.png" alt="../images/sine20k.png" title="../images/sine20k.png" /></td>
+<td><img src="../images/sine37k.png" alt="../images/sine37k.png" title="../images/sine37k.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/sine48k.png" alt="../images/sine48k.png" title="../images/sine48k.png" /></td>
+<td><img src="../images/sine67k.png" alt="../images/sine67k.png" title="../images/sine67k.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/sine75k.png" alt="../images/sine75k.png" title="../images/sine75k.png" /></td>
+<td><img src="../images/sine100k.png" alt="../images/sine100k.png" title="../images/sine100k.png" /></td>
+<td class="align-right"></td>
+</tr>
+</tbody>
+</table>
+<figure>
+<p>wave generator
+<img src="../images/sinegraph.png" alt="../images/sinegraph.png" title="../images/sinegraph.png" /></p>
+<figcaption>
+this is out graph for frequrncy vs output voltage for sine
+</figcaption>
+</figure>
+<p>
+\(V_{out}{p-p}\) is after applying all the filters and tuning. Original
+output is quite large in peak to peak voltage around 5 times big.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec:org29641f3" class="outline-3">
+<h3 id="sec:org29641f3">
+Block 2: Square wave generator
+</h3>
+<div id="outline-text-sec:org29641f3" class="outline-text-3">
+<p>As square wave generator we have basic astable multivibrator. This
+circuit works on scenario where output will have to stable state and it
+will swing between them, hence the name.</p>
+<p>
+<img src="../images/square.png" alt="../images/square.png" title="../images/square.png" /></p>
+<p>
+When circuit is \(+V_{sat}\), we will have high signal output and when
+circuit is \(-V_{sat}\), we will have low signal output. So, we will
+have square wave as desired. The circuit for astable multivibrator is
+shown below.</p>
+<p>
+Here, frequency would be,</p>
+<p>
+\[\label{eq:org1a80d97}
+  f =\frac{1}{2 RC ln(\frac{2R_{1}+R_{2}}{R_{2}})}\]</p>
+<p>
+<img src="../images/squarereal.png" alt="../images/squarereal.png" title="../images/squarereal.png" /></p>
+<p>
+If, we take \(R_{2}=1.16R_{1}\) then,</p>
+<p>
+\[\label{eq:orgfe0486d}
+  f =\frac{1}{2RC}\]</p>
+<p>
+Here, we took \(R_{1} = 10k\Omega\) and \(R_{2} = 11.6k\Omega\) such
+that \(\frac{R_{2}}{R_{1}}=1.16\). Also, you can see that we employed
+\(100k\Omega\) in input terminals for accurate and reliable signal.</p>
+<p>
+Frequency range would be of (for constant capacitance at \(47nF\)) and
+here our \(R_1\) and \(R_2\) are equal at \(10k\Omega\),</p>
+<p>
+\[\label{eq:org53e196d}
+  f_{min} =\frac{1}{2\times 100k\times 47n \times ln(3)} \approx 97 hz\]</p>
+<p>
+\[\label{eq:org59a9bfa}
+  f_{max} =\frac{1}{2\times 100 \times 47n \times ln(3)} \approx 97 khz\]</p>
+<div id="outline-container-sec:orgf30ebeb" class="outline-4">
+<h4 id="sec:orgf30ebeb">
+Problems in getting Square wave
+</h4>
+<div id="outline-text-sec:orgf30ebeb" class="outline-text-4">
+<p>Square wave is mostly (maybe lesser) immune to those porblem of sine
+wave generator but still it has serious problem. Mainly of slew rate
+problem, which is quite fundamental to OpAmp than particular circuit.
+For understanding this phenomena we should exploit inner working of
+OpAmp.</p>
+<p>
+Let&#39;s define some phenomena before taking serious talk on output
+signals.</p>
+<p>
+<strong><strong>1) Transient state:</strong></strong> After some initial stable state, if the system
+(for us the OpAmp) comes at another steady state, the intermediate state
+is called transient state.</p>
+<p>
+<strong><strong>2) Steady state:</strong></strong> The state at which system has fix value of response
+(stable) which independent on time is called steady state (response).</p>
+<p>
+<strong><strong>3) Slew rate:</strong></strong> State is maximum rate of change with respect to
+microsecond of time.</p>
+<p>
+\[S = \left.\frac{dV}{dt}\right|_{max}\]</p>
+<p>
+It is measured in \(\frac{V}{\mu s}\). After seeing this, it&#39;s quite
+transparent to see the problem in our square wave generator. Also, the
+thing is slew rate is slop of signal with voltage and time domain. We
+can also see that it&#39;ll show us how gradual signal change from two
+steady state.</p>
+<p>
+When signal is at \(\pm V_{sat}\), it is at steady state. When it&#39;s
+changes signal goes into transient state. A fact that Slew rate is
+fundamental property IC (LM741 has slew rate around
+\(\appro .5 V/\mu s\)), which shows us how some IC is more reactive and
+some are not. This also defines Bandwidth some times. If we take high
+frequency which change so rapidly that slew rate can&#39;t keep up to signal
+than signal will not even change after some frequency value.</p>
+</div>
+</div>
+<div id="outline-container-sec:orge9f83c7" class="outline-4">
+<h4 id="sec:orge9f83c7">
+Output of square wave
+</h4>
+<div id="outline-text-sec:orge9f83c7" class="outline-text-4">
+<p>In out project we have IC LM741 with slewrate of \(0.5 V/\mu s\). Which
+directly means that our square wave will not look square wave after some
+frequencies value. For example look at this results after some
+\(10k Hz\) it is deforming.</p>
+<p>
+For better result, we can use OpAmp with higher slew rate. Typically
+<em>current feedback OpAmp</em> has higher response type, consequently higher
+slew rate (in the order of \(4k V/\mu s\)). Even for some voltage
+feedback OpAmp has higher Slew rate in range of \(500 V/\mu s\) to
+\(3000 V/\mu s\). Some ICs and it&#39;s slew rate value are shown in this
+table.</p>
+<div class="center-block" style="text-align: center; margin-left: auto; margin-right: auto;">
+<table>
+<thead>
+<tr>
+<th>IC NAME</th>
+<th>slew rate</th>
+<th>gain bandwidth product</th>
+<th>type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OPA 859QDSGRQ1</td>
+<td>kV/\(\mu\) s</td>
+<td>MHz</td>
+<td>voltage feedback</td>
+</tr>
+<tr>
+<td>AD 9631ARZ</td>
+<td>1.3 kV</td>
+<td>110 MHz</td>
+<td></td>
+</tr>
+<tr>
+<td>MAX 4212EUK+T</td>
+<td>V/\(\mu\)s</td>
+<td>MHz</td>
+<td>voltage feedback</td>
+</tr>
+<tr>
+<td>BUF 634AIDR</td>
+<td>kv/\(\mu\)s</td>
+<td>MHz</td>
+<td>voltage feedback</td>
+</tr>
+<tr>
+<td>OPA 695IDGKT</td>
+<td>kV/\(\mu s\)</td>
+<td>GHz</td>
+<td>current feedback</td>
+</tr>
+<tr>
+<td>THS3001IDGN</td>
+<td>kV/\(\mu\) s</td>
+<td>MHz</td>
+<td>current feedback</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table>
+<tbody>
+<tr>
+<td><img src="../images/square100.png" alt="../images/square100.png" title="../images/square100.png" /></td>
+<td><img src="../images/square500.png" alt="../images/square500.png" title="../images/square500.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/square1k.png" alt="../images/square1k.png" title="../images/square1k.png" /></td>
+<td><img src="../images/square7k.png" alt="../images/square7k.png" title="../images/square7k.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/square10k.png" alt="../images/square10k.png" title="../images/square10k.png" /></td>
+<td><img src="../images/square30k.png" alt="../images/square30k.png" title="../images/square30k.png" /></td>
+<td class="align-right"></td>
+</tr>
+<tr>
+<td><img src="../images/square47k.png" alt="../images/square47k.png" title="../images/square47k.png" /></td>
+<td><img src="../images/square60k.png" alt="../images/square60k.png" title="../images/square60k.png" /></td>
+<td class="align-right"></td>
+</tr>
+</tbody>
+</table>
+<p>
+Frequency to Output voltage is necessary too. Frequency to output
+voltage is in this relation. This gives out frequency range which is up
+to 60kHz. Data if this is given on appendix.</p>
+<figure>
+<p>generator
+<img src="../images/squaregraph.png" alt="../images/squaregraph.png" title="../images/squaregraph.png" /></p>
+<figcaption>
+here is frequency to \(V_o\) relationship for square wave
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec:org12e0f06" class="outline-3">
+<h3 id="sec:org12e0f06">
+Block 3: Triangular Wave generator
+</h3>
+<div id="outline-text-sec:org12e0f06" class="outline-text-3">
+<p>We basically extend block 2 with integrator circuit. Which would give
+triangular wave as intended. Here, this integrator circuit differs from
+basic circuit that \(100k\Omega\) as feedback resister is joined. Which
+would give better stability and accurate output. Circuit diagram is
+shown below,</p>
+<figure>
+<img src="../images/triang.png" alt="../images/triang.png" title="../images/triang.png" /><figcaption>
+integrator circuit with square wave as input
+</figcaption>
+</figure>
+<figure>
+<img src="../images/triangreal.png" alt="../images/triangreal.png" title="../images/triangreal.png" /><figcaption>
+block 3: triangluar wave generator
+</figcaption>
+</figure>
+<p>
+Here, \(R_{4}\) have to be \(10R_{3}\). Frequency is give by same
+relation as block 2.</p>
+<div id="outline-container-sec:org410e7c3" class="outline-4">
+<h4 id="sec:org410e7c3">
+Working of Integrator
+</h4>
+<div id="outline-text-sec:org410e7c3" class="outline-text-4">
+<p>A Basic integrator is shown in figure <a href="#fig:triang">7</a>. Which can
+modified as out need. Here basic passive components like capacitor and
+resistor used with OpAmp. The basic Integrator is made of inverting
+amplifier configuration. It has capacitor as feedback component. We used
+resistor of \(100k\Omega\) in parallel to capacitor to stabilize
+integration operation. Since, capacitor as very low reactance at
+feedback. Here, inverting mode is employed so we have inverting input as
+virtual ground. Here, changing rate is determined by RC time constant.
+OpAmp produces ramp output till capacitor gets fully charged. The
+capacitor charges current decreases by the influence between the virtual
+ground and negative output.</p>
+</div>
+</div>
+<div id="outline-container-sec:org80c2387" class="outline-4">
+<h4 id="sec:org80c2387">
+Output of triangular wave.
+</h4>
+<div id="outline-text-sec:org80c2387" class="outline-text-4">
+<figure>
+<p>triangular wave generator
+<img src="../images/triangraph.png" alt="../images/triangraph.png" title="../images/triangraph.png" /></p>
+<figcaption>
+here we have relation between frequency vs \(V_o\) for
+</figcaption>
+</figure>
+<p>
+Here, we have results of triangular waves as \(V_o\) and frequency graph
+and practical data between them. You can see out practical data in
+appendix. All Output in CRO is shown in figure /ref{fig:tringraph}.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec:orge31cdcf" class="outline-2">
+<h2 id="sec:orge31cdcf">
+connection and switching
+</h2>
+<div id="outline-text-sec:orge31cdcf" class="outline-text-2">
+<p>For connection of all this block we have used DPST switch with. This
+have two poles, one for power controlling and other for output
+controlling. Basic diagram of this switch is drawn in figure below.</p>
+<p>
+When switch is <strong><strong>ON</strong></strong> it will connect 1 terminals with common and
+complete the circuit. When switch is <strong><strong>OFF</strong></strong> (pulled condition), the
+circuit will open and we will not get connection.</p>
+<p>
+ <img src="../images/switch.png" alt="../images/switch.png" title="../images/switch.png" />
+ <img src="../images/switchoff.png" alt="../images/switchoff.png" title="../images/switchoff.png" /> </p>
+<p>
+The +Vcc in common (upper common) is completely independent of Output
+terminal common (lower common). Which means switch can completely
+operate two tasks, which is when on it power the block and take output
+and give to CRO. You can see this is on block diagram in figure
+<a href="#fig:block">1</a>.</p>
+</div>
+</div>
+<div id="outline-container-sec:orgf8c2d80" class="outline-2">
+<h2 id="sec:orgf8c2d80">
+Appendix
+</h2>
+<div id="outline-text-sec:orgf8c2d80" class="outline-text-2">
+<div id="outline-container-sec:org1562ade" class="outline-3">
+<h3 id="sec:org1562ade">
+Used components in this project
+</h3>
+<div id="outline-text-sec:org1562ade" class="outline-text-3">
+<p>We used standard components in this projects. For resistor we used
+ceramic resistor and ceramic capacitor for capacitor. As problem with
+availability 47nF capacitor is plastic</p>
+<div id="outline-container-sec:org9b7a59f" class="outline-4">
+<h4 id="sec:org9b7a59f">
+Ceramic resistor
+</h4>
+<div id="outline-text-sec:org9b7a59f" class="outline-text-4">
+<p>A ceramic resistor is a fixed resistor used in electronic circuits. As
+name suggests the resistor&#39;s name suggest it is made from ceramic as
+substrate. Ceramic resistors are compact and versatile. Ceramic
+resistors are made by mixing ceramic powder with metallic oxide powder
+to form a paste. The paste is then shaped into a cylinder or rectangle
+and dried before being fired in a kiln. The firing process produces a
+dense, hard, and non-porous ceramic substrate that is stable at high
+temperatures and resistant to thermal shock.</p>
+<p>
+<em>Advantages of ceramic resistors:</em> a) high power rating. That means they
+can be used in higher power use case scenario compare to other type of
+resistors.\\</p>
+<ol>
+<li>As i said, ceramic resistor are compact and versatile.\\</li>
+<li>very reliable and low with tolerances. They get lower drift over time</li>
+</ol>
+<p>and can be used in harsh scenarios.\\</p>
+</div>
+</div>
+<div id="outline-container-sec:orgd32a6a6" class="outline-4">
+<h4 id="sec:orgd32a6a6">
+Ceramics capacitor
+</h4>
+<div id="outline-text-sec:orgd32a6a6" class="outline-text-4">
+<p>As name suggest it is made of ceramic as its dielectric material. There
+are most common in making electronic circuits. Ceramic capacitors are
+made by applying a layer of ceramic material to a metal electrode,
+creating a sandwich-like structure. The electrodes are then connected to
+leads or terminals, forming the capacitor. The thickness of the ceramic
+layer determines the capacitor&#39;s capacitance value, with thinner layers
+resulting in lower capacitance values and thicker layers resulting in
+higher capacitance values.</p>
+<p>
+<em>Advantages of ceramic capacitor</em>: a) ceramic capacitors can have high
+dielectric constant since ceramic have ceramic very low conductivity.
+This means it can store more energy in smaller package.\\</p>
+<ol>
+<li>they are small and lightweight. This is quite needed in modern</li>
+</ol>
+<p>electronics circuits.\\</p>
+<ol>
+<li>they are reliable in harsh conditions like extreme temperature</li>
+</ol>
+<p>variations, Making them suitable for almost every condition for
+electronic circuit purposes. They are also have very low drift with time
+making them suitable for long run.</p>
+<p>
+We used 10nF capacitor of ceramic capacitor.</p>
+</div>
+</div>
+<div id="outline-container-sec:orgf376a23" class="outline-4">
+<h4 id="sec:orgf376a23">
+Polypropylene capacitor
+</h4>
+<div id="outline-text-sec:orgf376a23" class="outline-text-4">
+<p>Polyester film capacitors are film capacitors using a dielectric made of
+the thermoplastic polar polymer material polyethylene terephthalate
+(PET), trade names Hostaphan or Mylar, from the polyester family. They
+are manufactured both as metallized wound and stacked versions, as well
+as film/foil types. The dielectric films, depending on the desired
+dielectric strength, are drawn in a special process to an extremely thin
+thickness, and are then provided with electrodes. The electrodes of film
+capacitors may be metallized aluminum or zinc applied directly to the
+surface of the plastic film, or a separate metallic foil. Film
+capacitors, together with ceramic capacitors and electrolytic
+capacitors, are the most common capacitor types for use in electronic
+equipment, and are used in many AC and DC microelectronics and
+electronics circuits</p>
+<p>
+We used 47nF capacitor of Polypropylene capacitor.</p>
+</div>
+</div>
+<div id="outline-container-sec:orge75e11e" class="outline-4">
+<h4 id="sec:orge75e11e">
+zener diode
+</h4>
+<div id="outline-text-sec:orge75e11e" class="outline-text-4">
+<p>A zener diode is a type of diode that is designed to operate in the
+reverse breakdown region of its voltage-current characteristics. This
+makes it useful as a voltage regulator in electronic circuits. The
+voltage across a zener diode is determined by the breakdown voltage,
+which is the voltage at which the diode starts to conduct in the reverse
+direction. Once the breakdown voltage is reached, the zener diode will
+conduct and maintain a relatively constant voltage across its terminals,
+regardless of changes in the applied voltage. This is main work of zener
+diode. It&#39;s straight voltage regulators with Fixed maximum voltage.</p>
+<p>
+Here, we have 12 volt zener diode, which is adequate for our purpose and
+regulating small voltage variations.</p>
+<p>
+If we take \(V_z\) as voltage across the zener diode, \(I_z\) as current
+through the diode, and R is the resistance of the load connected to the
+diode. In a typical voltage regulator circuit, the load resistance is
+known and fixed, so the voltage across the zener diode is determined by
+the current flowing through the diode. Current in reverse breakdown
+state,</p>
+<p>
+\[I_z = \frac{V_z - V_r}{R}\]</p>
+<p>
+where, \(V_r\) is the reverse voltage applied to the diode.</p>
+<p>
+It can also be used as voltage clamper and voltage reference
+applications.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec:org6c95c01" class="outline-3">
+<h3 id="sec:org6c95c01">
+Data sheet of OpAmp we used (IC uA741CP)
+</h3>
+</div>
+<div id="outline-container-sec:org34e0dba" class="outline-3">
+<h3 id="sec:org34e0dba">
+Pspice simulations
+</h3>
+<div id="outline-text-sec:org34e0dba" class="outline-text-3">
+<p>We did Pspice simulation In <a href="https://www.falstad.com/circuit/">https://www.falstad.com/circuit/</a>
+[cite:@Falsted] by Paul Falsted. Here are simlations result from
+different blocks. This outputs are for Potentiometer valued at
+\(3.3k\Omega\). We gain peek to peek voltage value at \(2.8917V\) for
+sine wave and \(2.11V\) and \(2.2\) in square wave and triangular wave
+respectively. This figures are from matplotlib
+[cite:@Hunter:2007][cite:@harris2020array], since we could not get from
+falsted. We got accurate p-p voltages.</p>
+<p>
+<img src="../images/outputs.png" alt="../images/outputs.png" title="../images/outputs.png" /></p>
+<p>
+1</p>
+<p>
+Paul Falsted. Online circuit simulator.
+<a href="https://www.falstad.com/circuit/">https://www.falstad.com/circuit/</a>. Accessed: 2023-03-30.</p>
+<p>
+Ramakant A Gayakwad. Op-amps and linear integrated circuit. .</p>
+<p>
+Charles R. Harris, K. Jarrod Millman, Stéfan J. van der Walt, Ralf
+Gommers, Pauli Virtanen, David Cournapeau, Eric Wieser, Julian Taylor,
+Sebastian Berg, Nathaniel J. Smith, Robert Kern, Matti Picus, Stephan
+Hoyer, Marten H. van Kerkwijk, Matthew Brett, Allan Haldane,
+Jaime Fernández del Río, Mark Wiebe, Pearu Peterson, Pierre
+Gérard-Marchant, Kevin Sheppard, Tyler Reddy, Warren Weckesser, Hameer
+Abbasi, Christoph Gohlke, and Travis E. Oliphant. Array programming with
+NumPy. , 585(7825):357–362, September 2020.</p>
+<p>
+Paul Horowitz, Winfield Hill, and Ian Robinson. , volume 2. Cambridge
+university press Cambridge, 1989.</p>
+<p>
+J. D. Hunter. Matplotlib: A 2d graphics environment. ,
+9(3):90–95, 2007.</p>
+<p>
+Wikipedia contributors. Plagiarism — Wikipedia, the free
+encyclopedia, 2004. .</p>
+</div>
+</div>
+</div>
+</div>
+
+        </div>
+        
+        
+    </article>
+    
+    
+</div>
+
+
+</div>
+    </main>
+    
+    <script src="/js/main.js"></script>
+    
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+    </script>
+</body>
+</html>

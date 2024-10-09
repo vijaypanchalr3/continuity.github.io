@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on continuity</title>
+    <link>http://localhost:1313/categories/projects/</link>
+    <description>Recent content in Projects on continuity</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 16 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprehensive analysis of electronic noise and their noise spectra of voltage regulator circuit with zener diode at low frequency</title>
+      <link>http://localhost:1313/projects/shotnoise/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/shotnoise/</guid>
+      <description>Abstract&#xD;We present a noise analysis of regulated power supplies. Basic zener&#xD;diode regulated power supply is employed. We studied noise&#xD;characteristics at very low frequency (sub hertz), low frequency(up to&#xD;10k) and relatively high frequency (up to 100k).</description>
+    </item>
+    <item>
+      <title>Function Generator using OpAmp</title>
+      <link>http://localhost:1313/projects/funcgen/</link>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/funcgen/</guid>
+      <description>Abstract&#xD;Function generator are useful tools in academia and industries. Mostly&#xD;they are avalaible in market. In this project we are trying to&#xD;understand and study simple frequency generators with use of OpAmp.</description>
+    </item>
+    <item>
+      <title>Concequences of Approximations in physics</title>
+      <link>http://localhost:1313/projects/aess/</link>
+      <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/aess/</guid>
+      <description>Abstract&#xD;Approximation methods is essential topic in physical science but consequences are rarely discussed. In this project we are trying to discuss one classical example of approximation from early physics stage.</description>
+    </item>
+  </channel>
+</rss>
